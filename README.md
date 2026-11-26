@@ -13,7 +13,7 @@
 [![Playwright](https://img.shields.io/badge/Playwright-E2E-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev/)
 [![Vitest](https://img.shields.io/badge/Vitest-Unit_Tests-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)](https://vitest.dev/)
 
-[Live Demo (Render)](https://docmate-ai-powered-doctor-assistant-6lld.onrender.com) · [Features](#-core-capabilities) · [Screenshots](#-screenshots) · [Demo Accounts](#-demo-accounts) · [Architecture](#-system-architecture) · [Project Structure](#-project-structure) · [Quickstart](#-local-quickstart)
+[Live Demo (Render)](https://docmate-ai-3zcz.onrender.com) · [Features](#-core-capabilities) · [Screenshots](#-screenshots) · [Demo Accounts](#-demo-accounts) · [Architecture](#-system-architecture) · [Project Structure](#-project-structure) · [Quickstart](#-local-quickstart)
 
 </div>
 
@@ -41,9 +41,9 @@
 
 | Environment | URL | Notes |
 | :--- | :--- | :--- |
-| **Live Hosted Demo (Render)** | https://docmate-ai-powered-doctor-assistant-6lld.onrender.com | Default locale redirects to `/bn` |
-| **English Portal (Render)** | https://docmate-ai-powered-doctor-assistant-6lld.onrender.com/en/login | Quick demo login buttons available |
-| **Bangla Portal (Render)** | https://docmate-ai-powered-doctor-assistant-6lld.onrender.com/bn/login | Full Bangla UI & clinical terminology |
+| **Live Hosted Demo (Render)** | https://docmate-ai-3zcz.onrender.com | Default locale redirects to `/bn` |
+| **English Portal (Render)** | https://docmate-ai-3zcz.onrender.com/en/login | Quick demo login buttons available |
+| **Bangla Portal (Render)** | https://docmate-ai-3zcz.onrender.com/bn/login | Full Bangla UI & clinical terminology |
 | **Local Development** | `http://localhost:3000` | Runs with `pnpm run dev` or `pnpm start` |
 
 ### Key Application Routes
