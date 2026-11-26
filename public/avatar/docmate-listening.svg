@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="listenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14B8A6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="coatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Glowing Listening Sound Rings -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#14B8A6" stroke-width="2.5" stroke-dasharray="4 4" opacity="0.8"/>
+  <circle cx="100" cy="100" r="90" fill="url(#listenGlow)"/>
+
+  <!-- Sound wave arcs at ears -->
+  <path d="M42 82 C38 90 38 100 42 108" fill="none" stroke="#0D9488" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M35 76 C29 88 29 104 35 114" fill="none" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M158 82 C162 90 162 100 158 108" fill="none" stroke="#0D9488" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M165 76 C171 88 171 104 165 114" fill="none" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Body & Doctor Coat -->
+  <path d="M40 185 C40 145 65 135 100 135 C135 135 160 145 160 185 Z" fill="url(#coatGrad)" stroke="#CBD5E1" stroke-width="2"/>
+  <!-- Inner Scrub Shirt -->
+  <polygon points="85,135 115,135 100,165" fill="url(#shirtGrad)"/>
+  <!-- Coat Lapels -->
+  <path d="M72 138 L94 175 L80 185" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M128 138 L106 175 L120 185" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Stethoscope -->
+  <path d="M68 142 C65 170 85 182 92 182 C98 182 100 178 100 174" fill="none" stroke="#0D9488" stroke-width="4" stroke-linecap="round"/>
+  <path d="M132 142 C135 170 115 182 108 182 C102 182 100 178 100 174" fill="none" stroke="#0D9488" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="92" cy="183" r="5" fill="#5EEAD4" stroke="#0D9488" stroke-width="2"/>
+
+  <!-- Neck -->
+  <rect x="88" y="118" width="24" height="22" rx="4" fill="#FBCDB6"/>
+
+  <!-- Ears (slightly alert) -->
+  <circle cx="56" cy="94" r="10" fill="#FBCDB6"/>
+  <circle cx="144" cy="94" r="10" fill="#FBCDB6"/>
+  <path d="M57 91 C55 94 57 97 59 97" fill="none" stroke="#E29D80" stroke-width="1.5"/>
+  <path d="M143 91 C145 94 143 97 141 97" fill="none" stroke="#E29D80" stroke-width="1.5"/>
+
+  <!-- Head Base -->
+  <ellipse cx="100" cy="92" rx="42" ry="45" fill="#FDE2D2"/>
+
+  <!-- Hair -->
+  <path d="M58 84 C56 60 72 45 100 45 C128 45 144 60 142 84 C134 70 120 66 100 66 C78 66 65 72 58 84 Z" fill="#1E293B"/>
+
+  <!-- Eyebrows (Interested / Listening Upward Curve) -->
+  <path d="M72 76 C77 73 84 74 88 77" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M112 77 C116 74 123 73 128 76" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Eyes (Wide, Attentive) -->
+  <ellipse cx="80" cy="87" rx="5" ry="6.2" fill="#0F172A"/>
+  <circle cx="78" cy="84.5" r="2.2" fill="#FFFFFF"/>
+  <ellipse cx="120" cy="87" rx="5" ry="6.2" fill="#0F172A"/>
+  <circle cx="118" cy="84.5" r="2.2" fill="#FFFFFF"/>
+
+  <!-- Cheeks Blush -->
+  <ellipse cx="70" cy="97" rx="6" ry="3.5" fill="#F43F5E" opacity="0.3"/>
+  <ellipse cx="130" cy="97" rx="6" ry="3.5" fill="#F43F5E" opacity="0.3"/>
+
+  <!-- Nose -->
+  <path d="M99 90 C98 94 100 97 103 97" fill="none" stroke="#E29D80" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Attentive Gentle O-Smile -->
+  <ellipse cx="100" cy="110" rx="4.5" ry="3.5" fill="#9F1239"/>
+</svg>

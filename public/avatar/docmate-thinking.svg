@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="thinkGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="coatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Thinking Aura -->
+  <circle cx="100" cy="100" r="92" fill="url(#thinkGlow)"/>
+
+  <!-- Floating Thought Dots / Lightbulb Particles -->
+  <circle cx="152" cy="55" r="4.5" fill="#3B82F6" opacity="0.8"/>
+  <circle cx="163" cy="42" r="6" fill="#6366F1" opacity="0.85"/>
+  <circle cx="178" cy="30" r="8.5" fill="#0D9488" opacity="0.9"/>
+  <!-- Small spark in largest thought bubble -->
+  <path d="M178 26 L178 34 M174 30 L182 30" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Body & Doctor Coat (slight shift) -->
+  <path d="M40 185 C40 145 65 135 100 135 C135 135 160 145 160 185 Z" fill="url(#coatGrad)" stroke="#CBD5E1" stroke-width="2"/>
+  <!-- Inner Scrub Shirt -->
+  <polygon points="85,135 115,135 100,165" fill="url(#shirtGrad)"/>
+  <!-- Coat Lapels -->
+  <path d="M72 138 L94 175 L80 185" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M128 138 L106 175 L120 185" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Stethoscope -->
+  <path d="M68 142 C65 170 85 182 92 182 C98 182 100 178 100 174" fill="none" stroke="#0284C7" stroke-width="4" stroke-linecap="round"/>
+  <path d="M132 142 C135 170 115 182 108 182 C102 182 100 178 100 174" fill="none" stroke="#0284C7" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="92" cy="183" r="5" fill="#E2E8F0" stroke="#0284C7" stroke-width="2"/>
+
+  <!-- Hand on Chin -->
+  <ellipse cx="118" cy="122" rx="10" ry="7" fill="#FBCDB6" stroke="#E29D80" stroke-width="1.5" transform="rotate(-15 118 122)"/>
+  <circle cx="112" cy="120" r="4" fill="#FBCDB6"/>
+
+  <!-- Head with slight ponder tilt -->
+  <g transform="rotate(-4 100 92)">
+    <!-- Neck -->
+    <rect x="88" y="118" width="24" height="22" rx="4" fill="#FBCDB6"/>
+
+    <!-- Ears -->
+    <circle cx="56" cy="94" r="9" fill="#FBCDB6"/>
+    <circle cx="144" cy="94" r="9" fill="#FBCDB6"/>
+
+    <!-- Head Base -->
+    <ellipse cx="100" cy="92" rx="42" ry="45" fill="#FDE2D2"/>
+
+    <!-- Hair -->
+    <path d="M58 84 C56 60 72 45 100 45 C128 45 144 60 142 84 C134 70 120 66 100 66 C78 66 65 72 58 84 Z" fill="#1E293B"/>
+
+    <!-- Eyebrows (One raised curiously, one flat) -->
+    <path d="M72 79 C76 77 83 77 87 79" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M112 74 C117 71 125 72 129 76" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Eyes (Looking up thoughtfully) -->
+    <ellipse cx="80" cy="86" rx="4.5" ry="5.5" fill="#0F172A"/>
+    <circle cx="82" cy="83.5" r="1.8" fill="#FFFFFF"/>
+    <ellipse cx="120" cy="86" rx="4.5" ry="5.5" fill="#0F172A"/>
+    <circle cx="122" cy="83.5" r="1.8" fill="#FFFFFF"/>
+
+    <!-- Cheeks Blush -->
+    <ellipse cx="70" cy="97" rx="6" ry="3.5" fill="#F43F5E" opacity="0.2"/>
+    <ellipse cx="130" cy="97" rx="6" ry="3.5" fill="#F43F5E" opacity="0.2"/>
+
+    <!-- Nose -->
+    <path d="M99 90 C98 94 100 97 103 97" fill="none" stroke="#E29D80" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Pondering Pursed Mouth -->
+    <ellipse cx="98" cy="108" rx="4" ry="2.5" fill="#BE123C"/>
+  </g>
+</svg>

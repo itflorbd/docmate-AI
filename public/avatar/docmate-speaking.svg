@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="speakGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="coatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Speaking Subtle Aura -->
+  <circle cx="100" cy="100" r="92" fill="url(#speakGlow)"/>
+
+  <!-- Body & Doctor Coat -->
+  <path d="M40 185 C40 145 65 135 100 135 C135 135 160 145 160 185 Z" fill="url(#coatGrad)" stroke="#CBD5E1" stroke-width="2"/>
+  <!-- Inner Scrub Shirt -->
+  <polygon points="85,135 115,135 100,165" fill="url(#shirtGrad)"/>
+  <!-- Coat Lapels -->
+  <path d="M72 138 L94 175 L80 185" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M128 138 L106 175 L120 185" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Stethoscope -->
+  <path d="M68 142 C65 170 85 182 92 182 C98 182 100 178 100 174" fill="none" stroke="#0284C7" stroke-width="4" stroke-linecap="round"/>
+  <path d="M132 142 C135 170 115 182 108 182 C102 182 100 178 100 174" fill="none" stroke="#0284C7" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="92" cy="183" r="5" fill="#E2E8F0" stroke="#0284C7" stroke-width="2"/>
+
+  <!-- Neck -->
+  <rect x="88" y="118" width="24" height="22" rx="4" fill="#FBCDB6"/>
+
+  <!-- Ears -->
+  <circle cx="56" cy="94" r="9" fill="#FBCDB6"/>
+  <circle cx="144" cy="94" r="9" fill="#FBCDB6"/>
+
+  <!-- Head Base -->
+  <ellipse cx="100" cy="92" rx="42" ry="45" fill="#FDE2D2"/>
+
+  <!-- Hair -->
+  <path d="M58 84 C56 60 72 45 100 45 C128 45 144 60 142 84 C134 70 120 66 100 66 C78 66 65 72 58 84 Z" fill="#1E293B"/>
+
+  <!-- Eyebrows (Expressive) -->
+  <path d="M72 77 C77 74 84 75 88 78" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M112 78 C116 75 123 74 128 77" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Eyes (Warm & Engaged) -->
+  <ellipse cx="80" cy="87" rx="4.8" ry="5.8" fill="#0F172A"/>
+  <circle cx="78" cy="85" r="1.9" fill="#FFFFFF"/>
+  <ellipse cx="120" cy="87" rx="4.8" ry="5.8" fill="#0F172A"/>
+  <circle cx="118" cy="85" r="1.9" fill="#FFFFFF"/>
+
+  <!-- Cheeks Blush -->
+  <ellipse cx="70" cy="97" rx="6" ry="3.5" fill="#F43F5E" opacity="0.25"/>
+  <ellipse cx="130" cy="97" rx="6" ry="3.5" fill="#F43F5E" opacity="0.25"/>
+
+  <!-- Nose -->
+  <path d="M99 90 C98 94 100 97 103 97" fill="none" stroke="#E29D80" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Dynamic Speaking Open Mouth with Teeth and Tongue -->
+  <g id="avatar-speaking-mouth">
+    <ellipse cx="100" cy="110" rx="9" ry="7" fill="#881337"/>
+    <!-- Teeth -->
+    <path d="M93 106 C96 108 104 108 107 106 Z" fill="#FFFFFF"/>
+    <!-- Tongue -->
+    <path d="M95 115 C98 112 102 112 105 115 C102 117 98 117 95 115 Z" fill="#FB7185"/>
+  </g>
+</svg>

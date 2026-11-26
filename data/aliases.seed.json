@@ -1,0 +1,2870 @@
+[
+  {
+    "canonical_en": "fever",
+    "category": "symptom",
+    "variants": {
+      "bn": ["জ্বর", "গরম গা"],
+      "banglish": ["jor", "jwor", "jhor", "gaye jor", "gaye tap"],
+      "en": ["fever", "pyrexia", "febrile", "high temperature"],
+      "bn_translit_en": ["ফিভার", "ফেব্রাইল"]
+    },
+    "status": "active",
+    "notes": "Core febrile symptom"
+  },
+  {
+    "canonical_en": "cough",
+    "category": "symptom",
+    "variants": {
+      "bn": ["কাশি", "কফ"],
+      "banglish": ["kashi", "kasi", "kof", "khashi"],
+      "en": ["cough", "coughing", "tussis"],
+      "bn_translit_en": ["কফ", "কাফ"]
+    },
+    "status": "active",
+    "notes": "Respiratory symptom"
+  },
+  {
+    "canonical_en": "dry cough",
+    "category": "symptom",
+    "variants": {
+      "bn": ["শুকনো কাশি", "খুকখুকে কাশি"],
+      "banglish": ["shukna kashi", "sukno kashi", "shukno kashi", "khukkhuke kashi"],
+      "en": ["dry cough", "non-productive cough"],
+      "bn_translit_en": ["ড্রাই কাফ"]
+    },
+    "status": "active",
+    "notes": "Non-productive cough"
+  },
+  {
+    "canonical_en": "productive cough",
+    "category": "symptom",
+    "variants": {
+      "bn": ["কফযুক্ত কাশি", "ভেজা কাশি"],
+      "banglish": ["kofjukto kashi", "veja kashi", "kof kashi"],
+      "en": ["productive cough", "wet cough", "phlegm cough"],
+      "bn_translit_en": ["প্রোডাক্টিভ কাফ"]
+    },
+    "status": "active",
+    "notes": "Cough with sputum"
+  },
+  {
+    "canonical_en": "headache",
+    "category": "symptom",
+    "variants": {
+      "bn": ["মাথা ব্যথা", "মাথা ধরা"],
+      "banglish": ["matha betha", "matha byatha", "matha dhora", "mathabyatha"],
+      "en": ["headache", "cephalalgia", "migraine"],
+      "bn_translit_en": ["হেডেক", "মাইগ্রেন"]
+    },
+    "status": "active",
+    "notes": "Neurological symptom"
+  },
+  {
+    "canonical_en": "chest pain",
+    "category": "symptom",
+    "variants": {
+      "bn": ["বুক ব্যথা", "বুকে ব্যথা", "বুকে চাপ", "বুকে ভার"],
+      "banglish": ["buk betha", "buk byatha", "buke chap", "buke betha"],
+      "en": ["chest pain", "angina", "thoracic pain", "substernal pain"],
+      "bn_translit_en": ["চেস্ট পেইন", "এনজাইনা"]
+    },
+    "status": "active",
+    "notes": "Cardiovascular / respiratory red flag"
+  },
+  {
+    "canonical_en": "shortness of breath",
+    "category": "symptom",
+    "variants": {
+      "bn": ["শ্বাসকষ্ট", "দম বন্ধ ভাব", "হাঁপানি"],
+      "banglish": ["shash kosto", "shas kosto", "shashkosto", "dom bondho", "dom bondho bhab"],
+      "en": ["shortness of breath", "dyspnea", "breathlessness", "difficulty breathing"],
+      "bn_translit_en": ["ডিসপনিয়া", "ব্রেথলেসনেস"]
+    },
+    "status": "active",
+    "notes": "Respiratory symptom"
+  },
+  {
+    "canonical_en": "abdominal pain",
+    "category": "symptom",
+    "variants": {
+      "bn": ["পেট ব্যথা", "পেট কামড়ানো"],
+      "banglish": ["pet betha", "pet byatha", "pete betha", "pet kamrano"],
+      "en": ["abdominal pain", "stomach ache", "belly pain"],
+      "bn_translit_en": ["অ্যাবডোমিনাল পেইন", "স্টমাক এক"]
+    },
+    "status": "active",
+    "notes": "GI symptom"
+  },
+  {
+    "canonical_en": "vomiting",
+    "category": "symptom",
+    "variants": {
+      "bn": ["বমি", "বমি হওয়া"],
+      "banglish": ["bomi", "bomi howa", "bomy"],
+      "en": ["vomiting", "emesis", "throwing up"],
+      "bn_translit_en": ["ভমিটিং", "এমেসিস"]
+    },
+    "status": "active",
+    "notes": "GI symptom"
+  },
+  {
+    "canonical_en": "nausea",
+    "category": "symptom",
+    "variants": {
+      "bn": ["বমি বমি ভাব", "গা গুলানো"],
+      "banglish": ["bomi bomi bhab", "ga gulano", "bomi bhab"],
+      "en": ["nausea", "queasiness", "sick to stomach"],
+      "bn_translit_en": ["নসিয়া", "নশিয়া"]
+    },
+    "status": "active",
+    "notes": "GI symptom"
+  },
+  {
+    "canonical_en": "diarrhoea",
+    "category": "symptom",
+    "variants": {
+      "bn": ["পাতলা পায়খানা", "ডায়রিয়া"],
+      "banglish": ["patla paykhana", "diarrhoea", "diarrhea", "patla paikhana"],
+      "en": ["diarrhoea", "diarrhea", "loose stools", "frequent watery stools"],
+      "bn_translit_en": ["ডায়রিয়া", "ডায়রিয়া"]
+    },
+    "status": "active",
+    "notes": "GI symptom"
+  },
+  {
+    "canonical_en": "chills",
+    "category": "symptom",
+    "variants": {
+      "bn": ["কাঁপুনি", "ঠান্ডা লাগা", "শীত শীত ভাব"],
+      "banglish": ["kapuni", "thanda laga", "shit shit bhab", "kampon"],
+      "en": ["chills", "rigors", "shivering"],
+      "bn_translit_en": ["চিলস", "রিগরস"]
+    },
+    "status": "active",
+    "notes": "Infection sign / symptom"
+  },
+  {
+    "canonical_en": "body ache",
+    "category": "symptom",
+    "variants": {
+      "bn": ["গায়ে ব্যথা", "শরীর ব্যথা", "হাত পা ব্যথা"],
+      "banglish": ["gaye betha", "shorir betha", "hat pa betha", "ga betha"],
+      "en": ["body ache", "generalized body ache", "myalgia", "body pain"],
+      "bn_translit_en": ["বডি এক", "মায়ালজিয়া"]
+    },
+    "status": "active",
+    "notes": "Constitutional symptom"
+  },
+  {
+    "canonical_en": "weakness",
+    "category": "symptom",
+    "variants": {
+      "bn": ["দুর্বলতা", "ক্লান্তি"],
+      "banglish": ["durbolota", "klanti", "durbol", "khub durbol"],
+      "en": ["weakness", "asthenia", "fatigue", "lethargy", "exhaustion"],
+      "bn_translit_en": ["উইকনেস", "ফেটিগ"]
+    },
+    "status": "active",
+    "notes": "Constitutional symptom"
+  },
+  {
+    "canonical_en": "sore throat",
+    "category": "symptom",
+    "variants": {
+      "bn": ["গলা ব্যথা", "গলা খুশখুশ", "ঢোক গিলতে ব্যথা"],
+      "banglish": ["gola betha", "gola khushkhush", "dhok gilte betha", "gola byatha"],
+      "en": ["sore throat", "throat pain", "pharyngitis", "odynophagia"],
+      "bn_translit_en": ["সোর থ্রোট", "ফ্যারিঞ্জাইটিস"]
+    },
+    "status": "active",
+    "notes": "ENT symptom"
+  },
+  {
+    "canonical_en": "dizziness",
+    "category": "symptom",
+    "variants": {
+      "bn": ["মাথা ঘোরা", "ঝিমুনি"],
+      "banglish": ["matha ghora", "matha ghurche", "jhimuni", "matha ghora"],
+      "en": ["dizziness", "vertigo", "lightheadedness", "giddiness"],
+      "bn_translit_en": ["ডিজিনেস", "ভার্টিগো"]
+    },
+    "status": "active",
+    "notes": "Neurological symptom"
+  },
+  {
+    "canonical_en": "loss of appetite",
+    "category": "symptom",
+    "variants": {
+      "bn": ["ক্ষুধামন্দা", "অরুচি", "খেতে না পারা"],
+      "banglish": ["khudhamonda", "oruchi", "khete na para", "khide nai"],
+      "en": ["loss of appetite", "anorexia", "poor oral intake"],
+      "bn_translit_en": ["অ্যানোরেক্সিয়া"]
+    },
+    "status": "active",
+    "notes": "Constitutional symptom"
+  },
+  {
+    "canonical_en": "itching",
+    "category": "symptom",
+    "variants": {
+      "bn": ["চুলকানি", "গা চুলকানো"],
+      "banglish": ["chulkani", "ga chulkay", "chulkache"],
+      "en": ["itching", "pruritus", "itchy skin"],
+      "bn_translit_en": ["ইচিং", "প্রুরাইটিস"]
+    },
+    "status": "active",
+    "notes": "Dermatological symptom"
+  },
+  {
+    "canonical_en": "rash",
+    "category": "symptom",
+    "variants": {
+      "bn": ["ফুসকুড়ি", "র‍্যাশ", "লাল দাগ"],
+      "banglish": ["fuskuri", "rash", "lal dag", "lal chhop"],
+      "en": ["rash", "eruption", "erythema", "maculopapular rash"],
+      "bn_translit_en": ["র‍্যাশ", "ইরাপশন"]
+    },
+    "status": "active",
+    "notes": "Dermatological sign"
+  },
+  {
+    "canonical_en": "palpitations",
+    "category": "symptom",
+    "variants": {
+      "bn": ["বুক ধড়ফড়", "বুক ধড়ফড়", "হৃদস্পন্দন দ্রুত হওয়া"],
+      "banglish": ["buk dhorfor", "buk dorfor", "buk dhorfor kora", "buk dhorfor korche"],
+      "en": ["palpitations", "racing heart", "heart pounding", "irregular heartbeat"],
+      "bn_translit_en": ["পালপিটেশন"]
+    },
+    "status": "active",
+    "notes": "Cardiac symptom"
+  },
+  {
+    "canonical_en": "insomnia",
+    "category": "symptom",
+    "variants": {
+      "bn": ["ঘুম না হওয়া", "অনিদ্রা"],
+      "banglish": ["ghum hocche na", "onidra", "ghum nai", "ghum ase na"],
+      "en": ["insomnia", "sleeplessness", "poor sleep"],
+      "bn_translit_en": ["ইনসোমনিয়া"]
+    },
+    "status": "active",
+    "notes": "Sleep disorder"
+  },
+  {
+    "canonical_en": "runny nose",
+    "category": "symptom",
+    "variants": {
+      "bn": ["নাক দিয়ে পানি পড়া", "সর্দি"],
+      "banglish": ["nak diye pani pora", "sordi", "shordi", "nak bondho"],
+      "en": ["runny nose", "rhinorrhea", "nasal discharge", "coryza"],
+      "bn_translit_en": ["রাইনোরিয়া", "রানি নোজ"]
+    },
+    "status": "active",
+    "notes": "Upper respiratory symptom"
+  },
+  {
+    "canonical_en": "sweating",
+    "category": "symptom",
+    "variants": {
+      "bn": ["ঘাম হওয়া", "অতিরিক্ত ঘাম", "রাতে ঘাম"],
+      "banglish": ["gham", "gham hocche", "rate gham", "otirikto gham"],
+      "en": ["sweating", "diaphoresis", "night sweats"],
+      "bn_translit_en": ["ডায়াফোরোসিস"]
+    },
+    "status": "active",
+    "notes": "Constitutional symptom"
+  },
+  {
+    "canonical_en": "joint pain",
+    "category": "symptom",
+    "variants": {
+      "bn": ["গাঁটে ব্যথা", "জয়েন্টে ব্যথা"],
+      "banglish": ["gate betha", "joint e betha", "gite gite betha"],
+      "en": ["joint pain", "arthralgia", "arthritis"],
+      "bn_translit_en": ["আর্থ্রালজিয়া", "জয়েন্ট পেইন"]
+    },
+    "status": "active",
+    "notes": "Musculoskeletal symptom"
+  },
+  {
+    "canonical_en": "back pain",
+    "category": "symptom",
+    "variants": {
+      "bn": ["কোমর ব্যথা", "পিঠ ব্যথা"],
+      "banglish": ["komor betha", "pith betha", "komore betha"],
+      "en": ["back pain", "low back pain", "lumbago"],
+      "bn_translit_en": ["ব্যাক পেইন", "লাম্বাগো"]
+    },
+    "status": "active",
+    "notes": "Musculoskeletal symptom"
+  },
+  {
+    "canonical_en": "burning sensation",
+    "category": "symptom",
+    "variants": {
+      "bn": ["জ্বালাপোড়া", "বুকে জ্বালা", "প্রস্রাবে জ্বালাপোড়া"],
+      "banglish": ["jalapora", "buke jala", "prosrobe jala", "jolapora"],
+      "en": ["burning sensation", "heartburn", "dysuria", "burning micturition"],
+      "bn_translit_en": ["হার্টবার্ন", "ডিসইউরিয়া"]
+    },
+    "status": "active",
+    "notes": "Sensory / GI / Urological symptom"
+  },
+  {
+    "canonical_en": "constipation",
+    "category": "symptom",
+    "variants": {
+      "bn": ["কোষ্ঠকাঠিন্য", "পায়খানা শক্ত হওয়া"],
+      "banglish": ["koshthokathinno", "paykhana shokto", "kosha"],
+      "en": ["constipation", "infrequent stools", "hard stools"],
+      "bn_translit_en": ["কনস্টিপেশন"]
+    },
+    "status": "active",
+    "notes": "GI symptom"
+  },
+  {
+    "canonical_en": "swelling",
+    "category": "symptom",
+    "variants": {
+      "bn": ["ফোলা", "পা ফোলা", "শরীর ফোলা"],
+      "banglish": ["fola", "pa fola", "shorir fola", "fule geche"],
+      "en": ["swelling", "edema", "puffiness"],
+      "bn_translit_en": ["ইডিমা", "সোয়েলিং"]
+    },
+    "status": "active",
+    "notes": "Cardiovascular / renal sign"
+  },
+  {
+    "canonical_en": "crackles",
+    "category": "sign",
+    "variants": {
+      "bn": ["ক্রেপিটেশন", "ফুসফুসে শব্দ", "খড়খড় শব্দ"],
+      "banglish": ["crackles", "crepitations", "creps", "khor khor shobdo"],
+      "en": ["crackles", "crepitations", "rales", "bibasilar crackles"],
+      "bn_translit_en": ["ক্রেপিটেশন", "ক্র্যাকলস"]
+    },
+    "status": "active",
+    "notes": "Auscultatory lung sign"
+  },
+  {
+    "canonical_en": "wheezing",
+    "category": "sign",
+    "variants": {
+      "bn": ["হুইজ", "বাঁশির মতো শব্দ", "সাইঁ সাইঁ শব্দ"],
+      "banglish": ["wheeze", "wheezing", "shai shai shobdo", "bhashir moto"],
+      "en": ["wheeze", "wheezing", "rhonchi", "bronchospasm"],
+      "bn_translit_en": ["হুইজ", "হুইজিং"]
+    },
+    "status": "active",
+    "notes": "Airway obstruction sign"
+  },
+  {
+    "canonical_en": "pallor",
+    "category": "sign",
+    "variants": {
+      "bn": ["ফ্যাকাসে ভাব", "রক্তশূন্যতা"],
+      "banglish": ["fekashe", "rokto shunnota", "pale"],
+      "en": ["pallor", "pale conjunctiva", "anemia"],
+      "bn_translit_en": ["প্যালর", "অ্যানিমিয়া"]
+    },
+    "status": "active",
+    "notes": "General exam sign"
+  },
+  {
+    "canonical_en": "jaundice",
+    "category": "sign",
+    "variants": {
+      "bn": ["জন্ডিস", "চোখ হলুদ হওয়া", "প্রস্রাব হলুদ"],
+      "banglish": ["jaundice", "chokh holud", "prosrab holud"],
+      "en": ["jaundice", "icterus", "hyperbilirubinemia"],
+      "bn_translit_en": ["জন্ডিস", "ইকটেরাস"]
+    },
+    "status": "active",
+    "notes": "Hepatic sign"
+  },
+  {
+    "canonical_en": "cyanosis",
+    "category": "sign",
+    "variants": {
+      "bn": ["নীলাভ ভাব", "অক্সিজেন স্বল্পতা"],
+      "banglish": ["nilabho", "oxygen kom", "blue lips"],
+      "en": ["cyanosis", "central cyanosis", "peripheral cyanosis"],
+      "bn_translit_en": ["সায়ানোসিস"]
+    },
+    "status": "active",
+    "notes": "Hypoxemia sign"
+  },
+  {
+    "canonical_en": "pneumonia",
+    "category": "disease",
+    "variants": {
+      "bn": ["নিউমোনিয়া", "ফুসফুসের প্রদাহ"],
+      "banglish": ["pneumonia", "numonia", "nimonia"],
+      "en": ["pneumonia", "lung infection", "consolidation"],
+      "bn_translit_en": ["নিউমোনিয়া"]
+    },
+    "status": "active",
+    "notes": "Lower respiratory tract infection"
+  },
+  {
+    "canonical_en": "community acquired pneumonia",
+    "category": "disease",
+    "variants": {
+      "bn": ["কমিউনিটি-অ্যাকওয়ার্ড নিউমোনিয়া"],
+      "banglish": ["cap", "community acquired pneumonia"],
+      "en": ["community acquired pneumonia", "CAP"],
+      "bn_translit_en": ["কমিউনিটি অ্যাকোয়ার্ড নিউমোনিয়া"]
+    },
+    "status": "active",
+    "notes": "CAP guideline specific"
+  },
+  {
+    "canonical_en": "bronchitis",
+    "category": "disease",
+    "variants": {
+      "bn": ["ব্রঙ্কাইটিস"],
+      "banglish": ["bronchitis", "acute bronchitis"],
+      "en": ["bronchitis", "acute bronchitis"],
+      "bn_translit_en": ["ব্রঙ্কাইটিস"]
+    },
+    "status": "active",
+    "notes": "Airway inflammation"
+  },
+  {
+    "canonical_en": "asthma",
+    "category": "disease",
+    "variants": {
+      "bn": ["অ্যাজমা", "হাঁপানি"],
+      "banglish": ["asthma", "hapani", "azma"],
+      "en": ["asthma", "bronchial asthma"],
+      "bn_translit_en": ["অ্যাজমা", "ব্রঙ্কিয়াল অ্যাজমা"]
+    },
+    "status": "active",
+    "notes": "Chronic airway disease"
+  },
+  {
+    "canonical_en": "copd",
+    "category": "disease",
+    "variants": {
+      "bn": ["সিওপিডি", "ফুসফুসের দীর্ঘমেয়াদী রোগ"],
+      "banglish": ["copd", "chronic bronchitis"],
+      "en": ["copd", "chronic obstructive pulmonary disease"],
+      "bn_translit_en": ["সিওপিডি"]
+    },
+    "status": "active",
+    "notes": "Chronic airway obstruction"
+  },
+  {
+    "canonical_en": "dengue",
+    "category": "disease",
+    "variants": {
+      "bn": ["ডেঙ্গু", "ডেঙ্গু জ্বর"],
+      "banglish": ["dengue", "dengu", "dengue jor"],
+      "en": ["dengue", "dengue fever", "breakbone fever"],
+      "bn_translit_en": ["ডেঙ্গু"]
+    },
+    "status": "active",
+    "notes": "Arboviral infection endemic to Bangladesh"
+  },
+  {
+    "canonical_en": "typhoid",
+    "category": "disease",
+    "variants": {
+      "bn": ["টাইফয়েড", "অন্ত্রীয় জ্বর"],
+      "banglish": ["typhoid", "enteric fever", "taifoyd"],
+      "en": ["typhoid", "enteric fever", "salmonella typhi"],
+      "bn_translit_en": ["টাইফয়েড"]
+    },
+    "status": "active",
+    "notes": "Salmonella infection"
+  },
+  {
+    "canonical_en": "malaria",
+    "category": "disease",
+    "variants": {
+      "bn": ["ম্যালেরিয়া"],
+      "banglish": ["malaria", "melaria"],
+      "en": ["malaria", "plasmodium vivax", "plasmodium falciparum"],
+      "bn_translit_en": ["ম্যালেরিয়া"]
+    },
+    "status": "active",
+    "notes": "Parasitic infection"
+  },
+  {
+    "canonical_en": "tuberculosis",
+    "category": "disease",
+    "variants": {
+      "bn": ["যক্ষ্মা", "টিবি"],
+      "banglish": ["jokkhma", "tb", "tuberculosis"],
+      "en": ["tuberculosis", "TB", "mycobacterium tuberculosis"],
+      "bn_translit_en": ["টিবি", "টিউবারকিউলোসিস"]
+    },
+    "status": "active",
+    "notes": "Mycobacterial infection"
+  },
+  {
+    "canonical_en": "hypertension",
+    "category": "disease",
+    "variants": {
+      "bn": ["উচ্চ রক্তচাপ", "হাইপারটেনশন"],
+      "banglish": ["high pressure", "hypertension", "uccho roktochap", "high bp"],
+      "en": ["hypertension", "high blood pressure", "HTN"],
+      "bn_translit_en": ["হাইপারটেনশন"]
+    },
+    "status": "active",
+    "notes": "Cardiovascular condition"
+  },
+  {
+    "canonical_en": "diabetes mellitus",
+    "category": "disease",
+    "variants": {
+      "bn": ["ডায়াবেটিস", "বহুমূত্র রোগ"],
+      "banglish": ["diabetes", "diabates", "sugar", "diabetic"],
+      "en": ["diabetes", "diabetes mellitus", "DM", "T2DM", "T1DM"],
+      "bn_translit_en": ["ডায়াবেটিস", "সুগার"]
+    },
+    "status": "active",
+    "notes": "Endocrine metabolic disorder"
+  },
+  {
+    "canonical_en": "urinary tract infection",
+    "category": "disease",
+    "variants": {
+      "bn": ["ইউরিন ইনফেকশন", "মূত্রনালীর সংক্রমণ"],
+      "banglish": ["uti", "urine infection", "mutronalir infection"],
+      "en": ["urinary tract infection", "UTI", "cystitis"],
+      "bn_translit_en": ["ইউটিআই", "ইউরিন ইনফেকশন"]
+    },
+    "status": "active",
+    "notes": "Urological infection"
+  },
+  {
+    "canonical_en": "acute coronary syndrome",
+    "category": "disease",
+    "variants": {
+      "bn": ["হার্ট অ্যাটাক", "অ্যাকিউট করোনারি সিন্ড্রোম"],
+      "banglish": ["heart attack", "acs", "acute coronary syndrome"],
+      "en": ["acute coronary syndrome", "ACS", "myocardial infarction", "heart attack"],
+      "bn_translit_en": ["হার্ট অ্যাটাক", "এমআই"]
+    },
+    "status": "active",
+    "notes": "Cardiac emergency"
+  },
+  {
+    "canonical_en": "stroke",
+    "category": "disease",
+    "variants": {
+      "bn": ["স্ট্রোক", "মস্তিষ্কে রক্তক্ষরণ"],
+      "banglish": ["stroke", "paralysis", "pokkhaghat"],
+      "en": ["stroke", "cerebrovascular accident", "CVA"],
+      "bn_translit_en": ["স্ট্রোক", "সিভিএ"]
+    },
+    "status": "active",
+    "notes": "Neurological emergency"
+  },
+  {
+    "canonical_en": "blood pressure",
+    "category": "sign",
+    "variants": {
+      "bn": ["রক্তচাপ", "বিপি", "ব্লাড প্রেসার"],
+      "banglish": ["bp", "blood pressure", "pressure", "presar"],
+      "en": ["blood pressure", "BP"],
+      "bn_translit_en": ["বিপি", "ব্লাড প্রেসার"]
+    },
+    "status": "active",
+    "notes": "Vital sign"
+  },
+  {
+    "canonical_en": "heart rate",
+    "category": "sign",
+    "variants": {
+      "bn": ["হৃদস্পন্দন", "পালস"],
+      "banglish": ["pulse", "heart rate", "hr"],
+      "en": ["heart rate", "pulse", "HR", "beats per minute"],
+      "bn_translit_en": ["পালস", "হার্ট রেট"]
+    },
+    "status": "active",
+    "notes": "Vital sign"
+  },
+  {
+    "canonical_en": "temperature",
+    "category": "sign",
+    "variants": {
+      "bn": ["তাপমাত্রা", "শরীরের তাপমাত্রা"],
+      "banglish": ["temp", "temperature", "tapmatra"],
+      "en": ["temperature", "temp", "body temperature"],
+      "bn_translit_en": ["টেম্পারেচার"]
+    },
+    "status": "active",
+    "notes": "Vital sign"
+  },
+  {
+    "canonical_en": "paracetamol",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["প্যারাসিটামল"],
+      "banglish": ["paracetamol", "parasitamol", "parasetamol"],
+      "en": ["paracetamol", "acetaminophen", "APAP"],
+      "bn_translit_en": ["প্যারাসিটামল", "অ্যাসিটামিনোফেন"]
+    },
+    "status": "active",
+    "notes": "Analgesic and antipyretic"
+  },
+  {
+    "canonical_en": "Napa",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["নাপা"],
+      "banglish": ["napa"],
+      "en": ["Napa"],
+      "bn_translit_en": ["নাপা"]
+    },
+    "status": "active",
+    "notes": "Beximco Paracetamol brand"
+  },
+  {
+    "canonical_en": "Napa Extra",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["নাপা এক্সট্রা"],
+      "banglish": ["napa extra"],
+      "en": ["Napa Extra"],
+      "bn_translit_en": ["নাপা এক্সট্রা"]
+    },
+    "status": "active",
+    "notes": "Paracetamol + Caffeine brand"
+  },
+  {
+    "canonical_en": "Ace",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["এইস"],
+      "banglish": ["ace", "eis"],
+      "en": ["Ace"],
+      "bn_translit_en": ["এইস"]
+    },
+    "status": "active",
+    "notes": "Square Paracetamol brand"
+  },
+  {
+    "canonical_en": "amoxicillin",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["অ্যামোক্সিসিলিন", "এমোক্সিসিলিন"],
+      "banglish": ["amoxicillin", "amoxacillin", "amoxycillin", "amoxi"],
+      "en": ["amoxicillin", "amoxycillin"],
+      "bn_translit_en": ["অ্যামোক্সিসিলিন"]
+    },
+    "status": "active",
+    "notes": "First-line beta-lactam antibiotic"
+  },
+  {
+    "canonical_en": "Moxacil",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["মক্সাসিল"],
+      "banglish": ["moxacil", "moxasyl"],
+      "en": ["Moxacil"],
+      "bn_translit_en": ["মক্সাসিল"]
+    },
+    "status": "active",
+    "notes": "Square Amoxicillin brand"
+  },
+  {
+    "canonical_en": "azithromycin",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["অ্যাজিথ্রোমাইসিন", "এজিথ্রোমাইসিন"],
+      "banglish": ["azithromycin", "azithro", "azithromisin", "ejithro"],
+      "en": ["azithromycin"],
+      "bn_translit_en": ["অ্যাজিথ্রোমাইসিন", "জিথ্রো"]
+    },
+    "status": "active",
+    "notes": "Macrolide antibiotic"
+  },
+  {
+    "canonical_en": "Zithrox",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["জিথ্রক্স"],
+      "banglish": ["zithrox"],
+      "en": ["Zithrox"],
+      "bn_translit_en": ["জিথ্রক্স"]
+    },
+    "status": "active",
+    "notes": "Square Azithromycin brand"
+  },
+  {
+    "canonical_en": "ciprofloxacin",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["সিপ্রোফ্লক্সাসিন", "সিপ্রো"],
+      "banglish": ["ciprofloxacin", "cipro", "sipro"],
+      "en": ["ciprofloxacin"],
+      "bn_translit_en": ["সিপ্রোফ্লক্সাসিন", "সিপ্রো"]
+    },
+    "status": "active",
+    "notes": "Fluoroquinolone antibiotic"
+  },
+  {
+    "canonical_en": "Neofloxin",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["নিওফ্লক্সিন"],
+      "banglish": ["neofloxin"],
+      "en": ["Neofloxin"],
+      "bn_translit_en": ["নিওফ্লক্সিন"]
+    },
+    "status": "active",
+    "notes": "Beximco Ciprofloxacin brand"
+  },
+  {
+    "canonical_en": "omeprazole",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["অমিপ্রাজল", "ওমিপ্রাজল"],
+      "banglish": ["omeprazole", "omeprazol", "omiprazol"],
+      "en": ["omeprazole"],
+      "bn_translit_en": ["অমিপ্রাজল"]
+    },
+    "status": "active",
+    "notes": "Proton pump inhibitor"
+  },
+  {
+    "canonical_en": "Seclo",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["সেকলো"],
+      "banglish": ["seclo", "seklo"],
+      "en": ["Seclo"],
+      "bn_translit_en": ["সেকলো"]
+    },
+    "status": "active",
+    "notes": "Square Omeprazole brand"
+  },
+  {
+    "canonical_en": "pantoprazole",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["প্যান্টোপ্রাজল"],
+      "banglish": ["pantoprazole", "pantoprazol"],
+      "en": ["pantoprazole"],
+      "bn_translit_en": ["প্যান্টোপ্রাজল"]
+    },
+    "status": "active",
+    "notes": "Proton pump inhibitor"
+  },
+  {
+    "canonical_en": "Pantonix",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["প্যান্টোনিক্স"],
+      "banglish": ["pantonix"],
+      "en": ["Pantonix"],
+      "bn_translit_en": ["প্যান্টোনিক্স"]
+    },
+    "status": "active",
+    "notes": "Incepta Pantoprazole brand"
+  },
+  {
+    "canonical_en": "metronidazole",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["মেট্রোনিডাজল", "মেট্রো"],
+      "banglish": ["metronidazole", "metro", "metronidazol"],
+      "en": ["metronidazole"],
+      "bn_translit_en": ["মেট্রোনিডাজল"]
+    },
+    "status": "active",
+    "notes": "Antiprotozoal / antibacterial"
+  },
+  {
+    "canonical_en": "Filmet",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["ফিলমেট"],
+      "banglish": ["filmet"],
+      "en": ["Filmet"],
+      "bn_translit_en": ["ফিলমেট"]
+    },
+    "status": "active",
+    "notes": "Beximco Metronidazole brand"
+  },
+  {
+    "canonical_en": "cetirizine",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["সেটিরিজিন"],
+      "banglish": ["cetirizine", "setirizin", "cetrizin"],
+      "en": ["cetirizine"],
+      "bn_translit_en": ["সেটিরিজিন"]
+    },
+    "status": "active",
+    "notes": "Antihistamine"
+  },
+  {
+    "canonical_en": "Alatrol",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["অ্যালাট্রোল", "এলাট্রোল"],
+      "banglish": ["alatrol"],
+      "en": ["Alatrol"],
+      "bn_translit_en": ["অ্যালাট্রোল"]
+    },
+    "status": "active",
+    "notes": "Square Cetirizine brand"
+  },
+  {
+    "canonical_en": "fexofenadine",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["ফেক্সোফেনাডিন"],
+      "banglish": ["fexofenadine", "fexo"],
+      "en": ["fexofenadine"],
+      "bn_translit_en": ["ফেক্সোফেনাডিন"]
+    },
+    "status": "active",
+    "notes": "Non-sedating antihistamine"
+  },
+  {
+    "canonical_en": "Fexo",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["ফেক্সো"],
+      "banglish": ["fexo"],
+      "en": ["Fexo"],
+      "bn_translit_en": ["ফেক্সো"]
+    },
+    "status": "active",
+    "notes": "Square Fexofenadine brand"
+  },
+  {
+    "canonical_en": "losartan",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["লোসারটান"],
+      "banglish": ["losartan"],
+      "en": ["losartan"],
+      "bn_translit_en": ["লোসারটান"]
+    },
+    "status": "active",
+    "notes": "ARB antihypertensive"
+  },
+  {
+    "canonical_en": "Osartil",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["ওসারটিল"],
+      "banglish": ["osartil"],
+      "en": ["Osartil"],
+      "bn_translit_en": ["ওসারটিল"]
+    },
+    "status": "active",
+    "notes": "Incepta Losartan brand"
+  },
+  {
+    "canonical_en": "amlodipine",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["অ্যামলোডিপিন", "এমলোডিপিন"],
+      "banglish": ["amlodipine", "amlo"],
+      "en": ["amlodipine"],
+      "bn_translit_en": ["অ্যামলোডিপিন"]
+    },
+    "status": "active",
+    "notes": "CCB antihypertensive"
+  },
+  {
+    "canonical_en": "metformin",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["মেটফরমিন"],
+      "banglish": ["metformin"],
+      "en": ["metformin"],
+      "bn_translit_en": ["মেটফরমিন"]
+    },
+    "status": "active",
+    "notes": "Biguanide antidiabetic"
+  },
+  {
+    "canonical_en": "Comprid",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["কমপ্রিড"],
+      "banglish": ["comprid"],
+      "en": ["Comprid"],
+      "bn_translit_en": ["কমপ্রিড"]
+    },
+    "status": "active",
+    "notes": "Square Metformin brand"
+  },
+  {
+    "canonical_en": "salbutamol",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["সালবুটামল"],
+      "banglish": ["salbutamol", "albuterol"],
+      "en": ["salbutamol", "albuterol"],
+      "bn_translit_en": ["সালবুটামল"]
+    },
+    "status": "active",
+    "notes": "SABA bronchodilator"
+  },
+  {
+    "canonical_en": "Windel",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["উইন্ডেল"],
+      "banglish": ["windel"],
+      "en": ["Windel"],
+      "bn_translit_en": ["উইন্ডেল"]
+    },
+    "status": "active",
+    "notes": "Square Salbutamol brand"
+  },
+  {
+    "canonical_en": "montelukast",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["মন্টেলুকাস্ট"],
+      "banglish": ["montelukast", "monte"],
+      "en": ["montelukast"],
+      "bn_translit_en": ["মন্টেলুকাস্ট"]
+    },
+    "status": "active",
+    "notes": "Leukotriene receptor antagonist"
+  },
+  {
+    "canonical_en": "Montene",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["মন্টেন"],
+      "banglish": ["montene"],
+      "en": ["Montene"],
+      "bn_translit_en": ["মন্টেন"]
+    },
+    "status": "active",
+    "notes": "Incepta Montelukast brand"
+  },
+  {
+    "canonical_en": "ibuprofen",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["আইবুপ্রোফেন"],
+      "banglish": ["ibuprofen", "brufen"],
+      "en": ["ibuprofen"],
+      "bn_translit_en": ["আইবুপ্রোফেন"]
+    },
+    "status": "active",
+    "notes": "NSAID"
+  },
+  {
+    "canonical_en": "head",
+    "category": "body_part",
+    "variants": {
+      "bn": ["মাথা"],
+      "banglish": ["matha"],
+      "en": ["head"],
+      "bn_translit_en": ["হেড"]
+    },
+    "status": "active",
+    "notes": "Anatomical region"
+  },
+  {
+    "canonical_en": "chest",
+    "category": "body_part",
+    "variants": {
+      "bn": ["বুক"],
+      "banglish": ["buk", "buke"],
+      "en": ["chest", "thorax"],
+      "bn_translit_en": ["চেস্ট"]
+    },
+    "status": "active",
+    "notes": "Anatomical region"
+  },
+  {
+    "canonical_en": "abdomen",
+    "category": "body_part",
+    "variants": {
+      "bn": ["পেট"],
+      "banglish": ["pet", "pete"],
+      "en": ["abdomen", "stomach", "belly"],
+      "bn_translit_en": ["অ্যাবডোমেন"]
+    },
+    "status": "active",
+    "notes": "Anatomical region"
+  },
+  {
+    "canonical_en": "throat",
+    "category": "body_part",
+    "variants": {
+      "bn": ["গলা"],
+      "banglish": ["gola", "golay"],
+      "en": ["throat", "pharynx"],
+      "bn_translit_en": ["থ্রোট"]
+    },
+    "status": "active",
+    "notes": "Anatomical region"
+  },
+  {
+    "canonical_en": "lung",
+    "category": "body_part",
+    "variants": {
+      "bn": ["ফুসফুস"],
+      "banglish": ["fusfus", "fushfush"],
+      "en": ["lung", "lungs", "pulmonary"],
+      "bn_translit_en": ["লাং", "লাংস"]
+    },
+    "status": "active",
+    "notes": "Anatomical organ"
+  },
+  {
+    "canonical_en": "heart",
+    "category": "body_part",
+    "variants": {
+      "bn": ["হৃদপিণ্ড", "হার্ট"],
+      "banglish": ["heart", "hridpindo"],
+      "en": ["heart", "cardiac"],
+      "bn_translit_en": ["হার্ট"]
+    },
+    "status": "active",
+    "notes": "Anatomical organ"
+  },
+  {
+    "canonical_en": "back",
+    "category": "body_part",
+    "variants": {
+      "bn": ["পিঠ", "কোমর"],
+      "banglish": ["pith", "komor"],
+      "en": ["back", "spine", "lumbar"],
+      "bn_translit_en": ["ব্যাক"]
+    },
+    "status": "active",
+    "notes": "Anatomical region"
+  },
+  {
+    "canonical_en": "eye",
+    "category": "body_part",
+    "variants": {
+      "bn": ["চোখ"],
+      "banglish": ["chokh"],
+      "en": ["eye", "eyes", "ocular"],
+      "bn_translit_en": ["আই"]
+    },
+    "status": "active",
+    "notes": "Anatomical organ"
+  },
+  {
+    "canonical_en": "ear",
+    "category": "body_part",
+    "variants": {
+      "bn": ["কান"],
+      "banglish": ["kan"],
+      "en": ["ear", "ears", "aural"],
+      "bn_translit_en": ["ইয়ার"]
+    },
+    "status": "active",
+    "notes": "Anatomical organ"
+  },
+  {
+    "canonical_en": "leg",
+    "category": "body_part",
+    "variants": {
+      "bn": ["পা"],
+      "banglish": ["pa", "paye"],
+      "en": ["leg", "legs", "lower limb"],
+      "bn_translit_en": ["লেগ"]
+    },
+    "status": "active",
+    "notes": "Anatomical limb"
+  },
+  {
+    "canonical_en": "arm",
+    "category": "body_part",
+    "variants": {
+      "bn": ["হাত"],
+      "banglish": ["hat", "hate"],
+      "en": ["arm", "arms", "hand", "upper limb"],
+      "bn_translit_en": ["আর্ম"]
+    },
+    "status": "active",
+    "notes": "Anatomical limb"
+  },
+  {
+    "canonical_en": "skin",
+    "category": "body_part",
+    "variants": {
+      "bn": ["ত্বক", "চামড়া"],
+      "banglish": ["chomra", "tok"],
+      "en": ["skin", "cutaneous", "dermal"],
+      "bn_translit_en": ["স্কিন"]
+    },
+    "status": "active",
+    "notes": "Anatomical organ"
+  },
+  {
+    "canonical_en": "day",
+    "category": "duration",
+    "variants": {
+      "bn": ["দিন", "রোজ"],
+      "banglish": ["din", "diner", "roj"],
+      "en": ["day", "days", "d"],
+      "bn_translit_en": ["ডে", "ডেইজ"]
+    },
+    "status": "active",
+    "notes": "Time unit"
+  },
+  {
+    "canonical_en": "week",
+    "category": "duration",
+    "variants": {
+      "bn": ["সপ্তাহ"],
+      "banglish": ["saptah", "shoptaho", "soptahe", "shoptaha"],
+      "en": ["week", "weeks", "wk"],
+      "bn_translit_en": ["উইক", "উইকস"]
+    },
+    "status": "active",
+    "notes": "Time unit"
+  },
+  {
+    "canonical_en": "month",
+    "category": "duration",
+    "variants": {
+      "bn": ["মাস"],
+      "banglish": ["mash", "mas", "masher"],
+      "en": ["month", "months", "mo"],
+      "bn_translit_en": ["মান্থ", "মান্থস"]
+    },
+    "status": "active",
+    "notes": "Time unit"
+  },
+  {
+    "canonical_en": "year",
+    "category": "duration",
+    "variants": {
+      "bn": ["বছর"],
+      "banglish": ["bochor", "bochhor", "bosor"],
+      "en": ["year", "years", "yr"],
+      "bn_translit_en": ["ইয়ার", "ইয়ার্স"]
+    },
+    "status": "active",
+    "notes": "Time unit"
+  },
+  {
+    "canonical_en": "hour",
+    "category": "duration",
+    "variants": {
+      "bn": ["ঘণ্টা", "ঘন্টা"],
+      "banglish": ["ghonta", "ghontar"],
+      "en": ["hour", "hours", "hr"],
+      "bn_translit_en": ["আওয়ার"]
+    },
+    "status": "active",
+    "notes": "Time unit"
+  },
+  {
+    "canonical_en": "mg",
+    "category": "unit",
+    "variants": {
+      "bn": ["মিলিগ্রাম", "এমজি"],
+      "banglish": ["mg", "milligram", "miligram"],
+      "en": ["mg", "milligram", "milligrams"],
+      "bn_translit_en": ["মিলিগ্রাম", "এমজি"]
+    },
+    "status": "active",
+    "notes": "Mass dosage unit"
+  },
+  {
+    "canonical_en": "tablet",
+    "category": "unit",
+    "variants": {
+      "bn": ["ট্যাবলেট", "বড়ি"],
+      "banglish": ["tab", "tablet", "bori"],
+      "en": ["tablet", "tab", "tabs"],
+      "bn_translit_en": ["ট্যাবলেট", "ট্যাব"]
+    },
+    "status": "active",
+    "notes": "Pharmaceutical form"
+  },
+  {
+    "canonical_en": "capsule",
+    "category": "unit",
+    "variants": {
+      "bn": ["ক্যাপসুল"],
+      "banglish": ["cap", "capsule"],
+      "en": ["capsule", "cap", "caps"],
+      "bn_translit_en": ["ক্যাপসুল"]
+    },
+    "status": "active",
+    "notes": "Pharmaceutical form"
+  },
+  {
+    "canonical_en": "syrup",
+    "category": "unit",
+    "variants": {
+      "bn": ["সিরাপ"],
+      "banglish": ["syr", "syrup"],
+      "en": ["syrup", "syr"],
+      "bn_translit_en": ["সিরাপ"]
+    },
+    "status": "active",
+    "notes": "Pharmaceutical form"
+  },
+  {
+    "canonical_en": "ml",
+    "category": "unit",
+    "variants": {
+      "bn": ["মিলি", "এমএল", "মিলিলিটার"],
+      "banglish": ["ml", "mili", "milliliter"],
+      "en": ["ml", "milliliter", "cc"],
+      "bn_translit_en": ["এমএল", "মিলি"]
+    },
+    "status": "active",
+    "notes": "Volume unit"
+  },
+  {
+    "canonical_en": "not",
+    "category": "negation",
+    "variants": {
+      "bn": ["নেই", "নাই", "না", "নয়", "ছাড়া", "অনুপস্থিত"],
+      "banglish": ["nai", "nei", "na", "noy", "chhara", "chara"],
+      "en": ["no", "not", "without", "denies", "absent", "none", "negative"],
+      "bn_translit_en": ["নো", "নট"]
+    },
+    "status": "active",
+    "notes": "Core negation markers across 3 scripts"
+  },
+  {
+    "canonical_en": "but",
+    "category": "negation",
+    "variants": {
+      "bn": ["কিন্তু", "তবে", "অথচ"],
+      "banglish": ["kintu", "tobe", "othoco"],
+      "en": ["but", "however", "although", "except"],
+      "bn_translit_en": ["বাট"]
+    },
+    "status": "active",
+    "notes": "Adversative conjunction splitting negation scope"
+  },
+  {
+    "canonical_en": "1",
+    "category": "number",
+    "variants": {
+      "bn": ["১", "এক"],
+      "banglish": ["ek", "1"],
+      "en": ["one", "1"],
+      "bn_translit_en": ["ওয়ান"]
+    },
+    "status": "active",
+    "notes": "Numeral 1"
+  },
+  {
+    "canonical_en": "2",
+    "category": "number",
+    "variants": {
+      "bn": ["২", "দুই"],
+      "banglish": ["dui", "2"],
+      "en": ["two", "2"],
+      "bn_translit_en": ["টু"]
+    },
+    "status": "active",
+    "notes": "Numeral 2"
+  },
+  {
+    "canonical_en": "3",
+    "category": "number",
+    "variants": {
+      "bn": ["৩", "তিন"],
+      "banglish": ["tin", "3"],
+      "en": ["three", "3"],
+      "bn_translit_en": ["থ্রি"]
+    },
+    "status": "active",
+    "notes": "Numeral 3"
+  },
+  {
+    "canonical_en": "4",
+    "category": "number",
+    "variants": {
+      "bn": ["৪", "চার"],
+      "banglish": ["char", "4"],
+      "en": ["four", "4"],
+      "bn_translit_en": ["ফোর"]
+    },
+    "status": "active",
+    "notes": "Numeral 4"
+  },
+  {
+    "canonical_en": "5",
+    "category": "number",
+    "variants": {
+      "bn": ["৫", "পাঁচ"],
+      "banglish": ["panch", "pach", "5"],
+      "en": ["five", "5"],
+      "bn_translit_en": ["ফাইভ"]
+    },
+    "status": "active",
+    "notes": "Numeral 5"
+  },
+  {
+    "canonical_en": "6",
+    "category": "number",
+    "variants": {
+      "bn": ["৬", "ছয়", "ছয়"],
+      "banglish": ["choy", "6"],
+      "en": ["six", "6"],
+      "bn_translit_en": ["সিক্স"]
+    },
+    "status": "active",
+    "notes": "Numeral 6"
+  },
+  {
+    "canonical_en": "7",
+    "category": "number",
+    "variants": {
+      "bn": ["৭", "সাত"],
+      "banglish": ["shat", "sat", "7"],
+      "en": ["seven", "7"],
+      "bn_translit_en": ["সেভেন"]
+    },
+    "status": "active",
+    "notes": "Numeral 7"
+  },
+  {
+    "canonical_en": "8",
+    "category": "number",
+    "variants": {
+      "bn": ["৮", "আট"],
+      "banglish": ["at", "aath", "8"],
+      "en": ["eight", "8"],
+      "bn_translit_en": ["এইট"]
+    },
+    "status": "active",
+    "notes": "Numeral 8"
+  },
+  {
+    "canonical_en": "9",
+    "category": "number",
+    "variants": {
+      "bn": ["৯", "নয়", "নয়"],
+      "banglish": ["noy", "9"],
+      "en": ["nine", "9"],
+      "bn_translit_en": ["নাইন"]
+    },
+    "status": "active",
+    "notes": "Numeral 9"
+  },
+  {
+    "canonical_en": "10",
+    "category": "number",
+    "variants": {
+      "bn": ["১০", "দশ"],
+      "banglish": ["dosh", "dos", "10"],
+      "en": ["ten", "10"],
+      "bn_translit_en": ["টেন"]
+    },
+    "status": "active",
+    "notes": "Numeral 10"
+  },
+  {
+    "canonical_en": "15",
+    "category": "number",
+    "variants": {
+      "bn": ["১৫", "পনেরো"],
+      "banglish": ["ponero", "15"],
+      "en": ["fifteen", "15"],
+      "bn_translit_en": ["ফিফটিন"]
+    },
+    "status": "active",
+    "notes": "Numeral 15"
+  },
+  {
+    "canonical_en": "20",
+    "category": "number",
+    "variants": {
+      "bn": ["২০", "বিশ", "কুড়ি"],
+      "banglish": ["bish", "kuri", "20"],
+      "en": ["twenty", "20"],
+      "bn_translit_en": ["টুয়েন্টি"]
+    },
+    "status": "active",
+    "notes": "Numeral 20"
+  },
+  {
+    "canonical_en": "30",
+    "category": "number",
+    "variants": {
+      "bn": ["৩০", "ত্রিশ"],
+      "banglish": ["trish", "30"],
+      "en": ["thirty", "30"],
+      "bn_translit_en": ["থার্টি"]
+    },
+    "status": "active",
+    "notes": "Numeral 30"
+  },
+  {
+    "canonical_en": "40",
+    "category": "number",
+    "variants": {
+      "bn": ["৪০", "চল্লিশ"],
+      "banglish": ["chollish", "40"],
+      "en": ["forty", "40"],
+      "bn_translit_en": ["ফর্টি"]
+    },
+    "status": "active",
+    "notes": "Numeral 40"
+  },
+  {
+    "canonical_en": "50",
+    "category": "number",
+    "variants": {
+      "bn": ["৫০", "পঞ্চাশ"],
+      "banglish": ["ponchash", "50"],
+      "en": ["fifty", "50"],
+      "bn_translit_en": ["ফিফটি"]
+    },
+    "status": "active",
+    "notes": "Numeral 50"
+  },
+  {
+    "canonical_en": "100",
+    "category": "number",
+    "variants": {
+      "bn": ["১০০", "একশো"],
+      "banglish": ["eksho", "100"],
+      "en": ["hundred", "one hundred", "100"],
+      "bn_translit_en": ["হান্ড্রেড"]
+    },
+    "status": "active",
+    "notes": "Numeral 100"
+  },
+  {
+    "canonical_en": "500",
+    "category": "number",
+    "variants": {
+      "bn": ["৫০০", "পাঁচশো"],
+      "banglish": ["panchsho", "pachsho", "500"],
+      "en": ["five hundred", "500"],
+      "bn_translit_en": ["ফাইভ হান্ড্রেড"]
+    },
+    "status": "active",
+    "notes": "Numeral 500"
+  },
+  {
+    "canonical_en": "1000",
+    "category": "number",
+    "variants": {
+      "bn": ["১০০০", "এক হাজার"],
+      "banglish": ["hajar", "ek hajar", "1000"],
+      "en": ["thousand", "one thousand", "1000"],
+      "bn_translit_en": ["থাউজেন্ড"]
+    },
+    "status": "active",
+    "notes": "Numeral 1000"
+  },
+  {
+    "canonical_en": "ceftriaxone",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["সেফট্রিয়াক্সন", "সেফট্রিয়াক্সোন"],
+      "banglish": ["ceftriaxone", "ceftriaxon"],
+      "en": ["ceftriaxone"],
+      "bn_translit_en": ["সেফট্রিয়াক্সন"]
+    },
+    "status": "active",
+    "notes": "Third generation cephalosporin"
+  },
+  {
+    "canonical_en": "doxycycline",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["ডক্সিসাইক্লিন"],
+      "banglish": ["doxycycline", "doxy"],
+      "en": ["doxycycline"],
+      "bn_translit_en": ["ডক্সিসাইক্লিন"]
+    },
+    "status": "active",
+    "notes": "Tetracycline class antibiotic"
+  },
+  {
+    "canonical_en": "clarithromycin",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["ক্ল্যারিথ্রোমাইসিন"],
+      "banglish": ["clarithromycin", "clarithro"],
+      "en": ["clarithromycin"],
+      "bn_translit_en": ["ক্ল্যারিথ্রোমাইসিন"]
+    },
+    "status": "active",
+    "notes": "Macrolide antibiotic"
+  },
+  {
+    "canonical_en": "levofloxacin",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["লেভোফ্লক্সাসিন"],
+      "banglish": ["levofloxacin", "levo"],
+      "en": ["levofloxacin"],
+      "bn_translit_en": ["লেভোফ্লক্সাসিন"]
+    },
+    "status": "active",
+    "notes": "Respiratory fluoroquinolone"
+  },
+  {
+    "canonical_en": "amoxicillin clavulanate",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["অ্যামোক্সিসিলিন ক্লাভুলানেট", "অগমেন্টিন"],
+      "banglish": ["amoxicillin clavulanate", "co-amoxiclav", "augmentin"],
+      "en": ["amoxicillin clavulanate", "co-amoxiclav", "amoxicillin-clavulanic acid"],
+      "bn_translit_en": ["কো-অ্যামোক্সিক্লাভ", "অগমেন্টিন"]
+    },
+    "status": "active",
+    "notes": "Beta-lactam + beta-lactamase inhibitor"
+  },
+  {
+    "canonical_en": "moxifloxacin",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["মক্সিফ্লক্সাসিন"],
+      "banglish": ["moxifloxacin", "moxi"],
+      "en": ["moxifloxacin"],
+      "bn_translit_en": ["মক্সিফ্লক্সাসিন"]
+    },
+    "status": "active",
+    "notes": "Respiratory fluoroquinolone"
+  },
+  {
+    "canonical_en": "atenolol",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["অ্যাটেনোলল"],
+      "banglish": ["atenolol"],
+      "en": ["atenolol"],
+      "bn_translit_en": ["অ্যাটেনোলল"]
+    },
+    "status": "active",
+    "notes": "Beta blocker"
+  },
+  {
+    "canonical_en": "bisoprolol",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["বিসোপ্রোলল"],
+      "banglish": ["bisoprolol", "biso"],
+      "en": ["bisoprolol"],
+      "bn_translit_en": ["বিসোপ্রোলল"]
+    },
+    "status": "active",
+    "notes": "Cardioselective beta blocker"
+  },
+  {
+    "canonical_en": "atorvastatin",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["অ্যাটরভাস্টাটিন"],
+      "banglish": ["atorvastatin", "atorva"],
+      "en": ["atorvastatin"],
+      "bn_translit_en": ["অ্যাটরভাস্টাটিন"]
+    },
+    "status": "active",
+    "notes": "Statin lipid-lowering agent"
+  },
+  {
+    "canonical_en": "aspirin",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["অ্যাসপিরিন", "ইকোস্প্রিন"],
+      "banglish": ["aspirin", "ecosprin", "disprin"],
+      "en": ["aspirin", "acetylsalicylic acid", "ASA"],
+      "bn_translit_en": ["অ্যাসপিরিন", "ইকোস্প্রিন"]
+    },
+    "status": "active",
+    "notes": "Antiplatelet agent"
+  },
+  {
+    "canonical_en": "clopidogrel",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["ক্লোপিডোগ্রেল"],
+      "banglish": ["clopidogrel", "clopid"],
+      "en": ["clopidogrel"],
+      "bn_translit_en": ["ক্লোপিডোগ্রেল"]
+    },
+    "status": "active",
+    "notes": "P2Y12 antiplatelet"
+  },
+  {
+    "canonical_en": "insulin",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["ইনসুলিন"],
+      "banglish": ["insulin"],
+      "en": ["insulin"],
+      "bn_translit_en": ["ইনসুলিন"]
+    },
+    "status": "active",
+    "notes": "Antidiabetic hormone"
+  },
+  {
+    "canonical_en": "gliclazide",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["গ্লিক্লাজাইড"],
+      "banglish": ["gliclazide"],
+      "en": ["gliclazide"],
+      "bn_translit_en": ["গ্লিক্লাজাইড"]
+    },
+    "status": "active",
+    "notes": "Sulfonylurea antidiabetic"
+  },
+  {
+    "canonical_en": "ranitidine",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["রেনিটিডিন"],
+      "banglish": ["ranitidine", "rani"],
+      "en": ["ranitidine"],
+      "bn_translit_en": ["রেনিটিডিন"]
+    },
+    "status": "active",
+    "notes": "H2 blocker"
+  },
+  {
+    "canonical_en": "domperidone",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["ডমপেরিডন", "মটিগাট"],
+      "banglish": ["domperidone", "motigut", "domperidon"],
+      "en": ["domperidone"],
+      "bn_translit_en": ["ডমপেরিডন"]
+    },
+    "status": "active",
+    "notes": "Prokinetic antiemetic"
+  },
+  {
+    "canonical_en": "ondansetron",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["অনডানসেট্রন", "এমিস্ট্যাট"],
+      "banglish": ["ondansetron", "emistat"],
+      "en": ["ondansetron"],
+      "bn_translit_en": ["অনডানসেট্রন"]
+    },
+    "status": "active",
+    "notes": "5-HT3 receptor antagonist antiemetic"
+  },
+  {
+    "canonical_en": "ors",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["খাবার স্যালাইন", "ওআরএস"],
+      "banglish": ["khabar saline", "ors", "saline"],
+      "en": ["oral rehydration salts", "ORS", "oral rehydration solution"],
+      "bn_translit_en": ["ওআরএস"]
+    },
+    "status": "active",
+    "notes": "Essential oral rehydration therapy"
+  },
+  {
+    "canonical_en": "zinc",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["জিঙ্ক", "জিংক"],
+      "banglish": ["zinc", "jink", "baby zinc"],
+      "en": ["zinc", "zinc sulfate"],
+      "bn_translit_en": ["জিঙ্ক"]
+    },
+    "status": "active",
+    "notes": "Micronutrient in diarrhea management"
+  },
+  {
+    "canonical_en": "corticosteroid",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["স্টেরয়েড", "কর্টিকোস্টেরয়েড"],
+      "banglish": ["steroid", "prednisolone", "dexamethasone"],
+      "en": ["corticosteroid", "steroid", "prednisolone", "hydrocortisone", "dexamethasone"],
+      "bn_translit_en": ["স্টেরয়েড"]
+    },
+    "status": "active",
+    "notes": "Anti-inflammatory agent"
+  },
+  {
+    "canonical_en": "prednisolone",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["প্রেডনিসোলন"],
+      "banglish": ["prednisolone", "predni"],
+      "en": ["prednisolone"],
+      "bn_translit_en": ["প্রেডনিসোলন"]
+    },
+    "status": "active",
+    "notes": "Oral corticosteroid"
+  },
+  {
+    "canonical_en": "dexamethasone",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["ডেক্সামেথাসন"],
+      "banglish": ["dexamethasone", "dexa"],
+      "en": ["dexamethasone"],
+      "bn_translit_en": ["ডেক্সামেথাসন"]
+    },
+    "status": "active",
+    "notes": "Potent systemic corticosteroid"
+  },
+  {
+    "canonical_en": "hemoptysis",
+    "category": "symptom",
+    "variants": {
+      "bn": ["কফের সাথে রক্ত", "রক্তকাশি"],
+      "banglish": ["kofer sathe rokto", "rokto kashi", "kashite rokto"],
+      "en": ["hemoptysis", "coughing up blood", "blood in sputum"],
+      "bn_translit_en": ["হেমোপটিসিস"]
+    },
+    "status": "active",
+    "notes": "Respiratory red flag"
+  },
+  {
+    "canonical_en": "hematemesis",
+    "category": "symptom",
+    "variants": {
+      "bn": ["রক্তবমি"],
+      "banglish": ["rokto bomi", "bomite rokto"],
+      "en": ["hematemesis", "vomiting blood"],
+      "bn_translit_en": ["হেমাটেমেসিস"]
+    },
+    "status": "active",
+    "notes": "Upper GI bleeding red flag"
+  },
+  {
+    "canonical_en": "melena",
+    "category": "sign",
+    "variants": {
+      "bn": ["কালো পায়খানা"],
+      "banglish": ["kalo paykhana", "kalo paikhana"],
+      "en": ["melena", "black tarry stools"],
+      "bn_translit_en": ["মেলেনা"]
+    },
+    "status": "active",
+    "notes": "Lower/Upper GI bleeding sign"
+  },
+  {
+    "canonical_en": "syncope",
+    "category": "symptom",
+    "variants": {
+      "bn": ["অজ্ঞান হওয়া", "বেহুঁশ হওয়া"],
+      "banglish": ["oggan howa", "behush", "matha ghure pore jawa"],
+      "en": ["syncope", "fainting", "loss of consciousness"],
+      "bn_translit_en": ["সিনকোপ"]
+    },
+    "status": "active",
+    "notes": "Cardiovascular / neurological red flag"
+  },
+  {
+    "canonical_en": "convulsion",
+    "category": "symptom",
+    "variants": {
+      "bn": ["খিঁচুনি"],
+      "banglish": ["khichuni", "khicuni"],
+      "en": ["convulsion", "seizure", "fit", "epilepsy"],
+      "bn_translit_en": ["কনভালশন", "সিজার"]
+    },
+    "status": "active",
+    "notes": "Neurological emergency"
+  },
+  {
+    "canonical_en": "edema",
+    "category": "sign",
+    "variants": {
+      "bn": ["পানি জমা", "পা ফুলে যাওয়া"],
+      "banglish": ["pani joma", "pa fule jawa", "pedal edema"],
+      "en": ["edema", "pitting edema", "peripheral edema"],
+      "bn_translit_en": ["ইডিমা"]
+    },
+    "status": "active",
+    "notes": "Fluid retention sign"
+  },
+  {
+    "canonical_en": "hepatomegaly",
+    "category": "sign",
+    "variants": {
+      "bn": ["যকৃত বড় হওয়া", "লিভার বৃদ্ধি"],
+      "banglish": ["liver boro", "jokrit boro", "hepatomegaly"],
+      "en": ["hepatomegaly", "enlarged liver"],
+      "bn_translit_en": ["হেপাটোমেগালি"]
+    },
+    "status": "active",
+    "notes": "Abdominal sign"
+  },
+  {
+    "canonical_en": "splenomegaly",
+    "category": "sign",
+    "variants": {
+      "bn": ["প্লীহা বড় হওয়া", "স্প্লিন বৃদ্ধি"],
+      "banglish": ["splenomegaly", "spleen boro", "pliha boro"],
+      "en": ["splenomegaly", "enlarged spleen"],
+      "bn_translit_en": ["স্প্লেনোমেগালি"]
+    },
+    "status": "active",
+    "notes": "Abdominal sign"
+  },
+  {
+    "canonical_en": "lymphadenopathy",
+    "category": "sign",
+    "variants": {
+      "bn": ["লিম্ফ নোড বৃদ্ধি", "গ্ল্যান্ড ফোলা"],
+      "banglish": ["lymph node", "gland fola", "lymphadenopathy"],
+      "en": ["lymphadenopathy", "swollen glands"],
+      "bn_translit_en": ["লিম্ফ্যাডেনোপ্যাথি"]
+    },
+    "status": "active",
+    "notes": "Lymphatic sign"
+  },
+  {
+    "canonical_en": "ascites",
+    "category": "sign",
+    "variants": {
+      "bn": ["পেটে পানি জমা"],
+      "banglish": ["pete pani", "pete pani joma", "ascites"],
+      "en": ["ascites", "fluid in peritoneal cavity"],
+      "bn_translit_en": ["অ্যাসাইটিস"]
+    },
+    "status": "active",
+    "notes": "Abdominal sign"
+  },
+  {
+    "canonical_en": "clubbing",
+    "category": "sign",
+    "variants": {
+      "bn": ["নখ বাঁকা হওয়া", "ক্লাবিং"],
+      "banglish": ["clubbing", "nokher clubbing"],
+      "en": ["clubbing", "digital clubbing"],
+      "bn_translit_en": ["ক্লাবিং"]
+    },
+    "status": "active",
+    "notes": "Chronic hypoxia / pulmonary sign"
+  },
+  {
+    "canonical_en": "tachycardia",
+    "category": "sign",
+    "variants": {
+      "bn": ["দ্রুত হৃদস্পন্দন"],
+      "banglish": ["fast heart rate", "tachycardia", "druto pulse"],
+      "en": ["tachycardia", "rapid heart rate", "HR > 100"],
+      "bn_translit_en": ["ট্যাকিকার্ডিয়া"]
+    },
+    "status": "active",
+    "notes": "Vital sign"
+  },
+  {
+    "canonical_en": "bradycardia",
+    "category": "sign",
+    "variants": {
+      "bn": ["ধীর হৃদস্পন্দন"],
+      "banglish": ["slow heart rate", "bradycardia", "dhir pulse"],
+      "en": ["bradycardia", "slow heart rate", "HR < 60"],
+      "bn_translit_en": ["ব্র্যাডিকার্ডিয়া"]
+    },
+    "status": "active",
+    "notes": "Vital sign"
+  },
+  {
+    "canonical_en": "tachypnea",
+    "category": "sign",
+    "variants": {
+      "bn": ["দ্রুত শ্বাস নেওয়া"],
+      "banglish": ["fast breathing", "tachypnea", "druto shash"],
+      "en": ["tachypnea", "rapid respiration", "RR > 20"],
+      "bn_translit_en": ["ট্যাকিপনিয়া"]
+    },
+    "status": "active",
+    "notes": "Vital sign"
+  },
+  {
+    "canonical_en": "hypotension",
+    "category": "sign",
+    "variants": {
+      "bn": ["নিম্ন রক্তচাপ", "লো প্রেশার"],
+      "banglish": ["low pressure", "low bp", "hypotension"],
+      "en": ["hypotension", "low blood pressure", "systolic < 90"],
+      "bn_translit_en": ["হাইপোটেনশন"]
+    },
+    "status": "active",
+    "notes": "Vital sign"
+  },
+  {
+    "canonical_en": "Renova",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["রেনোভা"],
+      "banglish": ["renova"],
+      "en": ["Renova"],
+      "bn_translit_en": ["রেনোভা"]
+    },
+    "status": "active",
+    "notes": "Opsonin Paracetamol brand"
+  },
+  {
+    "canonical_en": "Fast",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["ফাস্ট"],
+      "banglish": ["fast"],
+      "en": ["Fast"],
+      "bn_translit_en": ["ফাস্ট"]
+    },
+    "status": "active",
+    "notes": "Acme Paracetamol brand"
+  },
+  {
+    "canonical_en": "Losectil",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["লোসেকটিল"],
+      "banglish": ["losectil", "losectyl"],
+      "en": ["Losectil"],
+      "bn_translit_en": ["লোসেকটিল"]
+    },
+    "status": "active",
+    "notes": "Eskayef Omeprazole brand"
+  },
+  {
+    "canonical_en": "Tridosil",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["ট্রিডোসিল"],
+      "banglish": ["tridosil"],
+      "en": ["Tridosil"],
+      "bn_translit_en": ["ট্রিডোসিল"]
+    },
+    "status": "active",
+    "notes": "Incepta Azithromycin brand"
+  },
+  {
+    "canonical_en": "Camlosart",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["ক্যামলোসার্ট"],
+      "banglish": ["camlosart"],
+      "en": ["Camlosart"],
+      "bn_translit_en": ["ক্যামলোসার্ট"]
+    },
+    "status": "active",
+    "notes": "Square Amlodipine + Losartan brand"
+  },
+  {
+    "canonical_en": "eye",
+    "category": "body_part",
+    "variants": {
+      "bn": ["চোখ"],
+      "banglish": ["chokh"],
+      "en": ["eye", "eyes"],
+      "bn_translit_en": ["আই"]
+    },
+    "status": "active",
+    "notes": "Anatomical part"
+  },
+  {
+    "canonical_en": "ear",
+    "category": "body_part",
+    "variants": {
+      "bn": ["কান"],
+      "banglish": ["kan"],
+      "en": ["ear", "ears"],
+      "bn_translit_en": ["ইয়ার"]
+    },
+    "status": "active",
+    "notes": "Anatomical part"
+  },
+  {
+    "canonical_en": "nose",
+    "category": "body_part",
+    "variants": {
+      "bn": ["নাক"],
+      "banglish": ["nak"],
+      "en": ["nose"],
+      "bn_translit_en": ["নোজ"]
+    },
+    "status": "active",
+    "notes": "Anatomical part"
+  },
+  {
+    "canonical_en": "mouth",
+    "category": "body_part",
+    "variants": {
+      "bn": ["মুখ"],
+      "banglish": ["mukh"],
+      "en": ["mouth", "oral cavity"],
+      "bn_translit_en": ["মাউথ"]
+    },
+    "status": "active",
+    "notes": "Anatomical part"
+  },
+  {
+    "canonical_en": "neck",
+    "category": "body_part",
+    "variants": {
+      "bn": ["ঘাড়", "গলা"],
+      "banglish": ["ghar", "gola"],
+      "en": ["neck", "cervical"],
+      "bn_translit_en": ["নেক"]
+    },
+    "status": "active",
+    "notes": "Anatomical part"
+  },
+  {
+    "canonical_en": "knee",
+    "category": "body_part",
+    "variants": {
+      "bn": ["হাঁটু"],
+      "banglish": ["hatu", "haatu"],
+      "en": ["knee", "knees"],
+      "bn_translit_en": ["নি"]
+    },
+    "status": "active",
+    "notes": "Anatomical joint"
+  },
+  {
+    "canonical_en": "shoulder",
+    "category": "body_part",
+    "variants": {
+      "bn": ["কাঁধ"],
+      "banglish": ["kadh", "kaadh"],
+      "en": ["shoulder"],
+      "bn_translit_en": ["শোল্ডার"]
+    },
+    "status": "active",
+    "notes": "Anatomical joint"
+  },
+  {
+    "canonical_en": "finger",
+    "category": "body_part",
+    "variants": {
+      "bn": ["আঙুল", "আঙ্গুল"],
+      "banglish": ["angul", "aangul"],
+      "en": ["finger", "fingers", "digit"],
+      "bn_translit_en": ["ফিঙ্গার"]
+    },
+    "status": "active",
+    "notes": "Anatomical extremity"
+  },
+  {
+    "canonical_en": "tooth",
+    "category": "body_part",
+    "variants": {
+      "bn": ["দাঁত"],
+      "banglish": ["dat", "daat"],
+      "en": ["tooth", "teeth", "dental"],
+      "bn_translit_en": ["টুথ"]
+    },
+    "status": "active",
+    "notes": "Dental structure"
+  },
+  {
+    "canonical_en": "stomach",
+    "category": "body_part",
+    "variants": {
+      "bn": ["পাকস্থলী"],
+      "banglish": ["pakostholi", "stomach"],
+      "en": ["stomach", "gastric"],
+      "bn_translit_en": ["স্টমাক"]
+    },
+    "status": "active",
+    "notes": "Internal organ"
+  },
+  {
+    "canonical_en": "kidney",
+    "category": "body_part",
+    "variants": {
+      "bn": ["বৃক্ক", "কিডনি"],
+      "banglish": ["kidney", "brikko"],
+      "en": ["kidney", "renal"],
+      "bn_translit_en": ["কিডনি"]
+    },
+    "status": "active",
+    "notes": "Internal organ"
+  },
+  {
+    "canonical_en": "liver",
+    "category": "body_part",
+    "variants": {
+      "bn": ["যকৃত", "কলিজা"],
+      "banglish": ["liver", "jokrit", "kolija"],
+      "en": ["liver", "hepatic"],
+      "bn_translit_en": ["লিভার"]
+    },
+    "status": "active",
+    "notes": "Internal organ"
+  },
+  {
+    "canonical_en": "brain",
+    "category": "body_part",
+    "variants": {
+      "bn": ["মস্তিষ্ক", "মগজ"],
+      "banglish": ["brain", "mostishko", "mogoj"],
+      "en": ["brain", "cerebral"],
+      "bn_translit_en": ["ব্রেইন"]
+    },
+    "status": "active",
+    "notes": "Internal organ"
+  },
+  {
+    "canonical_en": "blood",
+    "category": "body_part",
+    "variants": {
+      "bn": ["রক্ত", "খুন"],
+      "banglish": ["rokto", "roktokhoron"],
+      "en": ["blood", "hematologic"],
+      "bn_translit_en": ["ব্লাড"]
+    },
+    "status": "active",
+    "notes": "Body fluid"
+  },
+  {
+    "canonical_en": "urine",
+    "category": "body_part",
+    "variants": {
+      "bn": ["প্রস্রাব", "পেচ্ছাপ"],
+      "banglish": ["prosrab", "pecchap", "mutro"],
+      "en": ["urine", "urinary"],
+      "bn_translit_en": ["ইউরিন"]
+    },
+    "status": "active",
+    "notes": "Body fluid"
+  },
+  {
+    "canonical_en": "stool",
+    "category": "body_part",
+    "variants": {
+      "bn": ["পায়খানা", "মল"],
+      "banglish": ["paykhana", "paikhana", "mol"],
+      "en": ["stool", "feces"],
+      "bn_translit_en": ["স্টুল"]
+    },
+    "status": "active",
+    "notes": "Excretion"
+  },
+  {
+    "canonical_en": "sputum",
+    "category": "body_part",
+    "variants": {
+      "bn": ["কফ", "শ্লেষ্মা"],
+      "banglish": ["kof", "shleshma"],
+      "en": ["sputum", "phlegm"],
+      "bn_translit_en": ["স্পুটাম"]
+    },
+    "status": "active",
+    "notes": "Respiratory secretion"
+  },
+  {
+    "canonical_en": "allergy",
+    "category": "disease",
+    "variants": {
+      "bn": ["অ্যালার্জি", "এলার্জি"],
+      "banglish": ["allergy", "elarji", "alergy"],
+      "en": ["allergy", "hypersensitivity", "allergic reaction"],
+      "bn_translit_en": ["অ্যালার্জি", "এলার্জি"]
+    },
+    "status": "active",
+    "notes": "Immunological condition"
+  },
+  {
+    "canonical_en": "penicillin",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["পেনিসিলিন"],
+      "banglish": ["penicillin", "penisilin"],
+      "en": ["penicillin"],
+      "bn_translit_en": ["পেনিসিলিন"]
+    },
+    "status": "active",
+    "notes": "Beta-lactam antibiotic & common allergen"
+  },
+  {
+    "canonical_en": "acute bronchitis",
+    "category": "disease",
+    "variants": {
+      "bn": ["তীব্র ব্রঙ্কাইটিস"],
+      "banglish": ["acute bronchitis"],
+      "en": ["acute bronchitis"],
+      "bn_translit_en": ["অ্যাকিউট ব্রঙ্কাইটিস"]
+    },
+    "status": "active",
+    "notes": "Acute respiratory infection"
+  },
+  {
+    "canonical_en": "gastroenteritis",
+    "category": "disease",
+    "variants": {
+      "bn": ["গ্যাস্ট্রোএন্টারাইটিস", "পেটের অসুখ"],
+      "banglish": ["gastroenteritis", "gastro"],
+      "en": ["gastroenteritis", "stomach flu"],
+      "bn_translit_en": ["গ্যাস্ট্রোএন্টারাইটিস"]
+    },
+    "status": "active",
+    "notes": "GI infection"
+  },
+  {
+    "canonical_en": "peptic ulcer",
+    "category": "disease",
+    "variants": {
+      "bn": ["পেপটিক আলসার", "গ্যাস্ট্রিক আলসার"],
+      "banglish": ["peptic ulcer", "gastric", "ulcer"],
+      "en": ["peptic ulcer", "PUD", "gastric ulcer", "duodenal ulcer"],
+      "bn_translit_en": ["পেপটিক আলসার"]
+    },
+    "status": "active",
+    "notes": "Acid-peptic disorder"
+  },
+  {
+    "canonical_en": "gerd",
+    "category": "disease",
+    "variants": {
+      "bn": ["জিইআরডি", "অ্যাসিড রিফ্লাক্স"],
+      "banglish": ["gerd", "acid reflux"],
+      "en": ["gastroesophageal reflux disease", "GERD", "acid reflux"],
+      "bn_translit_en": ["জিইআরডি", "অ্যাসিড রিফ্লাক্স"]
+    },
+    "status": "active",
+    "notes": "GI reflux disorder"
+  },
+  {
+    "canonical_en": "viral fever",
+    "category": "disease",
+    "variants": {
+      "bn": ["ভাইরাল জ্বর"],
+      "banglish": ["viral fever", "viral jor"],
+      "en": ["viral fever", "viral syndrome"],
+      "bn_translit_en": ["ভাইরাল ফিভার"]
+    },
+    "status": "active",
+    "notes": "Acute viral infection"
+  },
+  {
+    "canonical_en": "candidiasis",
+    "category": "disease",
+    "variants": {
+      "bn": ["ছত্রাক সংক্রমণ", "ক্যান্ডিডিয়াসিস"],
+      "banglish": ["fungal infection", "candidiasis"],
+      "en": ["candidiasis", "fungal infection", "thrush"],
+      "bn_translit_en": ["ক্যান্ডিডিয়াসিস"]
+    },
+    "status": "active",
+    "notes": "Fungal infection"
+  },
+  {
+    "canonical_en": "scabies",
+    "category": "disease",
+    "variants": {
+      "bn": ["খোশপাঁচড়া", "স্কেবিজ"],
+      "banglish": ["khoshpachra", "scabies"],
+      "en": ["scabies", "sarcoptes scabiei"],
+      "bn_translit_en": ["স্কেবিজ"]
+    },
+    "status": "active",
+    "notes": "Parasitic skin infestation"
+  },
+  {
+    "canonical_en": "morning",
+    "category": "duration",
+    "variants": {
+      "bn": ["সকাল", "সকালে"],
+      "banglish": ["shokal", "shokale", "sokal", "sokale"],
+      "en": ["morning", "mornings", "AM"],
+      "bn_translit_en": ["মর্নিং"]
+    },
+    "status": "active",
+    "notes": "Dosing slot"
+  },
+  {
+    "canonical_en": "noon",
+    "category": "duration",
+    "variants": {
+      "bn": ["দুপুর", "দুপুরে"],
+      "banglish": ["dupur", "dupure"],
+      "en": ["noon", "midday", "afternoon"],
+      "bn_translit_en": ["নুন"]
+    },
+    "status": "active",
+    "notes": "Dosing slot"
+  },
+  {
+    "canonical_en": "night",
+    "category": "duration",
+    "variants": {
+      "bn": ["রাত", "রাতে"],
+      "banglish": ["raat", "rate", "raate"],
+      "en": ["night", "bedtime", "PM"],
+      "bn_translit_en": ["নাইট"]
+    },
+    "status": "active",
+    "notes": "Dosing slot"
+  },
+  {
+    "canonical_en": "before food",
+    "category": "unit",
+    "variants": {
+      "bn": ["খাওয়ার আগে", "খালি পেটে"],
+      "banglish": ["khawar age", "khali pete", "khabar age"],
+      "en": ["before food", "before meal", "empty stomach", "AC"],
+      "bn_translit_en": ["বিফোর মিল"]
+    },
+    "status": "active",
+    "notes": "Meal timing"
+  },
+  {
+    "canonical_en": "after food",
+    "category": "unit",
+    "variants": {
+      "bn": ["খাওয়ার পরে", "খাওয়ার পর", "ভরা পেটে"],
+      "banglish": ["khawar por", "khawar pore", "vhora pete", "bhora pete"],
+      "en": ["after food", "after meal", "with meal", "PC"],
+      "bn_translit_en": ["আফটার মিল"]
+    },
+    "status": "active",
+    "notes": "Meal timing"
+  },
+  {
+    "canonical_en": "daily",
+    "category": "duration",
+    "variants": {
+      "bn": ["প্রতিদিন", "রোজ", "দৈনিক"],
+      "banglish": ["protidin", "roj", "doinik"],
+      "en": ["daily", "once daily", "OD"],
+      "bn_translit_en": ["ডেইলি"]
+    },
+    "status": "active",
+    "notes": "Frequency"
+  },
+  {
+    "canonical_en": "twice daily",
+    "category": "duration",
+    "variants": {
+      "bn": ["দিনে দুইবার"],
+      "banglish": ["dine duibar", "dine 2 bar"],
+      "en": ["twice daily", "twice a day", "BD", "BID"],
+      "bn_translit_en": ["টয়াইস ডেইলি"]
+    },
+    "status": "active",
+    "notes": "Frequency"
+  },
+  {
+    "canonical_en": "thrice daily",
+    "category": "duration",
+    "variants": {
+      "bn": ["দিনে তিনবার"],
+      "banglish": ["dine tinbar", "dine 3 bar"],
+      "en": ["thrice daily", "three times daily", "TDS", "TID"],
+      "bn_translit_en": ["থ্রাইস ডেইলি"]
+    },
+    "status": "active",
+    "notes": "Frequency"
+  },
+  {
+    "canonical_en": "four times daily",
+    "category": "duration",
+    "variants": {
+      "bn": ["দিনে চারবার"],
+      "banglish": ["dine charbar", "dine 4 bar"],
+      "en": ["four times daily", "QDS", "QID"],
+      "bn_translit_en": ["ফোর টাইমস"]
+    },
+    "status": "active",
+    "notes": "Frequency"
+  },
+  {
+    "canonical_en": "as needed",
+    "category": "duration",
+    "variants": {
+      "bn": ["প্রয়োজনে", "দরকার হলে"],
+      "banglish": ["proyojone", "dorkar hole"],
+      "en": ["as needed", "PRN", "SOS"],
+      "bn_translit_en": ["পিআরএন", "এসওএস"]
+    },
+    "status": "active",
+    "notes": "Conditional dosing"
+  },
+  {
+    "canonical_en": "drop",
+    "category": "unit",
+    "variants": {
+      "bn": ["ড্রপ", "ফোঁটা"],
+      "banglish": ["drop", "fota", "phota"],
+      "en": ["drop", "drops", "gtt"],
+      "bn_translit_en": ["ড্রপ"]
+    },
+    "status": "active",
+    "notes": "Liquid form"
+  },
+  {
+    "canonical_en": "inhaler",
+    "category": "unit",
+    "variants": {
+      "bn": ["ইনহেলার", "পাফ"],
+      "banglish": ["inhaler", "puff", "paph"],
+      "en": ["inhaler", "puff", "puffs", "metered dose"],
+      "bn_translit_en": ["ইনহেলার", "পাফ"]
+    },
+    "status": "active",
+    "notes": "Respiratory form"
+  },
+  {
+    "canonical_en": "injection",
+    "category": "unit",
+    "variants": {
+      "bn": ["ইনজেকশন", "সুঁই"],
+      "banglish": ["injection", "inj", "sui"],
+      "en": ["injection", "inj", "IV", "IM", "SC"],
+      "bn_translit_en": ["ইনজেকশন", "ইনজ"]
+    },
+    "status": "active",
+    "notes": "Parenteral form"
+  },
+  {
+    "canonical_en": "ointment",
+    "category": "unit",
+    "variants": {
+      "bn": ["মলম", "ওয়েন্টমেন্ট"],
+      "banglish": ["molom", "ointment", "cream"],
+      "en": ["ointment", "cream", "gel", "topical"],
+      "bn_translit_en": ["মলম", "ক্রিম"]
+    },
+    "status": "active",
+    "notes": "Topical form"
+  },
+  {
+    "canonical_en": "saline",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["স্যালাইন", "আইভি স্যালাইন"],
+      "banglish": ["saline", "iv saline", "normal saline"],
+      "en": ["normal saline", "0.9% NaCl", "IV fluids", "saline"],
+      "bn_translit_en": ["স্যালাইন"]
+    },
+    "status": "active",
+    "notes": "IV fluid"
+  },
+  {
+    "canonical_en": "oxygen",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["অক্সিজেন"],
+      "banglish": ["oxygen", "o2"],
+      "en": ["oxygen", "supplemental oxygen", "O2 therapy"],
+      "bn_translit_en": ["অক্সিজেন"]
+    },
+    "status": "active",
+    "notes": "Respiratory support"
+  },
+  {
+    "canonical_en": "nebulizer",
+    "category": "unit",
+    "variants": {
+      "bn": ["নেবুলাইজার", "গ্যাস নেওয়া"],
+      "banglish": ["nebulizer", "gas dewa", "nebulization"],
+      "en": ["nebulizer", "nebulization", "neb"],
+      "bn_translit_en": ["নেবুলাইজার"]
+    },
+    "status": "active",
+    "notes": "Aerosol delivery device"
+  },
+  {
+    "canonical_en": "pulse oximeter",
+    "category": "sign",
+    "variants": {
+      "bn": ["পালস অক্সিমিটার", "অক্সিজেন মাপার যন্ত্র"],
+      "banglish": ["pulse oximeter", "spo2 machine"],
+      "en": ["pulse oximeter", "SpO2 monitor"],
+      "bn_translit_en": ["পালস অক্সিমিটার"]
+    },
+    "status": "active",
+    "notes": "Diagnostic monitor"
+  },
+  {
+    "canonical_en": "sphygmomanometer",
+    "category": "sign",
+    "variants": {
+      "bn": ["প্রেসার মাপার যন্ত্র"],
+      "banglish": ["pressure machine", "bp machine"],
+      "en": ["sphygmomanometer", "BP cuff"],
+      "bn_translit_en": ["স্ফিগমোম্যানোমিটার"]
+    },
+    "status": "active",
+    "notes": "Diagnostic monitor"
+  },
+  {
+    "canonical_en": "stethoscope",
+    "category": "sign",
+    "variants": {
+      "bn": ["স্টেথোস্কোপ"],
+      "banglish": ["stethoscope", "stetho"],
+      "en": ["stethoscope"],
+      "bn_translit_en": ["স্টেথোস্কোপ"]
+    },
+    "status": "active",
+    "notes": "Examination instrument"
+  },
+  {
+    "canonical_en": "thermometer",
+    "category": "sign",
+    "variants": {
+      "bn": ["থার্মোমিটার", "জ্বর মাপার যন্ত্র"],
+      "banglish": ["thermometer", "jor mapar jontro"],
+      "en": ["thermometer"],
+      "bn_translit_en": ["থার্মোমিটার"]
+    },
+    "status": "active",
+    "notes": "Examination instrument"
+  },
+  {
+    "canonical_en": "ecg",
+    "category": "sign",
+    "variants": {
+      "bn": ["ইসিজি", "ইলেকট্রোকার্ডিওগ্রাম"],
+      "banglish": ["ecg", "ekg"],
+      "en": ["electrocardiogram", "ECG", "EKG"],
+      "bn_translit_en": ["ইসিজি"]
+    },
+    "status": "active",
+    "notes": "Diagnostic investigation"
+  },
+  {
+    "canonical_en": "x-ray",
+    "category": "sign",
+    "variants": {
+      "bn": ["এক্স-রে", "বুকের এক্সরে"],
+      "banglish": ["x-ray", "xray", "buke xray"],
+      "en": ["x-ray", "chest x-ray", "CXR", "radiograph"],
+      "bn_translit_en": ["এক্সরে", "সিএক্সআর"]
+    },
+    "status": "active",
+    "notes": "Diagnostic imaging"
+  },
+  {
+    "canonical_en": "cbc",
+    "category": "sign",
+    "variants": {
+      "bn": ["সিবিসি", "রক্তের সম্পূর্ণ পরীক্ষা"],
+      "banglish": ["cbc", "complete blood count"],
+      "en": ["CBC", "complete blood count", "FBC", "full blood count"],
+      "bn_translit_en": ["সিবিসি"]
+    },
+    "status": "active",
+    "notes": "Laboratory investigation"
+  },
+  {
+    "canonical_en": "creatinine",
+    "category": "sign",
+    "variants": {
+      "bn": ["সিরাম ক্রিয়েটিনিন"],
+      "banglish": ["creatinine", "serum creatinine"],
+      "en": ["serum creatinine", "creatinine", "renal function"],
+      "bn_translit_en": ["ক্রিয়েটিনিন"]
+    },
+    "status": "active",
+    "notes": "Renal marker"
+  },
+  {
+    "canonical_en": "alt",
+    "category": "sign",
+    "variants": {
+      "bn": ["এসজিপিটি", "এএলটি"],
+      "banglish": ["sgpt", "alt", "liver function"],
+      "en": ["ALT", "SGPT", "alanine aminotransferase"],
+      "bn_translit_en": ["এসজিপিটি", "এএলটি"]
+    },
+    "status": "active",
+    "notes": "Hepatic enzyme"
+  },
+  {
+    "canonical_en": "blood glucose",
+    "category": "sign",
+    "variants": {
+      "bn": ["রক্তের সুগার", "ব্লাড গ্লুকোজ"],
+      "banglish": ["blood sugar", "rbs", "fbs", "rokter sugar"],
+      "en": ["blood glucose", "RBS", "FBS", "blood sugar"],
+      "bn_translit_en": ["ব্লাড সুগার", "আরবিএস"]
+    },
+    "status": "active",
+    "notes": "Metabolic marker"
+  },
+  {
+    "canonical_en": "hba1c",
+    "category": "sign",
+    "variants": {
+      "bn": ["এইচবিএওয়ানসি", "তিন মাসের সুগার"],
+      "banglish": ["hba1c", "tin masher sugar"],
+      "en": ["HbA1c", "glycated hemoglobin"],
+      "bn_translit_en": ["এইচবিএওয়ানসি"]
+    },
+    "status": "active",
+    "notes": "Long-term glycaemic control"
+  },
+  {
+    "canonical_en": "crp",
+    "category": "sign",
+    "variants": {
+      "bn": ["সিআরপি"],
+      "banglish": ["crp", "c reactive protein"],
+      "en": ["CRP", "C-reactive protein"],
+      "bn_translit_en": ["সিআরপি"]
+    },
+    "status": "active",
+    "notes": "Inflammatory marker"
+  },
+  {
+    "canonical_en": "platelet",
+    "category": "sign",
+    "variants": {
+      "bn": ["প্লাটিলেট", "অণুচক্রিকা"],
+      "banglish": ["platelet", "platlet", "onuchokrika"],
+      "en": ["platelet count", "thrombocytes", "platelets"],
+      "bn_translit_en": ["প্লাটিলেট"]
+    },
+    "status": "active",
+    "notes": "Hematological count"
+  },
+  {
+    "canonical_en": "wbc",
+    "category": "sign",
+    "variants": {
+      "bn": ["শ্বেতকণিকা", "ডব্লিউবিসি"],
+      "banglish": ["wbc", "tcdc", "shwet konika"],
+      "en": ["WBC", "white blood cell count", "leukocytes"],
+      "bn_translit_en": ["ডব্লিউবিসি"]
+    },
+    "status": "active",
+    "notes": "Immune cell count"
+  },
+  {
+    "canonical_en": "hemoglobin",
+    "category": "sign",
+    "variants": {
+      "bn": ["হিমোগ্লোবিন"],
+      "banglish": ["hemoglobin", "hb"],
+      "en": ["hemoglobin", "Hb", "Hgb"],
+      "bn_translit_en": ["হিমোগ্লোবিন", "এইচবি"]
+    },
+    "status": "active",
+    "notes": "Oxygen-carrying capacity"
+  },
+  {
+    "canonical_en": "dehydration",
+    "category": "symptom",
+    "variants": {
+      "bn": ["পানিশূন্যতা", "শরীর শুকিয়ে যাওয়া"],
+      "banglish": ["pani shunnota", "dehydration"],
+      "en": ["dehydration", "volume depletion", "fluid deficit"],
+      "bn_translit_en": ["ডিহাইড্রেশন"]
+    },
+    "status": "active",
+    "notes": "Fluid deficit status"
+  },
+  {
+    "canonical_en": "sepsis",
+    "category": "disease",
+    "variants": {
+      "bn": ["সেপসিস", "রক্তের মারাত্মক সংক্রমণ"],
+      "banglish": ["sepsis", "septicemia"],
+      "en": ["sepsis", "septic shock", "systemic infection"],
+      "bn_translit_en": ["সেপসিস"]
+    },
+    "status": "active",
+    "notes": "Life-threatening systemic emergency"
+  },
+  {
+    "canonical_en": "meningitis",
+    "category": "disease",
+    "variants": {
+      "bn": ["মেনিনজাইটিস", "মস্তিষ্কের ঝিল্লির প্রদাহ"],
+      "banglish": ["meningitis", "meningitis jor"],
+      "en": ["meningitis", "meningeal irritation"],
+      "bn_translit_en": ["মেনিনজাইটিস"]
+    },
+    "status": "active",
+    "notes": "CNS infection"
+  },
+  {
+    "canonical_en": "appendicitis",
+    "category": "disease",
+    "variants": {
+      "bn": ["অ্যাপেন্ডিসাইটিস"],
+      "banglish": ["appendicitis", "appendix betha"],
+      "en": ["appendicitis", "acute appendicitis"],
+      "bn_translit_en": ["অ্যাপেন্ডিসাইটিস"]
+    },
+    "status": "active",
+    "notes": "Surgical abdomen"
+  },
+  {
+    "canonical_en": "cholecystitis",
+    "category": "disease",
+    "variants": {
+      "bn": ["কোলেসিস্টাইটিস", "পিত্তথলির প্রদাহ"],
+      "banglish": ["cholecystitis", "pittotholi"],
+      "en": ["cholecystitis", "gallbladder inflammation"],
+      "bn_translit_en": ["কোলেসিস্টাইটিস"]
+    },
+    "status": "active",
+    "notes": "Biliary disease"
+  },
+  {
+    "canonical_en": "pancreatitis",
+    "category": "disease",
+    "variants": {
+      "bn": ["অগ্ন্যাশয়ের প্রদাহ", "প্যানক্রিয়াটাইটিস"],
+      "banglish": ["pancreatitis", "ognashoy"],
+      "en": ["pancreatitis", "acute pancreatitis"],
+      "bn_translit_en": ["প্যানক্রিয়াটাইটিস"]
+    },
+    "status": "active",
+    "notes": "GI inflammatory disease"
+  },
+  {
+    "canonical_en": "anaphylaxis",
+    "category": "disease",
+    "variants": {
+      "bn": ["অ্যানাফাইল্যাক্সিস", "তীব্র অ্যালার্জি প্রতিক্রিয়া"],
+      "banglish": ["anaphylaxis", "severe allergy"],
+      "en": ["anaphylaxis", "anaphylactic shock", "severe allergic reaction"],
+      "bn_translit_en": ["অ্যানাফাইল্যাক্সিস"]
+    },
+    "status": "active",
+    "notes": "Allergic emergency"
+  },
+  {
+    "canonical_en": "epinephrine",
+    "category": "medicine_generic",
+    "variants": {
+      "bn": ["এপিনেফ্রিন", "অ্যাড্রেনালিন"],
+      "banglish": ["epinephrine", "adrenaline", "adrenalin"],
+      "en": ["epinephrine", "adrenaline"],
+      "bn_translit_en": ["এপিনেফ্রিন", "অ্যাড্রেনালিন"]
+    },
+    "status": "active",
+    "notes": "First-line anaphylaxis medication"
+  },
+  {
+    "canonical_en": "paralysis",
+    "category": "symptom",
+    "variants": {
+      "bn": ["প্যারালাইসিস", "পক্ষঘাত", "অবশ হওয়া"],
+      "banglish": ["paralysis", "obosh", "pokkhaghat"],
+      "en": ["paralysis", "hemiplegia", "paucity of movement"],
+      "bn_translit_en": ["প্যারালাইসিস"]
+    },
+    "status": "active",
+    "notes": "Neurological sign"
+  },
+  {
+    "canonical_en": "numbness",
+    "category": "symptom",
+    "variants": {
+      "bn": ["ঝিনঝিন করা", "অবশ ভাব"],
+      "banglish": ["jhin jhin", "obosh bhab", "shon shon"],
+      "en": ["numbness", "paresthesia", "pins and needles"],
+      "bn_translit_en": ["নাম্বনেস", "প্যারেস্থেসিয়া"]
+    },
+    "status": "active",
+    "notes": "Neurological symptom"
+  },
+  {
+    "canonical_en": "tremor",
+    "category": "sign",
+    "variants": {
+      "bn": ["হাত কাঁপা", "কম্পন"],
+      "banglish": ["hat kapa", "tremor", "kompon"],
+      "en": ["tremor", "resting tremor", "intention tremor"],
+      "bn_translit_en": ["ট্রেমর"]
+    },
+    "status": "active",
+    "notes": "Neurological sign"
+  },
+  {
+    "canonical_en": "constipation",
+    "category": "symptom",
+    "variants": {
+      "bn": ["কোষ্ঠকাঠিন্য"],
+      "banglish": ["koshthokathinno", "kosha"],
+      "en": ["constipation"],
+      "bn_translit_en": ["কনস্টিপেশন"]
+    },
+    "status": "active",
+    "notes": "GI disorder"
+  },
+  {
+    "canonical_en": "pregnant women",
+    "category": "body_part",
+    "variants": {
+      "bn": ["গর্ভবতী নারী", "গর্ভকালীন সময়", "গর্ভবতী"],
+      "banglish": ["pregnant", "pregnancy", "gorbhoboti", "pett-e baccha"],
+      "en": ["pregnant women", "pregnancy", "gestation", "expectant mother"],
+      "bn_translit_en": ["প্রেগন্যান্ট", "প্রেগন্যান্সি"]
+    },
+    "status": "active",
+    "notes": "Clinical demographic requiring strict contraindication checks"
+  },
+  {
+    "canonical_en": "lactating mother",
+    "category": "body_part",
+    "variants": {
+      "bn": ["স্তন্যদানকারী মা", "দুধ খাওয়ানো মা"],
+      "banglish": ["lactating", "dudh khawano ma", "breastfeeding"],
+      "en": ["lactating mother", "breastfeeding", "lactation"],
+      "bn_translit_en": ["ল্যাকটেটিং"]
+    },
+    "status": "active",
+    "notes": "Clinical demographic requiring safety checks"
+  },
+  {
+    "canonical_en": "child",
+    "category": "body_part",
+    "variants": {
+      "bn": ["শিশু", "বাচ্চা"],
+      "banglish": ["shishu", "baccha", "child", "pediatric"],
+      "en": ["child", "pediatric", "infant", "toddler"],
+      "bn_translit_en": ["চাইল্ড", "পেডিয়াট্রিক"]
+    },
+    "status": "active",
+    "notes": "Pediatric demographic"
+  },
+  {
+    "canonical_en": "elderly",
+    "category": "body_part",
+    "variants": {
+      "bn": ["বৃদ্ধ", "বয়স্ক"],
+      "banglish": ["briddho", "boyoshko", "elderly"],
+      "en": ["elderly", "geriatric", "senior"],
+      "bn_translit_en": ["জেরিয়াট্রিক", "এল্ডারলি"]
+    },
+    "status": "active",
+    "notes": "Geriatric demographic"
+  },
+  {
+    "canonical_en": "esomeprazole",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["সারজেল", "সারজেল ২০", "সারজেল ৪০"],
+      "banglish": ["sergel", "sergel 20", "sergel 40"],
+      "en": ["Sergel", "Sergel 20", "Sergel 40"],
+      "bn_translit_en": ["সারজেল"]
+    },
+    "status": "active",
+    "notes": "Square Esomeprazole brand"
+  },
+  {
+    "canonical_en": "vitamin c",
+    "category": "medicine_brand",
+    "variants": {
+      "bn": ["সিভিট"],
+      "banglish": ["ceevit", "cevit", "c-vit"],
+      "en": ["Ceevit", "Cevit", "C-Vit"],
+      "bn_translit_en": ["সিভিট"]
+    },
+    "status": "active",
+    "notes": "Square Vitamin C chewable brand"
+  }
+]
