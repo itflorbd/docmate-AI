@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: docmate-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-docmate}
+      POSTGRES_USER: ${POSTGRES_USER:-docmate_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ChangeMeSecurePass2026!}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-docmate_admin} -d ${POSTGRES_DB:-docmate}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docmate-saas
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgresql://${POSTGRES_USER:-docmate_admin}:${POSTGRES_PASSWORD:-ChangeMeSecurePass2026!}@db:5432/${POSTGRES_DB:-docmate}
+      AUTH_SECRET: ${AUTH_SECRET}
+      CLINICAL_ENCRYPTION_KEY: ${CLINICAL_ENCRYPTION_KEY}
+      NEXT_TELEMETRY_DISABLED: 1
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/bn/login"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          memory: 2048M
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["npm", "run", "worker"]
+    container_name: docmate-worker
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgresql://${POSTGRES_USER:-docmate_admin}:${POSTGRES_PASSWORD:-ChangeMeSecurePass2026!}@db:5432/${POSTGRES_DB:-docmate}
+      AUTH_SECRET: ${AUTH_SECRET}
+      CLINICAL_ENCRYPTION_KEY: ${CLINICAL_ENCRYPTION_KEY}
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+
+volumes:
+  postgres_data:
+    driver: local

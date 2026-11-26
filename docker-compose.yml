@@ -1,0 +1,34 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: docmate-db
+    environment:
+      POSTGRES_USER: docmate
+      POSTGRES_PASSWORD: docmate_dev_password
+      POSTGRES_DB: docmate
+    ports:
+      - "5432:5432"
+    volumes:
+      - docmate_pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U docmate -d docmate"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["npm", "run", "worker"]
+    container_name: docmate-ingestion-worker
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://docmate:docmate_dev_password@postgres:5432/docmate
+
+volumes:
+  docmate_pgdata:
