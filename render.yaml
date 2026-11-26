@@ -9,7 +9,7 @@ services:
     name: docmate-ai
     runtime: docker
     dockerfilePath: ./Dockerfile
-    plan: starter
+    plan: free
     region: singapore
     healthCheckPath: /bn/login
     envVars:
@@ -47,6 +47,6 @@ databases:
   - name: docmate-db
     databaseName: docmate
     user: docmate_admin
-    plan: starter
+    plan: free
     region: singapore
     postgresMajorVersion: "16"
