@@ -27,6 +27,16 @@
 
 ---
 
+## 🏆 Competition Track & Declared Challenges
+
+| Field | Submission Declaration |
+| :--- | :--- |
+| **Selected Track** | **World Problem Solver Track** — Healthcare safety, clinical decision support, and patient-controlled medical records in Bangla & English |
+| **Challenge 1 (`A02`)** | **Intelligent Decisions & Optimization** — Closed-library RAG with deterministic whitespace-normalized quote verification, deterministic drug safety rules (allergies, DDI, dose bounds), and automatic `insufficient_evidence` abstention when vitals or library evidence are missing |
+| **Challenge 2 (`A03`)** | **Advanced Security & Access Control** — 6-role RBAC + dynamic feature permission matrix, profile-level report authorization (`authorizePatientProfileAccess`), AES PII encryption, prompt-injection & SSRF guards, atomic `db.transaction()` grant revocation, and immutable audit logs |
+
+---
+
 ## 🌐 Project Demo Links
 
 | Environment | URL | Notes |
