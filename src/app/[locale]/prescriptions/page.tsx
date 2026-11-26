@@ -8,6 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { buttonVariants } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
+import { Skeleton } from '@/components/ui/skeleton';
 import { Link } from '@/i18n/routing';
 import {
   FileText,
@@ -16,7 +17,6 @@ import {
   Calendar,
   Printer,
   ChevronRight,
-  AlertCircle,
 } from 'lucide-react';
 
 interface PrescriptionItem {
@@ -82,21 +82,6 @@ export default function PrescriptionsListPage() {
   return (
     <AppShell>
       <div className="space-y-6 max-w-7xl mx-auto pb-12">
-        {/* Persistent Clinical Disclaimer */}
-        <div className="bg-primary/10 border border-primary/20 rounded-xl p-3 text-xs text-primary font-medium flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <AlertCircle className="w-4 h-4 shrink-0" />
-            <span>
-              {locale === 'bn'
-                ? 'শুধুমাত্র ক্লিনিকাল সিদ্ধান্ত সহায়তা। পেশাদার মূল্যায়নের বিকল্প নয়।'
-                : 'Clinical decision support only. Not a substitute for professional judgement.'}
-            </span>
-          </div>
-          <span className="text-muted-foreground hidden sm:inline">
-            {locale === 'bn' ? 'চিকিৎসকই চূড়ান্ত সিদ্ধান্ত নেন।' : 'The doctor decides.'}
-          </span>
-        </div>
-
         <PageHeader
           title={locale === 'bn' ? 'প্রেসক্রিপশন তালিকা' : 'Prescription Records'}
           subtitle={
@@ -149,8 +134,18 @@ export default function PrescriptionsListPage() {
         {/* Prescription Cards Grid */}
         <div data-tour="rx-list">
           {loading ? (
-            <div className="p-12 text-center text-muted-foreground animate-pulse text-base">
-              {locale === 'bn' ? 'প্রেসক্রিপশন লোড হচ্ছে...' : 'Loading prescriptions...'}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {[1, 2, 3].map((i) => (
+                <Card key={i} className="border-border bg-card p-5 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <Skeleton className="h-6 w-28 rounded-md" />
+                    <Skeleton className="h-5 w-16 rounded-full" />
+                  </div>
+                  <Skeleton className="h-5 w-44 rounded-md" />
+                  <Skeleton className="h-4 w-32 rounded-md" />
+                  <Skeleton className="h-10 w-full rounded-md mt-2" />
+                </Card>
+              ))}
             </div>
           ) : filtered.length === 0 ? (
             <Card className="p-12 text-center border-dashed">

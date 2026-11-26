@@ -2,9 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+} from '@/components/ui/sheet';
 import {
   History,
   ShieldCheck,
@@ -307,75 +314,67 @@ export default function AdminAuditPage() {
         </CardContent>
       </Card>
 
-      {/* Inspect Modal Sheet */}
-      {selectedRecord && (
-        <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-xs flex items-center justify-center p-4">
-          <Card className="max-w-xl w-full border-border shadow-lg bg-card max-h-[85vh] flex flex-col">
-            <CardHeader className="pb-3 border-b border-border">
-              <div className="flex items-center justify-between">
-                <CardTitle className="text-base font-bold flex items-center gap-2">
+      {/* Inspect Audit Detail Sheet */}
+      <Sheet open={Boolean(selectedRecord)} onOpenChange={(open) => { if (!open) setSelectedRecord(null); }}>
+        <SheetContent side="right" className="w-full sm:max-w-lg overflow-y-auto">
+          {selectedRecord && (
+            <>
+              <SheetHeader className="pb-3 border-b border-border">
+                <SheetTitle className="text-base font-bold flex items-center gap-2">
                   <Hash className="w-4 h-4 text-primary" />
-                  <span className="font-mono">{selectedRecord.event}</span>
-                </CardTitle>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setSelectedRecord(null)}
-                  className="h-8 w-8 p-0"
-                >
-                  ✕
-                </Button>
-              </div>
-              <CardDescription className="text-xs font-mono">
-                Log ID: {selectedRecord.id}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-3 pt-4 overflow-y-auto flex-1 text-xs">
-              <div className="grid grid-cols-2 gap-3 bg-muted/20 p-3 rounded-lg border border-border">
-                <div>
-                  <span className="font-bold text-muted-foreground block text-[10px] uppercase">
-                    {locale === 'bn' ? 'সময়কাল' : 'Timestamp'}
+                  <span className="font-mono break-all">{selectedRecord.event}</span>
+                </SheetTitle>
+                <SheetDescription className="text-xs font-mono">
+                  Log ID: {selectedRecord.id}
+                </SheetDescription>
+              </SheetHeader>
+              <div className="space-y-3 pt-4 text-xs">
+                <div className="grid grid-cols-2 gap-3 bg-muted/20 p-3 rounded-lg border border-border">
+                  <div>
+                    <span className="font-bold text-muted-foreground block text-[10px] uppercase">
+                      {locale === 'bn' ? 'সময়কাল' : 'Timestamp'}
+                    </span>
+                    <span className="font-mono text-xs">{new Date(selectedRecord.createdAt).toISOString()}</span>
+                  </div>
+                  <div>
+                    <span className="font-bold text-muted-foreground block text-[10px] uppercase">
+                      {locale === 'bn' ? 'ব্যবহারকারী' : 'Actor'}
+                    </span>
+                    <span className="font-mono text-xs">{selectedRecord.userEmail || 'System'}</span>
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <span className="font-bold text-muted-foreground block text-[10px] uppercase font-mono">
+                    Prev Hash (SHA-256)
                   </span>
-                  <span className="font-mono text-xs">{new Date(selectedRecord.createdAt).toISOString()}</span>
+                  <div className="p-2 rounded bg-muted/40 font-mono text-[11px] break-all border border-border">
+                    {selectedRecord.prevHash || '0'.repeat(64)}
+                  </div>
                 </div>
-                <div>
-                  <span className="font-bold text-muted-foreground block text-[10px] uppercase">
-                    {locale === 'bn' ? 'ব্যবহারকারী' : 'Actor'}
+
+                <div className="space-y-1">
+                  <span className="font-bold text-muted-foreground block text-[10px] uppercase font-mono">
+                    Current Hash (SHA-256)
                   </span>
-                  <span className="font-mono text-xs">{selectedRecord.userEmail || 'System'}</span>
+                  <div className="p-2 rounded bg-muted/40 font-mono text-[11px] break-all border border-border text-primary font-semibold">
+                    {selectedRecord.hash || 'N/A'}
+                  </div>
+                </div>
+
+                <div className="space-y-1 pt-1">
+                  <span className="font-bold text-muted-foreground block text-[10px] uppercase">
+                    {locale === 'bn' ? 'পেলোড ডাটা (Verified Payload)' : 'Verified JSON Payload'}
+                  </span>
+                  <pre className="p-3 rounded-lg bg-muted/30 border border-border text-[11px] font-mono text-muted-foreground overflow-x-auto whitespace-pre-wrap leading-relaxed max-h-64">
+                    {JSON.stringify(selectedRecord.payload, null, 2)}
+                  </pre>
                 </div>
               </div>
-
-              <div className="space-y-1">
-                <span className="font-bold text-muted-foreground block text-[10px] uppercase font-mono">
-                  Prev Hash (SHA-256)
-                </span>
-                <div className="p-2 rounded bg-muted/40 font-mono text-[11px] break-all border border-border">
-                  {selectedRecord.prevHash || '0'.repeat(64)}
-                </div>
-              </div>
-
-              <div className="space-y-1">
-                <span className="font-bold text-muted-foreground block text-[10px] uppercase font-mono">
-                  Current Hash (SHA-256)
-                </span>
-                <div className="p-2 rounded bg-muted/40 font-mono text-[11px] break-all border border-border text-primary font-semibold">
-                  {selectedRecord.hash || 'N/A'}
-                </div>
-              </div>
-
-              <div className="space-y-1 pt-1">
-                <span className="font-bold text-muted-foreground block text-[10px] uppercase">
-                  {locale === 'bn' ? 'পেলোড ডাটা (Verified Payload)' : 'Verified JSON Payload'}
-                </span>
-                <pre className="p-3 rounded-lg bg-muted/30 border border-border text-[11px] font-mono text-muted-foreground overflow-x-auto whitespace-pre-wrap leading-relaxed max-h-48">
-                  {JSON.stringify(selectedRecord.payload, null, 2)}
-                </pre>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      )}
+            </>
+          )}
+        </SheetContent>
+      </Sheet>
     </div>
   );
 }

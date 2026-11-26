@@ -20,10 +20,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useFormatter, useTranslations } from 'next-intl';
 import { useSearchParams } from 'next/navigation';
 import { Link } from '@/i18n/routing';
-import { BookOpen, Search, PlusCircle, ShieldCheck, Filter, Loader2 } from 'lucide-react';
+import { BookOpen, Search, PlusCircle, ShieldCheck, Filter, Loader2, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { Source } from '@/types';
 import { ErrorState } from '@/components/shared/ErrorState';
+import { Skeleton } from '@/components/ui/skeleton';
 
 interface SourceWithCount extends Source {
   chunk_count?: number;
@@ -286,14 +287,24 @@ function LibraryContent() {
         {/* Filter and Search Bar */}
         <div data-tour="library-search" className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-card p-3 rounded-xl border border-border shadow-2xs">
           <div className="relative flex-1 w-full sm:w-auto">
-            <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+            <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
             <Input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={t('searchPlaceholder')}
               aria-label={t('searchPlaceholder')}
-              className="pl-9 text-sm h-9 bg-background border-border"
+              className="pl-9 pr-9 text-sm h-10 bg-background border-border"
             />
+            {search && (
+              <button
+                type="button"
+                onClick={() => setSearch('')}
+                aria-label={tCommon('clear')}
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
           </div>
 
           <div className="flex items-center gap-2 w-full sm:w-auto shrink-0">
@@ -314,17 +325,45 @@ function LibraryContent() {
 
         {/* Sources Grid */}
         {loading ? (
-          <div className="p-12 text-center text-sm text-muted-foreground flex items-center justify-center gap-2">
-            <Loader2 className="w-5 h-5 animate-spin text-primary" />
-            <span>Loading medical library sources...</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[1, 2, 3, 4].map((i) => (
+              <Card key={i} className="border-border bg-card">
+                <CardHeader className="p-5 pb-3 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <Skeleton className="h-5 w-20 rounded-full" />
+                    <Skeleton className="h-4 w-16" />
+                  </div>
+                  <Skeleton className="h-5 w-3/4" />
+                  <Skeleton className="h-3.5 w-1/2" />
+                </CardHeader>
+                <CardContent className="p-5 border-t border-border/60 mt-3 pt-3 flex items-center justify-between">
+                  <Skeleton className="h-4 w-24" />
+                  <Skeleton className="h-8 w-28 rounded-md" />
+                </CardContent>
+              </Card>
+            ))}
           </div>
         ) : sourceError ? (
           <ErrorState title={tCommon('errorTitle')} message={t('sourceLoadError')} onRetry={reloadSources} />
         ) : filteredSources.length === 0 ? (
-          <Card className="p-10 text-center border-dashed">
+          <Card className="p-10 text-center border-dashed space-y-2">
             <BookOpen className="w-10 h-10 text-muted-foreground mx-auto mb-2" />
             <h4 className="text-base font-semibold text-foreground">No library sources match your search.</h4>
-            <p className="text-xs text-muted-foreground mt-1">Try clearing filters or add a new source document.</p>
+            <p className="text-xs text-muted-foreground">Try clearing filters or add a new source document.</p>
+            {(search || typeFilter !== 'all') && (
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  setSearch('');
+                  setTypeFilter('all');
+                }}
+                className="mt-2 min-h-9"
+              >
+                {t('filterAll')}
+              </Button>
+            )}
           </Card>
         ) : (
           <div data-tour="library-sources" className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -350,7 +389,7 @@ function LibraryContent() {
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent className="p-5 pt-0 flex items-center justify-between border-t border-border/60 mt-3 pt-3">
+                <CardContent className="px-5 pb-5 flex items-center justify-between border-t border-border/60 mt-3 pt-3">
                   <span className="text-xs text-muted-foreground flex items-center gap-1.5 font-medium">
                     <ShieldCheck className="w-4 h-4 text-emerald-600" />
                     <span>{t('chunkCount', { count: source.chunk_count ?? 0 })}</span>
@@ -392,9 +431,14 @@ function LibraryContent() {
 
             <div className="flex-1 overflow-y-auto p-6 space-y-4">
               {loadingChunks ? (
-                <div className="py-12 text-center text-xs text-muted-foreground flex items-center justify-center gap-2">
-                  <Loader2 className="w-4 h-4 animate-spin text-primary" />
-                  <span>{tCommon('loading')}</span>
+                <div className="space-y-3">
+                  {[1, 2, 3].map((i) => (
+                    <Card key={i} className="p-4 border-border space-y-2">
+                      <Skeleton className="h-4 w-1/3" />
+                      <Skeleton className="h-3.5 w-full" />
+                      <Skeleton className="h-3.5 w-5/6" />
+                    </Card>
+                  ))}
                 </div>
               ) : chunkError ? (
                 <ErrorState title={tCommon('errorTitle')} message={t('chunkLoadError')}

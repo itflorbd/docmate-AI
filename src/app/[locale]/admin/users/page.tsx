@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import {
   Table,
   TableBody,
@@ -15,6 +15,13 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 import {
   Search,
   CheckCircle,
@@ -486,59 +493,65 @@ export default function AdminUsersPage() {
         </div>
       </Card>
 
-      {/* Reject Verification Modal */}
-      {rejectingUserId && (
-        <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-xs flex items-center justify-center p-4">
-          <Card className="max-w-md w-full border-border shadow-lg bg-card">
-            <CardHeader>
-              <CardTitle className="text-base font-bold text-destructive flex items-center gap-2">
-                <XCircle className="w-5 h-5" />
-                <span>{locale === 'bn' ? 'যাচাইকরণ প্রত্যাখ্যান' : 'Reject Verification'}</span>
-              </CardTitle>
-              <CardDescription className="text-xs">
-                {locale === 'bn'
-                  ? 'প্রত্যাখ্যানের সুনির্দিষ্ট কারণ উল্লেখ করুন (যেমন: অস্পষ্ট BMDC সনদ, মেয়াদ উত্তীর্ণ আইডি)।'
-                  : 'Specify the clinical or regulatory reason for rejecting this verification request.'}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label className="text-xs font-semibold">{t('rejectionReason')}</Label>
-                <Input
-                  value={rejectionReason}
-                  onChange={(e) => setRejectionReason(e.target.value)}
-                  placeholder={locale === 'bn' ? 'প্রত্যাখ্যানের কারণ লিখুন...' : 'Enter rejection reason...'}
-                  className="text-xs"
-                />
-              </div>
-              <div className="flex justify-end gap-2 pt-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => {
-                    setRejectingUserId(null);
-                    setRejectionReason('');
-                  }}
-                  disabled={actionLoading}
-                  className="text-xs"
-                >
-                  {locale === 'bn' ? 'বাতিল' : 'Cancel'}
-                </Button>
-                <Button
-                  variant="destructive"
-                  size="sm"
-                  onClick={() => handleAction('reject_verification', rejectingUserId, rejectionReason)}
-                  disabled={actionLoading || !rejectionReason.trim()}
-                  className="text-xs"
-                >
-                  {actionLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin mr-1.5" /> : null}
-                  <span>{t('confirmReject')}</span>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      )}
+      {/* Reject Verification Dialog */}
+      <Dialog
+        open={Boolean(rejectingUserId)}
+        onOpenChange={(open) => {
+          if (!open) {
+            setRejectingUserId(null);
+            setRejectionReason('');
+          }
+        }}
+      >
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-base font-bold text-destructive flex items-center gap-2">
+              <XCircle className="w-5 h-5" />
+              <span>{locale === 'bn' ? 'যাচাইকরণ প্রত্যাখ্যান' : 'Reject Verification'}</span>
+            </DialogTitle>
+            <DialogDescription className="text-xs">
+              {locale === 'bn'
+                ? 'প্রত্যাখ্যানের সুনির্দিষ্ট কারণ উল্লেখ করুন (যেমন: অস্পষ্ট BMDC সনদ, মেয়াদ উত্তীর্ণ আইডি)।'
+                : 'Specify the clinical or regulatory reason for rejecting this verification request.'}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4 pt-1">
+            <div className="space-y-2">
+              <Label className="text-xs font-semibold">{t('rejectionReason')}</Label>
+              <Input
+                value={rejectionReason}
+                onChange={(e) => setRejectionReason(e.target.value)}
+                placeholder={locale === 'bn' ? 'প্রত্যাখ্যানের কারণ লিখুন...' : 'Enter rejection reason...'}
+                className="text-xs"
+              />
+            </div>
+            <div className="flex justify-end gap-2 pt-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  setRejectingUserId(null);
+                  setRejectionReason('');
+                }}
+                disabled={actionLoading}
+                className="text-xs"
+              >
+                {locale === 'bn' ? 'বাতিল' : 'Cancel'}
+              </Button>
+              <Button
+                variant="destructive"
+                size="sm"
+                onClick={() => rejectingUserId && handleAction('reject_verification', rejectingUserId, rejectionReason)}
+                disabled={actionLoading || !rejectionReason.trim() || !rejectingUserId}
+                className="text-xs"
+              >
+                {actionLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin mr-1.5" /> : null}
+                <span>{t('confirmReject')}</span>
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

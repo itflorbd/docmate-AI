@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { CitationChip } from '@/components/shared/CitationChip';
 import { LoadingState } from '@/components/shared/LoadingState';
 import { useTranslations, useLocale } from 'next-intl';
-import { Search, Sparkles, BookOpen, ShieldCheck, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { Search, Sparkles, BookOpen, ShieldCheck, AlertCircle, CheckCircle2, X } from 'lucide-react';
 import { VerifiedClaim } from '@/types';
 
 export default function AskLibraryPage() {
@@ -103,14 +103,24 @@ export default function AskLibraryPage() {
               className="flex flex-col sm:flex-row gap-2.5"
             >
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                <Search className="absolute left-3 top-3.5 h-4 w-4 text-muted-foreground" />
                 <Input
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
                   placeholder={t('placeholder')}
-                  className="pl-9 h-11 text-sm bg-background border-border"
+                  className="pl-9 pr-10 h-11 text-sm bg-background border-border"
                   disabled={loading}
                 />
+                {question && !loading && (
+                  <button
+                    type="button"
+                    onClick={() => setQuestion('')}
+                    aria-label={locale === 'bn' ? 'মুছুন' : 'Clear'}
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                )}
               </div>
 
               <Button
@@ -136,7 +146,7 @@ export default function AskLibraryPage() {
                       key={idx}
                       type="button"
                       onClick={() => handleAsk(promptStr)}
-                      className="text-xs text-left px-2.5 py-1 rounded-md border border-border/80 bg-muted/30 hover:bg-muted/80 hover:border-primary/40 text-foreground transition-all cursor-pointer leading-relaxed"
+                      className="text-xs text-left min-h-9 px-3 py-1.5 rounded-md border border-border/80 bg-muted/30 hover:bg-muted/80 hover:border-primary/40 text-foreground transition-all cursor-pointer leading-relaxed"
                     >
                       &ldquo;{promptStr}&rdquo;
                     </button>
@@ -191,7 +201,7 @@ export default function AskLibraryPage() {
                   <Sparkles className="w-4 h-4" />
                   <span>{t('answer')}</span>
                 </div>
-                <span className="flex items-center gap-1 text-[11px] font-semibold text-emerald-600 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                <span className="flex items-center gap-1 text-[11px] font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   <span>Verbatim Verified</span>
                 </span>

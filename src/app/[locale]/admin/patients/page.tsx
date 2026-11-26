@@ -13,11 +13,18 @@ import {
   User,
   Loader2,
 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 import { toast } from 'sonner';
 
 interface ProfileMeta {
@@ -401,98 +408,96 @@ export default function AdminPatientGovernancePage() {
         </TabsContent>
       </Tabs>
 
-      {/* Non-Destructive Profile Merge Modal */}
-      {mergeTarget && (
-        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
-          <Card className="w-full max-w-lg bg-card border border-border shadow-xl">
-            <CardHeader className="p-4 border-b border-border">
-              <CardTitle className="text-base text-foreground flex items-center gap-2">
-                <GitMerge className="w-5 h-5 text-primary" />
-                <span>{isBn ? 'প্রোফাইল মার্জ নিশ্চিতকরণ (Non-Destructive Merge)' : 'Confirm Profile Merge'}</span>
-              </CardTitle>
-              <CardDescription className="text-xs">
-                {isBn
-                  ? 'ডুপ্লিকেট প্রোফাইলের সমস্ত রেকর্ড ক্যানোনিক্যাল প্রোফাইলে স্থানান্তরিত হবে। কোনো ক্লিনিকাল ডেটা মোছা হবে না।'
-                  : 'All clinical records will be reassigned to the canonical profile without deleting data.'}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="p-4 space-y-4">
-              <form onSubmit={handleExecuteMerge} className="space-y-4">
-                <div className="space-y-2">
-                  <label className="text-xs font-bold text-foreground block">
-                    {isBn ? 'মূল (ক্যানোনিক্যাল) প্রোফাইল নির্বাচন করুন:' : 'Select Canonical Profile:'}
-                  </label>
-                  <div className="grid grid-cols-2 gap-3">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setCanonicalId(mergeTarget.profileA.id);
-                        setDuplicateId(mergeTarget.profileB.id);
-                      }}
-                      className={`p-3 rounded-lg border text-left text-xs space-y-1 transition-all ${
-                        canonicalId === mergeTarget.profileA.id
-                          ? 'border-primary bg-primary/10 shadow-xs'
-                          : 'border-border bg-muted/40'
-                      }`}
-                    >
-                      <strong className="block font-bold text-foreground">{mergeTarget.profileA.name}</strong>
-                      <span className="text-muted-foreground block">{mergeTarget.profileA.phoneMasked}</span>
-                      <span className="text-[10px] text-muted-foreground block">Age: {mergeTarget.profileA.age} ({mergeTarget.profileA.relation})</span>
-                    </button>
+      {/* Non-Destructive Profile Merge Dialog */}
+      <Dialog open={Boolean(mergeTarget)} onOpenChange={(open) => { if (!open) setMergeTarget(null); }}>
+        <DialogContent className="sm:max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 text-base">
+              <GitMerge className="w-5 h-5 text-primary" />
+              <span>{isBn ? 'প্রোফাইল মার্জ নিশ্চিতকরণ' : 'Confirm Profile Merge'}</span>
+            </DialogTitle>
+            <DialogDescription className="text-xs">
+              {isBn
+                ? 'ডুপ্লিকেট প্রোফাইলের সমস্ত রেকর্ড ক্যানোনিক্যাল প্রোফাইলে স্থানান্তরিত হবে। কোনো ক্লিনিকাল ডেটা মোছা হবে না।'
+                : 'All clinical records will be reassigned to the canonical profile without deleting data.'}
+            </DialogDescription>
+          </DialogHeader>
+          {mergeTarget && (
+            <form onSubmit={handleExecuteMerge} className="space-y-4 pt-1">
+              <div className="space-y-2">
+                <label className="text-xs font-bold text-foreground block">
+                  {isBn ? 'মূল (ক্যানোনিক্যাল) প্রোফাইল নির্বাচন করুন:' : 'Select Canonical Profile:'}
+                </label>
+                <div className="grid grid-cols-2 gap-3">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setCanonicalId(mergeTarget.profileA.id);
+                      setDuplicateId(mergeTarget.profileB.id);
+                    }}
+                    className={`p-3 rounded-lg border text-left text-xs space-y-1 transition-all ${
+                      canonicalId === mergeTarget.profileA.id
+                        ? 'border-primary bg-primary/10 shadow-xs'
+                        : 'border-border bg-muted/40'
+                    }`}
+                  >
+                    <strong className="block font-bold text-foreground">{mergeTarget.profileA.name}</strong>
+                    <span className="text-muted-foreground block">{mergeTarget.profileA.phoneMasked}</span>
+                    <span className="text-[10px] text-muted-foreground block">Age: {mergeTarget.profileA.age} ({mergeTarget.profileA.relation})</span>
+                  </button>
 
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setCanonicalId(mergeTarget.profileB.id);
-                        setDuplicateId(mergeTarget.profileA.id);
-                      }}
-                      className={`p-3 rounded-lg border text-left text-xs space-y-1 transition-all ${
-                        canonicalId === mergeTarget.profileB.id
-                          ? 'border-primary bg-primary/10 shadow-xs'
-                          : 'border-border bg-muted/40'
-                      }`}
-                    >
-                      <strong className="block font-bold text-foreground">{mergeTarget.profileB.name}</strong>
-                      <span className="text-muted-foreground block">{mergeTarget.profileB.phoneMasked}</span>
-                      <span className="text-[10px] text-muted-foreground block">Age: {mergeTarget.profileB.age} ({mergeTarget.profileB.relation})</span>
-                    </button>
-                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setCanonicalId(mergeTarget.profileB.id);
+                      setDuplicateId(mergeTarget.profileA.id);
+                    }}
+                    className={`p-3 rounded-lg border text-left text-xs space-y-1 transition-all ${
+                      canonicalId === mergeTarget.profileB.id
+                        ? 'border-primary bg-primary/10 shadow-xs'
+                        : 'border-border bg-muted/40'
+                    }`}
+                  >
+                    <strong className="block font-bold text-foreground">{mergeTarget.profileB.name}</strong>
+                    <span className="text-muted-foreground block">{mergeTarget.profileB.phoneMasked}</span>
+                    <span className="text-[10px] text-muted-foreground block">Age: {mergeTarget.profileB.age} ({mergeTarget.profileB.relation})</span>
+                  </button>
                 </div>
+              </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-foreground block">
-                    {isBn ? 'মার্জ করার লিখিত কারণ / অডিট জাস্টিফিকেশন *' : 'Written Clinical / Admin Justification *'}
-                  </label>
-                  <textarea
-                    value={justification}
-                    onChange={(e) => setJustification(e.target.value)}
-                    placeholder={isBn ? 'যেমন: একই রোগীর দুটি প্রোফাইল তৈরি হয়েছিল, প্রেসক্রিপশন ও ভিজিট একত্রিত করা হলো' : 'e.g. Duplicate account created for same patient'}
-                    rows={3}
-                    required
-                    className="w-full text-xs p-2.5 rounded-md border border-border bg-background text-foreground"
-                  />
-                </div>
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold text-foreground block">
+                  {isBn ? 'মার্জ করার লিখিত কারণ / অডিট জাস্টিফিকেশন *' : 'Written Clinical / Admin Justification *'}
+                </label>
+                <textarea
+                  value={justification}
+                  onChange={(e) => setJustification(e.target.value)}
+                  placeholder={isBn ? 'যেমন: একই রোগীর দুটি প্রোফাইল তৈরি হয়েছিল, প্রেসক্রিপশন ও ভিজিট একত্রিত করা হলো' : 'e.g. Duplicate account created for same patient'}
+                  rows={3}
+                  required
+                  className="w-full text-xs p-2.5 rounded-md border border-border bg-background text-foreground"
+                />
+              </div>
 
-                <div className="flex items-center justify-end gap-2 pt-2 border-t border-border">
-                  <Button type="button" variant="outline" size="sm" onClick={() => setMergeTarget(null)}>
-                    {isBn ? 'বাতিল' : 'Cancel'}
-                  </Button>
-                  <Button type="submit" size="sm" disabled={merging}>
-                    {merging ? (
-                      <>
-                        <Loader2 className="w-3.5 h-3.5 animate-spin mr-1" />
-                        <span>{isBn ? 'মার্জ হচ্ছে...' : 'Merging...'}</span>
-                      </>
-                    ) : (
-                      <span>{isBn ? 'মার্জ নিশ্চিত করুন' : 'Confirm Merge'}</span>
-                    )}
-                  </Button>
-                </div>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
-      )}
+              <div className="flex items-center justify-end gap-2 pt-2 border-t border-border">
+                <Button type="button" variant="outline" size="sm" onClick={() => setMergeTarget(null)}>
+                  {isBn ? 'বাতিল' : 'Cancel'}
+                </Button>
+                <Button type="submit" size="sm" disabled={merging}>
+                  {merging ? (
+                    <>
+                      <Loader2 className="w-3.5 h-3.5 animate-spin mr-1" />
+                      <span>{isBn ? 'মার্জ হচ্ছে...' : 'Merging...'}</span>
+                    </>
+                  ) : (
+                    <span>{isBn ? 'মার্জ নিশ্চিত করুন' : 'Confirm Merge'}</span>
+                  )}
+                </Button>
+              </div>
+            </form>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

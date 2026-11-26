@@ -9,12 +9,18 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import {
   Languages,
   Search,
   Plus,
   CheckCircle2,
   AlertTriangle,
-  XCircle,
   BookOpen,
   Loader2,
   BarChart3,
@@ -511,130 +517,124 @@ export default function AdminLanguagePage() {
         </TabsContent>
       </Tabs>
 
-      {/* Add Alias Modal Dialog */}
-      {showAddModal && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in-50">
-          <div className="bg-card border border-border rounded-2xl w-full max-w-lg p-5 space-y-4 shadow-xl">
-            <div className="flex items-center justify-between border-b border-border/60 pb-3">
-              <h3 className="text-sm font-bold text-foreground flex items-center gap-1.5">
-                <Plus className="w-4 h-4 text-primary" />
-                <span>{isBn ? 'নতুন ক্লিনিকাল প্রতিশব্দ যোগ করুন' : 'Add New Clinical Alias'}</span>
-              </h3>
-              <button
-                type="button"
-                onClick={() => setShowAddModal(false)}
-                className="text-muted-foreground hover:text-foreground p-1"
-              >
-                <XCircle className="w-4 h-4" />
-              </button>
+      {/* Add Alias Dialog */}
+      <Dialog open={showAddModal} onOpenChange={setShowAddModal}>
+        <DialogContent className="sm:max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="text-sm font-bold flex items-center gap-1.5">
+              <Plus className="w-4 h-4 text-primary" />
+              <span>{isBn ? 'নতুন ক্লিনিকাল প্রতিশব্দ যোগ করুন' : 'Add New Clinical Alias'}</span>
+            </DialogTitle>
+            <DialogDescription className="text-xs">
+              {isBn ? 'প্রমিত ইংরেজি নাম ও বাংলা/বাংলিশ প্রতিশব্দ যোগ করুন।' : 'Map canonical English clinical terms to Bangla and Banglish variants.'}
+            </DialogDescription>
+          </DialogHeader>
+
+          <form onSubmit={handleSaveAlias} className="space-y-3 text-xs pt-1">
+            <div>
+              <label className="font-semibold text-foreground block mb-1">
+                {isBn ? 'প্রমিত ইংরেজি নাম (Canonical EN)' : 'Canonical English Name'} *
+              </label>
+              <Input
+                required
+                placeholder="e.g. fever, amoxicillin, pneumonia"
+                value={newCanonical}
+                onChange={(e) => setNewCanonical(e.target.value)}
+                className="h-8 text-xs font-mono"
+              />
             </div>
 
-            <form onSubmit={handleSaveAlias} className="space-y-3 text-xs">
-              <div>
-                <label className="font-semibold text-foreground block mb-1">
-                  {isBn ? 'প্রমিত ইংরেজি নাম (Canonical EN)' : 'Canonical English Name'} *
-                </label>
-                <Input
-                  required
-                  placeholder="e.g. fever, amoxicillin, pneumonia"
-                  value={newCanonical}
-                  onChange={(e) => setNewCanonical(e.target.value)}
-                  className="h-8 text-xs font-mono"
-                />
-              </div>
+            <div>
+              <label className="font-semibold text-foreground block mb-1">
+                {isBn ? 'ক্যাটাগরি' : 'Category'} *
+              </label>
+              <select aria-label={isBn ? 'ক্যাটাগরি' : 'Category'}
+                value={newCategory}
+                onChange={(e) => setNewCategory(e.target.value)}
+                className="w-full h-8 px-2 text-xs rounded-md border border-input bg-background text-foreground font-medium"
+              >
+                <option value="symptom">Symptom (উপসর্গ)</option>
+                <option value="disease">Disease (রোগ)</option>
+                <option value="sign">Sign (শারীরিক লক্ষণ)</option>
+                <option value="medicine_generic">Generic Medicine (জেনেরিক)</option>
+                <option value="medicine_brand">Brand Medicine (ব্র্যান্ড)</option>
+                <option value="unit">Unit (একক)</option>
+                <option value="duration">Duration (সময়কাল)</option>
+                <option value="negation">Negation (নেতিবাচক)</option>
+              </select>
+            </div>
 
-              <div>
-                <label className="font-semibold text-foreground block mb-1">
-                  {isBn ? 'ক্যাটাগরি' : 'Category'} *
-                </label>
-                <select aria-label={isBn ? 'ক্যাটাগরি' : 'Category'}
-                  value={newCategory}
-                  onChange={(e) => setNewCategory(e.target.value)}
-                  className="w-full h-8 px-2 text-xs rounded-md border border-input bg-background text-foreground font-medium"
-                >
-                  <option value="symptom">Symptom (উপসর্গ)</option>
-                  <option value="disease">Disease (রোগ)</option>
-                  <option value="sign">Sign (শারীরিক লক্ষণ)</option>
-                  <option value="medicine_generic">Generic Medicine (জেনেরিক)</option>
-                  <option value="medicine_brand">Brand Medicine (ব্র্যান্ড)</option>
-                  <option value="unit">Unit (একক)</option>
-                  <option value="duration">Duration (সময়কাল)</option>
-                  <option value="negation">Negation (নেতিবাচক)</option>
-                </select>
-              </div>
+            <div>
+              <label className="font-semibold text-foreground block mb-1">
+                {isBn ? 'বাংলা রূপ (কমা দিয়ে আলাদা করুন)' : 'Bangla Script Variants (comma-separated)'}
+              </label>
+              <Input
+                placeholder="e.g. জ্বর, গরম গা"
+                value={newBn}
+                onChange={(e) => setNewBn(e.target.value)}
+                className="h-8 text-xs"
+              />
+            </div>
 
-              <div>
-                <label className="font-semibold text-foreground block mb-1">
-                  {isBn ? 'বাংলা রূপ (কমা দিয়ে আলাদা করুন)' : 'Bangla Script Variants (comma-separated)'}
-                </label>
-                <Input
-                  placeholder="e.g. জ্বর, গরম গা"
-                  value={newBn}
-                  onChange={(e) => setNewBn(e.target.value)}
-                  className="h-8 text-xs"
-                />
-              </div>
+            <div>
+              <label className="font-semibold text-foreground block mb-1">
+                {isBn ? 'বাংলিশ রূপ (কমা দিয়ে আলাদা করুন)' : 'Banglish Variants (comma-separated)'}
+              </label>
+              <Input
+                placeholder="e.g. jor, jhor, gaye jor"
+                value={newBanglish}
+                onChange={(e) => setNewBanglish(e.target.value)}
+                className="h-8 text-xs font-mono"
+              />
+            </div>
 
-              <div>
-                <label className="font-semibold text-foreground block mb-1">
-                  {isBn ? 'বাংলিশ রূপ (কমা দিয়ে আলাদা করুন)' : 'Banglish Variants (comma-separated)'}
-                </label>
-                <Input
-                  placeholder="e.g. jor, jhor, gaye jor"
-                  value={newBanglish}
-                  onChange={(e) => setNewBanglish(e.target.value)}
-                  className="h-8 text-xs font-mono"
-                />
-              </div>
+            <div>
+              <label className="font-semibold text-foreground block mb-1">
+                {isBn ? 'ইংরেজি প্রতিশব্দ (কমা দিয়ে আলাদা করুন)' : 'English Synonyms (comma-separated)'}
+              </label>
+              <Input
+                placeholder="e.g. fever, pyrexia, febrile"
+                value={newEn}
+                onChange={(e) => setNewEn(e.target.value)}
+                className="h-8 text-xs"
+              />
+            </div>
 
-              <div>
-                <label className="font-semibold text-foreground block mb-1">
-                  {isBn ? 'ইংরেজি প্রতিশব্দ (কমা দিয়ে আলাদা করুন)' : 'English Synonyms (comma-separated)'}
-                </label>
-                <Input
-                  placeholder="e.g. fever, pyrexia, febrile"
-                  value={newEn}
-                  onChange={(e) => setNewEn(e.target.value)}
-                  className="h-8 text-xs"
-                />
-              </div>
+            <div>
+              <label className="font-semibold text-foreground block mb-1">
+                {isBn ? 'বাংলা প্রতিবর্ণায়ন / STT (কমা দিয়ে আলাদা করুন)' : 'Phonetic STT Variants (comma-separated)'}
+              </label>
+              <Input
+                placeholder="e.g. ফিভার, ফেব্রাইল"
+                value={newTranslit}
+                onChange={(e) => setNewTranslit(e.target.value)}
+                className="h-8 text-xs"
+              />
+            </div>
 
-              <div>
-                <label className="font-semibold text-foreground block mb-1">
-                  {isBn ? 'বাংলা প্রতিবর্ণায়ন / STT (কমা দিয়ে আলাদা করুন)' : 'Phonetic STT Variants (comma-separated)'}
-                </label>
-                <Input
-                  placeholder="e.g. ফিভার, ফেব্রাইল"
-                  value={newTranslit}
-                  onChange={(e) => setNewTranslit(e.target.value)}
-                  className="h-8 text-xs"
-                />
-              </div>
-
-              <div className="flex items-center justify-end gap-2 pt-3 border-t border-border/60">
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setShowAddModal(false)}
-                  className="h-8 text-xs"
-                >
-                  {isBn ? 'বাতিল' : 'Cancel'}
-                </Button>
-                <Button
-                  type="submit"
-                  size="sm"
-                  disabled={savingAlias}
-                  className="h-8 text-xs bg-primary text-primary-foreground font-semibold"
-                >
-                  {savingAlias && <Loader2 className="w-3.5 h-3.5 animate-spin mr-1.5" />}
-                  <span>{isBn ? 'সংরক্ষণ করুন' : 'Save Alias'}</span>
-                </Button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
+            <div className="flex items-center justify-end gap-2 pt-3 border-t border-border/60">
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => setShowAddModal(false)}
+                className="h-8 text-xs"
+              >
+                {isBn ? 'বাতিল' : 'Cancel'}
+              </Button>
+              <Button
+                type="submit"
+                size="sm"
+                disabled={savingAlias}
+                className="h-8 text-xs bg-primary text-primary-foreground font-semibold"
+              >
+                {savingAlias && <Loader2 className="w-3.5 h-3.5 animate-spin mr-1.5" />}
+                <span>{isBn ? 'সংরক্ষণ করুন' : 'Save Alias'}</span>
+              </Button>
+            </div>
+          </form>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

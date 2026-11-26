@@ -7,6 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
+import { Skeleton } from '@/components/ui/skeleton';
 import { Link } from '@/i18n/routing';
 import {
   Users,
@@ -14,10 +15,8 @@ import {
   Search,
   Phone,
   FileText,
-  AlertCircle,
   Droplet,
   User,
-  Loader2,
   X,
 } from 'lucide-react';
 import {
@@ -76,21 +75,6 @@ export default function PatientsListPage() {
   return (
     <AppShell>
       <div className="space-y-4 max-w-7xl mx-auto pb-12">
-        {/* Persistent Clinical Disclaimer */}
-        <div className="bg-primary/10 border border-primary/20 rounded-xl p-2.5 sm:p-3 text-xs text-primary font-medium flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <AlertCircle className="w-4 h-4 shrink-0" />
-            <span>
-              {locale === 'bn'
-                ? 'শুধুমাত্র ক্লিনিকাল সিদ্ধান্ত সহায়তা। পেশাদার মূল্যায়নের বিকল্প নয়।'
-                : 'Clinical decision support only. Not a substitute for professional judgement.'}
-            </span>
-          </div>
-          <span className="text-muted-foreground hidden sm:inline">
-            {locale === 'bn' ? 'চিকিৎসকই চূড়ান্ত সিদ্ধান্ত নেন।' : 'The doctor decides.'}
-          </span>
-        </div>
-
         {/* Page Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-1">
           <div>
@@ -252,9 +236,16 @@ export default function PatientsListPage() {
         <div data-tour="patients-list">
           {loading ? (
             <Card className="border-border shadow-xs">
-              <CardContent className="p-12 text-center text-muted-foreground flex items-center justify-center gap-2">
-                <Loader2 className="w-5 h-5 animate-spin text-primary" />
-                <span>{locale === 'bn' ? 'রোগীর তালিকা লোড হচ্ছে...' : 'Loading patient records...'}</span>
+              <CardContent className="p-4 space-y-3">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <div key={i} className="flex items-center justify-between gap-4 py-2 border-b border-border/50 last:border-0">
+                    <Skeleton className="h-6 w-20 rounded-md" />
+                    <Skeleton className="h-5 w-40 rounded-md" />
+                    <Skeleton className="h-5 w-24 rounded-md hidden sm:block" />
+                    <Skeleton className="h-5 w-28 rounded-md hidden md:block" />
+                    <Skeleton className="h-8 w-24 rounded-md ml-auto" />
+                  </div>
+                ))}
               </CardContent>
             </Card>
           ) : filtered.length === 0 ? (
@@ -276,9 +267,40 @@ export default function PatientsListPage() {
               </CardContent>
             </Card>
           ) : (
-            <Card className="border-border shadow-xs overflow-hidden">
-              <CardContent className="p-0">
-                <Table>
+            <>
+              {/* Mobile Cards (< md) */}
+              <div className="space-y-2.5 md:hidden">
+                {filtered.map((patient) => (
+                  <Link
+                    key={patient.id}
+                    href={`/patients/${patient.id}`}
+                    className="block p-4 rounded-xl border border-border bg-card hover:border-primary/40 transition-colors space-y-2 shadow-2xs"
+                  >
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-mono font-bold text-xs bg-primary/10 text-primary px-2 py-0.5 rounded">
+                        {patient.patient_code}
+                      </span>
+                      {patient.blood_group && (
+                        <Badge variant="outline" className="font-bold text-destructive border-destructive/30 bg-destructive/5 text-[11px]">
+                          {patient.blood_group}
+                        </Badge>
+                      )}
+                    </div>
+                    <div className="font-bold text-sm text-foreground">{patient.name}</div>
+                    <div className="flex items-center justify-between text-xs text-muted-foreground pt-1 border-t border-border/50">
+                      <span>
+                        {patient.gender === 'female' ? (locale === 'bn' ? 'মহিলা' : 'Female') : (locale === 'bn' ? 'পুরুষ' : 'Male')}, {patient.age} {locale === 'bn' ? 'বছর' : 'yrs'}
+                      </span>
+                      <span className="font-mono">{patient.phone || '—'}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Desktop Table (>= md) */}
+              <Card className="hidden md:block border-border shadow-xs overflow-hidden">
+                <CardContent className="p-0">
+                  <Table>
                   <TableHeader>
                     <TableRow className="hover:bg-transparent bg-muted/40">
                       <TableHead className="w-32 font-semibold">
@@ -391,6 +413,7 @@ export default function PatientsListPage() {
                 </Table>
               </CardContent>
             </Card>
+            </>
           )}
         </div>
       </div>

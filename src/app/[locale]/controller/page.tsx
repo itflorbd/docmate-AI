@@ -24,6 +24,13 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 import { toast } from 'sonner';
 
 interface MedicineBrand {
@@ -1056,184 +1063,190 @@ export default function ControllerPage() {
         </TabsContent>
       </Tabs>
 
-      {/* PROPOSE BRAND MODAL */}
-      {showAddModal && (
-        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
-          <div className="bg-card w-full max-w-md rounded-xl border border-border p-5 space-y-4 shadow-xl">
-            <div className="flex items-center justify-between border-b pb-3">
-              <h3 className="font-bold text-base text-foreground">
-                {isBn ? 'নতুন ওষুধ ব্র্যান্ড প্রস্তাব করুন' : 'Propose New Medicine Brand'}
-              </h3>
-              <button
-                className="text-muted-foreground hover:text-foreground text-sm"
-                onClick={() => setShowAddModal(false)}
-              >
-                ✕
-              </button>
+      {/* PROPOSE BRAND DIALOG */}
+      <Dialog open={showAddModal} onOpenChange={setShowAddModal}>
+        <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-base">
+              {isBn ? 'নতুন ওষুধ ব্র্যান্ড প্রস্তাব করুন' : 'Propose New Medicine Brand'}
+            </DialogTitle>
+            <DialogDescription className="text-xs">
+              {isBn ? 'ডিজিডিএ ফর্মুলারিতে নতুন ব্র্যান্ড যুক্ত করতে তথ্য দিন।' : 'Submit a new brand entry for DGDA formulary review.'}
+            </DialogDescription>
+          </DialogHeader>
+
+          <form onSubmit={handleCreateBrand} className="space-y-3 text-xs pt-1">
+            <div>
+              <label className="font-medium block mb-1">
+                {isBn ? 'ব্র্যান্ড নাম *' : 'Brand Name *'}
+              </label>
+              <Input
+                placeholder="e.g. Napa Extra"
+                value={newBrand.brandName}
+                onChange={(e) => setNewBrand({ ...newBrand, brandName: e.target.value })}
+                required
+              />
             </div>
 
-            <form onSubmit={handleCreateBrand} className="space-y-3 text-xs">
-              <div>
-                <label className="font-medium block mb-1">
-                  {isBn ? 'ব্র্যান্ড নাম *' : 'Brand Name *'}
-                </label>
-                <Input
-                  placeholder="e.g. Napa Extra"
-                  value={newBrand.brandName}
-                  onChange={(e) => setNewBrand({ ...newBrand, brandName: e.target.value })}
-                  required
-                />
-              </div>
+            <div>
+              <label className="font-medium block mb-1">
+                {isBn ? 'জেনেরিক নাম *' : 'Generic Name *'}
+              </label>
+              <Input
+                placeholder="e.g. Paracetamol + Caffeine"
+                value={newBrand.genericName}
+                onChange={(e) => setNewBrand({ ...newBrand, genericName: e.target.value })}
+                required
+              />
+            </div>
 
-              <div>
-                <label className="font-medium block mb-1">
-                  {isBn ? 'জেনেরিক নাম *' : 'Generic Name *'}
-                </label>
-                <Input
-                  placeholder="e.g. Paracetamol + Caffeine"
-                  value={newBrand.genericName}
-                  onChange={(e) => setNewBrand({ ...newBrand, genericName: e.target.value })}
-                  required
-                />
-              </div>
+            <div>
+              <label className="font-medium block mb-1">
+                {isBn ? 'প্রস্তুতকারক কোম্পানি *' : 'Manufacturer *'}
+              </label>
+              <select aria-label={isBn ? 'প্রস্তুতকারক কোম্পানি *' : 'Manufacturer *'}
+                className="w-full h-9 px-3 rounded-md border border-border bg-background"
+                value={newBrand.manufacturer}
+                onChange={(e) => setNewBrand({ ...newBrand, manufacturer: e.target.value })}
+              >
+                <option value="Square Pharmaceuticals PLC">Square Pharmaceuticals PLC</option>
+                <option value="Beximco Pharmaceuticals Ltd.">Beximco Pharmaceuticals Ltd.</option>
+                <option value="Incepta Pharmaceuticals Ltd.">Incepta Pharmaceuticals Ltd.</option>
+                <option value="Renata Limited">Renata Limited</option>
+                <option value="Opsonin Pharma Ltd.">Opsonin Pharma Ltd.</option>
+                <option value="Eskayef Pharmaceuticals Ltd.">Eskayef Pharmaceuticals Ltd.</option>
+                <option value="The ACME Laboratories Ltd.">The ACME Laboratories Ltd.</option>
+                <option value="ACI Limited">ACI Limited</option>
+                <option value="Aristopharma Ltd.">Aristopharma Ltd.</option>
+              </select>
+            </div>
 
+            <div className="grid grid-cols-2 gap-2">
               <div>
-                <label className="font-medium block mb-1">
-                  {isBn ? 'প্রস্তুতকারক কোম্পানি *' : 'Manufacturer *'}
-                </label>
-                <select aria-label={isBn ? 'প্রস্তুতকারক কোম্পানি *' : 'Manufacturer *'}
+                <label className="font-medium block mb-1">{isBn ? 'ফর্ম' : 'Form'}</label>
+                <select aria-label={isBn ? 'ফর্ম' : 'Form'}
                   className="w-full h-9 px-3 rounded-md border border-border bg-background"
-                  value={newBrand.manufacturer}
-                  onChange={(e) => setNewBrand({ ...newBrand, manufacturer: e.target.value })}
+                  value={newBrand.form}
+                  onChange={(e) => setNewBrand({ ...newBrand, form: e.target.value })}
                 >
-                  <option value="Square Pharmaceuticals PLC">Square Pharmaceuticals PLC</option>
-                  <option value="Beximco Pharmaceuticals Ltd.">Beximco Pharmaceuticals Ltd.</option>
-                  <option value="Incepta Pharmaceuticals Ltd.">Incepta Pharmaceuticals Ltd.</option>
-                  <option value="Renata Limited">Renata Limited</option>
-                  <option value="Opsonin Pharma Ltd.">Opsonin Pharma Ltd.</option>
-                  <option value="Eskayef Pharmaceuticals Ltd.">Eskayef Pharmaceuticals Ltd.</option>
-                  <option value="The ACME Laboratories Ltd.">The ACME Laboratories Ltd.</option>
-                  <option value="ACI Limited">ACI Limited</option>
-                  <option value="Aristopharma Ltd.">Aristopharma Ltd.</option>
+                  <option value="Tab">Tablet (Tab)</option>
+                  <option value="Cap">Capsule (Cap)</option>
+                  <option value="Syr">Syrup (Syr)</option>
+                  <option value="Inj">Injection (Inj)</option>
+                  <option value="Inhaler">Inhaler</option>
                 </select>
               </div>
 
-              <div className="grid grid-cols-2 gap-2">
-                <div>
-                  <label className="font-medium block mb-1">{isBn ? 'ফর্ম' : 'Form'}</label>
-                  <select aria-label={isBn ? 'ফর্ম' : 'Form'}
-                    className="w-full h-9 px-3 rounded-md border border-border bg-background"
-                    value={newBrand.form}
-                    onChange={(e) => setNewBrand({ ...newBrand, form: e.target.value })}
-                  >
-                    <option value="Tab">Tablet (Tab)</option>
-                    <option value="Cap">Capsule (Cap)</option>
-                    <option value="Syr">Syrup (Syr)</option>
-                    <option value="Inj">Injection (Inj)</option>
-                    <option value="Inhaler">Inhaler</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="font-medium block mb-1">{isBn ? 'শক্তি (Strength)' : 'Strength'}</label>
-                  <Input
-                    placeholder="e.g. 500 mg"
-                    value={newBrand.strength}
-                    onChange={(e) => setNewBrand({ ...newBrand, strength: e.target.value })}
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-2">
-                <div>
-                  <label className="font-medium block mb-1">{isBn ? 'প্যাক সাইজ' : 'Pack Size'}</label>
-                  <Input
-                    placeholder="e.g. 10x10"
-                    value={newBrand.packSize}
-                    onChange={(e) => setNewBrand({ ...newBrand, packSize: e.target.value })}
-                  />
-                </div>
-
-                <div>
-                  <label className="font-medium block mb-1">{isBn ? 'খুচরা মূল্য (টাকা)' : 'MRP Price (BDT)'}</label>
-                  <Input
-                    type="number"
-                    step="0.01"
-                    value={newBrand.priceBdt}
-                    onChange={(e) =>
-                      setNewBrand({ ...newBrand, priceBdt: parseFloat(e.target.value) || 0 })
-                    }
-                  />
-                </div>
-              </div>
-
               <div>
-                <label className="font-medium block mb-1">{isBn ? 'ডিজিডিএ রেজি নং' : 'DGDA Reg No'}</label>
+                <label className="font-medium block mb-1">{isBn ? 'শক্তি (Strength)' : 'Strength'}</label>
                 <Input
-                  placeholder="DAR-012-XXXX"
-                  value={newBrand.dgdaRegNum}
-                  onChange={(e) => setNewBrand({ ...newBrand, dgdaRegNum: e.target.value })}
+                  placeholder="e.g. 500 mg"
+                  value={newBrand.strength}
+                  onChange={(e) => setNewBrand({ ...newBrand, strength: e.target.value })}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-2">
+              <div>
+                <label className="font-medium block mb-1">{isBn ? 'প্যাক সাইজ' : 'Pack Size'}</label>
+                <Input
+                  placeholder="e.g. 10x10"
+                  value={newBrand.packSize}
+                  onChange={(e) => setNewBrand({ ...newBrand, packSize: e.target.value })}
                 />
               </div>
 
-              <div className="flex justify-end gap-2 pt-2">
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setShowAddModal(false)}
-                >
-                  {isBn ? 'বাতিল' : 'Cancel'}
-                </Button>
-                <Button type="submit" size="sm">
-                  {isBn ? 'প্রস্তাব জমা দিন' : 'Submit Proposal'}
-                </Button>
+              <div>
+                <label className="font-medium block mb-1">{isBn ? 'খুচরা মূল্য (টাকা)' : 'MRP Price (BDT)'}</label>
+                <Input
+                  type="number"
+                  step="0.01"
+                  value={newBrand.priceBdt}
+                  onChange={(e) =>
+                    setNewBrand({ ...newBrand, priceBdt: parseFloat(e.target.value) || 0 })
+                  }
+                />
               </div>
-            </form>
-          </div>
-        </div>
-      )}
+            </div>
 
-      {/* REJECTION REASON MODAL */}
-      {rejectingMedId && (
-        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
-          <div className="bg-card w-full max-w-sm rounded-xl border border-border p-5 space-y-3 shadow-xl">
-            <h3 className="font-bold text-sm text-foreground">
-              {isBn ? 'প্রত্যাখ্যানের সুনির্দিষ্ট কারণ উল্লেখ করুন' : 'Provide Rejection Reason'}
-            </h3>
-            <textarea
-              className="w-full h-24 p-2 text-xs rounded border border-border bg-background"
-              placeholder={
-                isBn
-                  ? 'উদা: বায়োইকুইভ্যালেন্স সনদের ঘাটতি বা ত্রুটিপূর্ণ প্যাকেজিং...'
-                  : 'e.g. Substandard packaging or lack of bioequivalence certificate...'
-              }
-              value={rejectReason}
-              onChange={(e) => setRejectReason(e.target.value)}
-            />
-            <div className="flex justify-end gap-2">
+            <div>
+              <label className="font-medium block mb-1">{isBn ? 'ডিজিডিএ রেজি নং' : 'DGDA Reg No'}</label>
+              <Input
+                placeholder="DAR-012-XXXX"
+                value={newBrand.dgdaRegNum}
+                onChange={(e) => setNewBrand({ ...newBrand, dgdaRegNum: e.target.value })}
+              />
+            </div>
+
+            <div className="flex justify-end gap-2 pt-2">
               <Button
-                size="sm"
+                type="button"
                 variant="outline"
-                onClick={() => {
-                  setRejectingMedId(null);
-                  setRejectReason('');
-                }}
+                size="sm"
+                onClick={() => setShowAddModal(false)}
               >
                 {isBn ? 'বাতিল' : 'Cancel'}
               </Button>
-              <Button
-                size="sm"
-                className="bg-rose-700 hover:bg-rose-800 text-white"
-                onClick={() => handleReviewAction(rejectingMedId, 'reject', rejectReason)}
-              >
-                {isBn ? 'প্রত্যাখ্যান নিশ্চিত করুন' : 'Confirm Rejection'}
+              <Button type="submit" size="sm">
+                {isBn ? 'প্রস্তাব জমা দিন' : 'Submit Proposal'}
               </Button>
             </div>
+          </form>
+        </DialogContent>
+      </Dialog>
+
+      {/* REJECTION REASON DIALOG */}
+      <Dialog
+        open={Boolean(rejectingMedId)}
+        onOpenChange={(open) => {
+          if (!open) {
+            setRejectingMedId(null);
+            setRejectReason('');
+          }
+        }}
+      >
+        <DialogContent className="sm:max-w-sm">
+          <DialogHeader>
+            <DialogTitle className="text-sm font-bold">
+              {isBn ? 'প্রত্যাখ্যানের সুনির্দিষ্ট কারণ উল্লেখ করুন' : 'Provide Rejection Reason'}
+            </DialogTitle>
+            <DialogDescription className="text-xs">
+              {isBn ? 'ওষুধ ব্র্যান্ডটি বাতিলের কারণ লিখুন।' : 'Document the regulatory reason for rejecting this medicine entry.'}
+            </DialogDescription>
+          </DialogHeader>
+          <textarea
+            className="w-full h-24 p-2.5 text-xs rounded-md border border-border bg-background"
+            placeholder={
+              isBn
+                ? 'উদা: বায়োইকুইভ্যালেন্স সনদের ঘাটতি বা ত্রুটিপূর্ণ প্যাকেজিং...'
+                : 'e.g. Substandard packaging or lack of bioequivalence certificate...'
+            }
+            value={rejectReason}
+            onChange={(e) => setRejectReason(e.target.value)}
+          />
+          <div className="flex justify-end gap-2">
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => {
+                setRejectingMedId(null);
+                setRejectReason('');
+              }}
+            >
+              {isBn ? 'বাতিল' : 'Cancel'}
+            </Button>
+            <Button
+              size="sm"
+              variant="destructive"
+              onClick={() => rejectingMedId && handleReviewAction(rejectingMedId, 'reject', rejectReason)}
+            >
+              {isBn ? 'প্রত্যাখ্যান নিশ্চিত করুন' : 'Confirm Rejection'}
+            </Button>
           </div>
-        </div>
-      )}
+        </DialogContent>
+      </Dialog>
       </div>
     </AppShell>
   );
