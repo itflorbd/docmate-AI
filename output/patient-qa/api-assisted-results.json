@@ -1,0 +1,124 @@
+{
+  "patient-profile-api": {
+    "status": 201,
+    "profileId": "d62133d1-4efe-4912-998e-dc2003f00bb3"
+  },
+  "ask-en-Cedar-17": {
+    "status": 200,
+    "found": true,
+    "matching": 1,
+    "first": {
+      "quote": "DOCMATE AI / SYNTHETIC TEST DATA 02\nSYNTHETIC RECORDS / FX-101 TO FX-103\nFebrile illness\nCompare time course, explicit negatives and an incomplete intake. FX-101 | Cedar-17 | Dengue evidence review\nRecord. Adult, 32. Fever entered on day 1. On day 4, lower temperature was recorded alongside\npersistent vomiting and abdominal pain. Symptom entries are self-reported. No test result is attached. Evidence statement. Cedar-17 records persistent vomiting on day 4 after the fever was reported lower. Record limitation. Examination, fluid intake and test result are unrecorded. The intake tag does not\nestablish a diagnosis. FX-102 | Maple-24 | Fever and cough with negatives\nRecord. Adult, 41. Cough for five days. At the time of the recorded call the patient denied fever and\nshortness of breath. No in-person examination was documented. Evidence statement. Maple-24 documents cough for five days and explicitly records no fever at the time\nof the call. Record limitation. Past fever history, observations and examination findings are unavailable. FX-103 | Birch-09 | Fever intake with missing observations\nRecord. Adult, 27. The entire intake is “feels hot since yesterday.” No measured temperature, symptom\nreview or examination appears in the record. Evidence statement. Birch-09 contains a reported fever without a measured temperature or documented\nexamination. Record limitation. Measured vital signs, associated symptoms and examination are missing.",
+      "page": 2,
+      "chunk_id": "e6bf5009-898f-40b5-b86c-3bed9e88eeba"
+    }
+  },
+  "ask-en-Orchid-42": {
+    "status": 200,
+    "found": true,
+    "matching": 1,
+    "first": {
+      "quote": "DOCMATE AI / SYNTHETIC TEST DATA 04\nSYNTHETIC RECORDS / FX-107 TO FX-109\nBlood pressure and metabolic\ndocumentation\nPreserve units, dates and the difference between a reading and a diagnosis. FX-107 | Orchid-42 | Two blood pressure readings\nRecord. Adult, 61. A clinic intake lists an upper-arm measurement of 148/94 mmHg and a later entry on a\nseparate day of 142/90 mmHg. Both are recorded observations. Evidence statement. Orchid-42 lists 148/94 mmHg on the first visit and 142/90 mmHg on the second\nvisit. Record limitation. Measurement conditions and clinician assessment are unrecorded. FX-108 | Iris-08 | Blood pressure measurement disagreement\nRecord. Adult, 46. The home diary shows 131/82 mmHg at 07:30. The clinic intake shows 151/92 mmHg\nat 14:20. Device validation is unknown. Evidence statement. Iris-08 labels 131/82 mmHg as home and 151/92 mmHg as clinic. Record limitation. Measurement technique, repeat readings and device validation are missing. FX-109 | Lotus-27 | Glucose with unknown fasting status\nRecord. Adult, 52. Glucose 168 mg/dL was transcribed from a point-of-care screen. The meal timing field\nis empty. No interpretation was entered. Evidence statement. Lotus-27 records glucose of 168 mg/dL with fasting status unknown. Record limitation. Confirm specimen, timing, device and clinician interpretation.",
+      "page": 4,
+      "chunk_id": "2af3d3ce-d186-4f32-bf2f-c67f36c48830"
+    }
+  },
+  "ask-en-unrelated": {
+    "status": 200,
+    "found": false,
+    "matching": 0
+  },
+  "patient-otp-and-portal": {
+    "send": 200,
+    "wrong": 400,
+    "correct": 200,
+    "portal": 200,
+    "profile": "Synthetic Cedar QA",
+    "prescriptions": 0,
+    "schedules": 0,
+    "reports": 0,
+    "grants": 1
+  },
+  "ask-bn-Orchid-42": {
+    "status": 200,
+    "found": true,
+    "matching": 1,
+    "first": {
+      "quote": "DOCMATE AI / SYNTHETIC TEST DATA 04\nSYNTHETIC RECORDS / FX-107 TO FX-109\nBlood pressure and metabolic\ndocumentation\nPreserve units, dates and the difference between a reading and a diagnosis. FX-107 | Orchid-42 | Two blood pressure readings\nRecord. Adult, 61. A clinic intake lists an upper-arm measurement of 148/94 mmHg and a later entry on a\nseparate day of 142/90 mmHg. Both are recorded observations. Evidence statement. Orchid-42 lists 148/94 mmHg on the first visit and 142/90 mmHg on the second\nvisit. Record limitation. Measurement conditions and clinician assessment are unrecorded. FX-108 | Iris-08 | Blood pressure measurement disagreement\nRecord. Adult, 46. The home diary shows 131/82 mmHg at 07:30. The clinic intake shows 151/92 mmHg\nat 14:20. Device validation is unknown. Evidence statement. Iris-08 labels 131/82 mmHg as home and 151/92 mmHg as clinic. Record limitation. Measurement technique, repeat readings and device validation are missing. FX-109 | Lotus-27 | Glucose with unknown fasting status\nRecord. Adult, 52. Glucose 168 mg/dL was transcribed from a point-of-care screen. The meal timing field\nis empty. No interpretation was entered. Evidence statement. Lotus-27 records glucose of 168 mg/dL with fasting status unknown. Record limitation. Confirm specimen, timing, device and clinician interpretation.",
+      "page": 4,
+      "chunk_id": "2af3d3ce-d186-4f32-bf2f-c67f36c48830"
+    }
+  },
+  "ask-bn-Maple-24": {
+    "status": 200,
+    "found": true,
+    "matching": 1,
+    "first": {
+      "quote": "DOCMATE AI / SYNTHETIC TEST DATA 02\nSYNTHETIC RECORDS / FX-101 TO FX-103\nFebrile illness\nCompare time course, explicit negatives and an incomplete intake. FX-101 | Cedar-17 | Dengue evidence review\nRecord. Adult, 32. Fever entered on day 1. On day 4, lower temperature was recorded alongside\npersistent vomiting and abdominal pain. Symptom entries are self-reported. No test result is attached. Evidence statement. Cedar-17 records persistent vomiting on day 4 after the fever was reported lower. Record limitation. Examination, fluid intake and test result are unrecorded. The intake tag does not\nestablish a diagnosis. FX-102 | Maple-24 | Fever and cough with negatives\nRecord. Adult, 41. Cough for five days. At the time of the recorded call the patient denied fever and\nshortness of breath. No in-person examination was documented. Evidence statement. Maple-24 documents cough for five days and explicitly records no fever at the time\nof the call. Record limitation. Past fever history, observations and examination findings are unavailable. FX-103 | Birch-09 | Fever intake with missing observations\nRecord. Adult, 27. The entire intake is “feels hot since yesterday.” No measured temperature, symptom\nreview or examination appears in the record. Evidence statement. Birch-09 contains a reported fever without a measured temperature or documented\nexamination. Record limitation. Measured vital signs, associated symptoms and examination are missing.",
+      "page": 2,
+      "chunk_id": "e6bf5009-898f-40b5-b86c-3bed9e88eeba"
+    }
+  },
+  "portal-en-mobile": {
+    "viewport": 390,
+    "docWidth": 390,
+    "heading": "Patient Portal",
+    "disclaimer": true
+  },
+  "portal-Prescriptions": {
+    "text": "Recorded Prescriptions\nNo prescriptions recorded yet",
+    "visual": {
+      "viewport": 390,
+      "docWidth": 390,
+      "heading": "Patient Portal",
+      "disclaimer": true
+    }
+  },
+  "portal-Reports": {
+    "text": "Medical Reports & Files\n\nManage lab reports and control whether doctors can view them\n\nUpload Report\nNo reports uploaded yet",
+    "visual": {
+      "viewport": 390,
+      "docWidth": 390,
+      "heading": "Patient Portal",
+      "disclaimer": true
+    }
+  },
+  "portal-Consent & Logs": {
+    "text": "Doctor Access Grants\n\nDoctors authorized to view your clinical history. You can revoke access at any time.\n\nDr. Farhana Rahman (MBBS, FCPS)\nA-12345\nActive (—d left)\n\nScope: this_doctor_only via OTP\n\nRevoke Access\nWho Viewed My Records (Audit Log)\n\nTamper-evident log of clinical access to this patient profile\n\nDr. Farhana Rahman (MBBS, FCPS) (doctor)\n\nPhysici",
+    "visual": {
+      "viewport": 390,
+      "docWidth": 390,
+      "heading": "Patient Portal",
+      "disclaimer": true
+    }
+  },
+  "ask-visual": {
+    "status": 200,
+    "visual": {
+      "viewport": 1280,
+      "docWidth": 1280,
+      "heading": "Ask the Medical Library",
+      "disclaimer": true
+    }
+  },
+  "patient-cases-permission": {
+    "status": 403
+  },
+  "patient-upload-report": {
+    "visibleFileInputs": 0,
+    "status": 404,
+    "code": "Patient not found"
+  },
+  "portal-bn-mobile": {
+    "viewport": 390,
+    "docWidth": 390,
+    "heading": "রোগী পোর্টাল",
+    "disclaimer": true
+  },
+  "portal-bn-tablet": {
+    "viewport": 768,
+    "docWidth": 768,
+    "heading": "রোগী পোর্টাল",
+    "disclaimer": true
+  }
+}

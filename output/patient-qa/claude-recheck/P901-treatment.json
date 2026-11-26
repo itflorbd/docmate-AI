@@ -1,0 +1,11 @@
+{
+  "route": 200,
+  "diagnosis": "Diabetes mellitus, subtype unspecified",
+  "status": "insufficient_evidence",
+  "visibleStatus": "insufficient_evidence",
+  "visibleSummary": "Treatment draft\n\nA draft for you to review. You decide.\n\nTest data only. Not for real patients.\nRebuild draft\nNot enough evidence for a draft\nThe library has no guideline passage that names a medicine for \"Diabetes mellitus\". Check the diagnosis wording or add an approved guideline.",
+  "missing": [
+    "Guideline evidence for this diagnosis"
+  ],
+  "options": []
+}

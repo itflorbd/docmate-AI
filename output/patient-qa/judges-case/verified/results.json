@@ -1,0 +1,92 @@
+{
+  "caseSetup": {
+    "status": "created",
+    "code": "P-901"
+  },
+  "chatWorkspace": {
+    "error": "expect(locator).toBeVisible() failed\n\nLocator: getByRole('textbox', { name: 'Enter clinical observation' })\nExpected: visible\nTimeout: 55000ms\nError: element(s) not found"
+  },
+  "03-structural-analysis": {
+    "http": 200,
+    "labs": [
+      {
+        "name": "Laboratory HbA1c, Day 1",
+        "unit": "%",
+        "value": 7.4
+      },
+      {
+        "name": "Fasting plasma glucose, Day 1 after 8 hours fasting",
+        "unit": "mg/dL",
+        "value": 154
+      },
+      {
+        "name": "Repeat fasting plasma glucose, Day 8 after 8 hours fasting",
+        "unit": "mg/dL",
+        "value": 151
+      }
+    ],
+    "status": "insufficient_evidence",
+    "differentials": [],
+    "missing": [
+      {
+        "why_it_helps": "",
+        "which_diagnoses_it_separates": [],
+        "id": "exam",
+        "type": "question",
+        "text": "What findings did the physician document on examination?"
+      }
+    ]
+  },
+  "04-library-ask": {
+    "http": 200,
+    "found": true,
+    "answer": "The library contains the following matching source excerpts.",
+    "citations": [
+      {
+        "claim_text": "DOCMATE AI / JUDGES DEMO LIBRARY\nDiabetes diagnostic\nreference\nAdult laboratory thresholds, confirmation, and limits of classification\nLaboratory thresholds in nonpregnant adults\nLABORATORY HbA1c (A1C) FASTING PLASMA GLUCOSE (FPG)\n6.5% or higher 126 mg/dL or higher\nEach threshold falls in the diabetes range. Laboratory fasting plasma glucose is measured after a fast\nof at least 8 hours. [1, 2]\nConfirm with a second result\nA second test is generally used to confirm diabetes. Repeated fasting plasma glucose in the diabetes\nrange on separate draws supports confirmation. [1, 2]\nUse symptoms as clinical context\nFrequent urination (polyuria), increased thirst (polydipsia), and fatigue can occur with diabetes. These\nsymptoms occur across diabetes types. Check the documented laboratory results before confirming\nthe diagnosis in an evidence review. [1, 3]\nKeep the diagnosis and its subtype separate\nThese glucose tests can establish diabetes mellitus. Classifying the subtype requires additional clinical\nassessment. If A1C and glucose disagree, review test reliability and possible factors affecting A1C. [1,\n2]\nSources\n[1] NIDDK. Diabetes Tests & Diagnosis\n[2] NIDDK. Diabetes & Prediabetes Tests\n[3] CDC. Symptoms of Diabetes\nSource-derived summary for a synthetic software demo. Checked 24 November 2026. Clinical decision support only. Not a substitute for professional judgement. 01",
+        "text": "DOCMATE AI / JUDGES DEMO LIBRARY\nDiabetes diagnostic\nreference\nAdult laboratory thresholds, confirmation, and limits of classification\nLaboratory thresholds in nonpregnant adults\nLABORATORY HbA1c (A1C) FASTING PLASMA GLUCOSE (FPG)\n6.5% or higher 126 mg/dL or higher\nEach threshold falls in the diabetes range. Laboratory fasting plasma glucose is measured after a fast\nof at least 8 hours. [1, 2]\nConfirm with a second result\nA second test is generally used to confirm diabetes. Repeated fasting plasma glucose in the diabetes\nrange on separate draws supports confirmation. [1, 2]\nUse symptoms as clinical context\nFrequent urination (polyuria), increased thirst (polydipsia), and fatigue can occur with diabetes. These\nsymptoms occur across diabetes types. Check the documented laboratory results before confirming\nthe diagnosis in an evidence review. [1, 3]\nKeep the diagnosis and its subtype separate\nThese glucose tests can establish diabetes mellitus. Classifying the subtype requires additional clinical\nassessment. If A1C and glucose disagree, review test reliability and possible factors affecting A1C. [1,\n2]\nSources\n[1] NIDDK. Diabetes Tests & Diagnosis\n[2] NIDDK. Diabetes & Prediabetes Tests\n[3] CDC. Symptoms of Diabetes\nSource-derived summary for a synthetic software demo. Checked 24 November 2026. Clinical decision support only. Not a substitute for professional judgement. 01",
+        "quote": "DOCMATE AI / JUDGES DEMO LIBRARY\nDiabetes diagnostic\nreference\nAdult laboratory thresholds, confirmation, and limits of classification\nLaboratory thresholds in nonpregnant adults\nLABORATORY HbA1c (A1C) FASTING PLASMA GLUCOSE (FPG)\n6.5% or higher 126 mg/dL or higher\nEach threshold falls in the diabetes range. Laboratory fasting plasma glucose is measured after a fast\nof at least 8 hours. [1, 2]\nConfirm with a second result\nA second test is generally used to confirm diabetes. Repeated fasting plasma glucose in the diabetes\nrange on separate draws supports confirmation. [1, 2]\nUse symptoms as clinical context\nFrequent urination (polyuria), increased thirst (polydipsia), and fatigue can occur with diabetes. These\nsymptoms occur across diabetes types. Check the documented laboratory results before confirming\nthe diagnosis in an evidence review. [1, 3]\nKeep the diagnosis and its subtype separate\nThese glucose tests can establish diabetes mellitus. Classifying the subtype requires additional clinical\nassessment. If A1C and glucose disagree, review test reliability and possible factors affecting A1C. [1,\n2]\nSources\n[1] NIDDK. Diabetes Tests & Diagnosis\n[2] NIDDK. Diabetes & Prediabetes Tests\n[3] CDC. Symptoms of Diabetes\nSource-derived summary for a synthetic software demo. Checked 24 November 2026. Clinical decision support only. Not a substitute for professional judgement. 01",
+        "chunk_id": "5fa65e03-07b4-4a3a-8589-feea9b12bb5e",
+        "source_title": "DocMate Judges - Diabetes Diagnostic Reference",
+        "source_year": 2026,
+        "page": 1,
+        "verified": true,
+        "verification_status": "verified"
+      },
+      {
+        "claim_text": "DOCMATE AI / SYNTHETIC TEST DATA 04\nSYNTHETIC RECORDS / FX-107 TO FX-109\nBlood pressure and metabolic\ndocumentation\nPreserve units, dates and the difference between a reading and a diagnosis. FX-107 | Orchid-42 | Two blood pressure readings\nRecord. Adult, 61. A clinic intake lists an upper-arm measurement of 148/94 mmHg and a later entry on a\nseparate day of 142/90 mmHg. Both are recorded observations. Evidence statement. Orchid-42 lists 148/94 mmHg on the first visit and 142/90 mmHg on the second\nvisit. Record limitation. Measurement conditions and clinician assessment are unrecorded. FX-108 | Iris-08 | Blood pressure measurement disagreement\nRecord. Adult, 46. The home diary shows 131/82 mmHg at 07:30. The clinic intake shows 151/92 mmHg\nat 14:20. Device validation is unknown. Evidence statement. Iris-08 labels 131/82 mmHg as home and 151/92 mmHg as clinic. Record limitation. Measurement technique, repeat readings and device validation are missing. FX-109 | Lotus-27 | Glucose with unknown fasting status\nRecord. Adult, 52. Glucose 168 mg/dL was transcribed from a point-of-care screen. The meal timing field\nis empty. No interpretation was entered. Evidence statement. Lotus-27 records glucose of 168 mg/dL with fasting status unknown. Record limitation. Confirm specimen, timing, device and clinician interpretation.",
+        "text": "DOCMATE AI / SYNTHETIC TEST DATA 04\nSYNTHETIC RECORDS / FX-107 TO FX-109\nBlood pressure and metabolic\ndocumentation\nPreserve units, dates and the difference between a reading and a diagnosis. FX-107 | Orchid-42 | Two blood pressure readings\nRecord. Adult, 61. A clinic intake lists an upper-arm measurement of 148/94 mmHg and a later entry on a\nseparate day of 142/90 mmHg. Both are recorded observations. Evidence statement. Orchid-42 lists 148/94 mmHg on the first visit and 142/90 mmHg on the second\nvisit. Record limitation. Measurement conditions and clinician assessment are unrecorded. FX-108 | Iris-08 | Blood pressure measurement disagreement\nRecord. Adult, 46. The home diary shows 131/82 mmHg at 07:30. The clinic intake shows 151/92 mmHg\nat 14:20. Device validation is unknown. Evidence statement. Iris-08 labels 131/82 mmHg as home and 151/92 mmHg as clinic. Record limitation. Measurement technique, repeat readings and device validation are missing. FX-109 | Lotus-27 | Glucose with unknown fasting status\nRecord. Adult, 52. Glucose 168 mg/dL was transcribed from a point-of-care screen. The meal timing field\nis empty. No interpretation was entered. Evidence statement. Lotus-27 records glucose of 168 mg/dL with fasting status unknown. Record limitation. Confirm specimen, timing, device and clinician interpretation.",
+        "quote": "DOCMATE AI / SYNTHETIC TEST DATA 04\nSYNTHETIC RECORDS / FX-107 TO FX-109\nBlood pressure and metabolic\ndocumentation\nPreserve units, dates and the difference between a reading and a diagnosis. FX-107 | Orchid-42 | Two blood pressure readings\nRecord. Adult, 61. A clinic intake lists an upper-arm measurement of 148/94 mmHg and a later entry on a\nseparate day of 142/90 mmHg. Both are recorded observations. Evidence statement. Orchid-42 lists 148/94 mmHg on the first visit and 142/90 mmHg on the second\nvisit. Record limitation. Measurement conditions and clinician assessment are unrecorded. FX-108 | Iris-08 | Blood pressure measurement disagreement\nRecord. Adult, 46. The home diary shows 131/82 mmHg at 07:30. The clinic intake shows 151/92 mmHg\nat 14:20. Device validation is unknown. Evidence statement. Iris-08 labels 131/82 mmHg as home and 151/92 mmHg as clinic. Record limitation. Measurement technique, repeat readings and device validation are missing. FX-109 | Lotus-27 | Glucose with unknown fasting status\nRecord. Adult, 52. Glucose 168 mg/dL was transcribed from a point-of-care screen. The meal timing field\nis empty. No interpretation was entered. Evidence statement. Lotus-27 records glucose of 168 mg/dL with fasting status unknown. Record limitation. Confirm specimen, timing, device and clinician interpretation.",
+        "chunk_id": "2af3d3ce-d186-4f32-bf2f-c67f36c48830",
+        "source_title": "DocMate Demo Resource Library",
+        "source_year": 2026,
+        "page": 4,
+        "verified": true,
+        "verification_status": "verified"
+      },
+      {
+        "claim_text": "DOCMATE AI / SYNTHETIC TEST DATA 01\nDOCMATE AI / DEMO LIBRARY\nDemo resource library\n24 synthetic records for retrieval, citation, and workflow testing. Synthetic data only\nAll case observations, dates, test identifiers, and mock medication names are fictional. They are intended\nfor software testing. Clinical decision support only. Not a substitute for professional judgement. Contents\n02 Febrile illness | FX-101 to FX-103\n03 Respiratory and chest symptoms | FX-104 to FX-106\n04 Blood pressure and metabolic documentation | FX-107 to FX-109\n05 Infection concern and uncertainty | FX-110 to FX-112\n06 Medication reconciliation | FX-113 to FX-115\n07 Patient context and measurement completeness | FX-116 to FX-118\n08 Conflicting sources and correction history | FX-119 to FX-121\n09 Administrative controls and distractors | FX-122 to FX-124\n10 Public health background and source notes\nEach record has a stable fixture ID, a distinctive retrieval label, a short extractable statement, and an explicit record\nlimitation. Page numbers are printed for manual evidence checks.",
+        "text": "DOCMATE AI / SYNTHETIC TEST DATA 01\nDOCMATE AI / DEMO LIBRARY\nDemo resource library\n24 synthetic records for retrieval, citation, and workflow testing. Synthetic data only\nAll case observations, dates, test identifiers, and mock medication names are fictional. They are intended\nfor software testing. Clinical decision support only. Not a substitute for professional judgement. Contents\n02 Febrile illness | FX-101 to FX-103\n03 Respiratory and chest symptoms | FX-104 to FX-106\n04 Blood pressure and metabolic documentation | FX-107 to FX-109\n05 Infection concern and uncertainty | FX-110 to FX-112\n06 Medication reconciliation | FX-113 to FX-115\n07 Patient context and measurement completeness | FX-116 to FX-118\n08 Conflicting sources and correction history | FX-119 to FX-121\n09 Administrative controls and distractors | FX-122 to FX-124\n10 Public health background and source notes\nEach record has a stable fixture ID, a distinctive retrieval label, a short extractable statement, and an explicit record\nlimitation. Page numbers are printed for manual evidence checks.",
+        "quote": "DOCMATE AI / SYNTHETIC TEST DATA 01\nDOCMATE AI / DEMO LIBRARY\nDemo resource library\n24 synthetic records for retrieval, citation, and workflow testing. Synthetic data only\nAll case observations, dates, test identifiers, and mock medication names are fictional. They are intended\nfor software testing. Clinical decision support only. Not a substitute for professional judgement. Contents\n02 Febrile illness | FX-101 to FX-103\n03 Respiratory and chest symptoms | FX-104 to FX-106\n04 Blood pressure and metabolic documentation | FX-107 to FX-109\n05 Infection concern and uncertainty | FX-110 to FX-112\n06 Medication reconciliation | FX-113 to FX-115\n07 Patient context and measurement completeness | FX-116 to FX-118\n08 Conflicting sources and correction history | FX-119 to FX-121\n09 Administrative controls and distractors | FX-122 to FX-124\n10 Public health background and source notes\nEach record has a stable fixture ID, a distinctive retrieval label, a short extractable statement, and an explicit record\nlimitation. Page numbers are printed for manual evidence checks.",
+        "chunk_id": "4ed43060-c774-46cc-8c61-609514688c4c",
+        "source_title": "DocMate Demo Resource Library",
+        "source_year": 2026,
+        "page": 1,
+        "verified": true,
+        "verification_status": "verified"
+      },
+      {
+        "claim_text": "DOCMATE AI / SYNTHETIC TEST DATA 05\nSYNTHETIC RECORDS / FX-110 TO FX-112\nInfection concern and uncertainty\nSeparate an observation, a suspected source and a confirmed finding. FX-110 | Ember-38 | Infection concern with mental status change\nRecord. Adult, 70. A caregiver described new confusion at 16:20 after a reported infection. The triage\nnote records an urgent clinician-review flag as a fictional workflow event. Evidence statement. Ember-38 records caregiver-reported new confusion at 16:20. Record limitation. Baseline mental status, examination and measurement context are unavailable. FX-111 | Cinder-22 | Urine test status and attribution\nRecord. Adult, 58. On the first day a urine specimen was requested. The second-day note says the\nspecimen was received. There is no result, organism or diagnosis in this fixture. Evidence statement. Cinder-22 says the specimen was received and the urine result remains pending. Record limitation. Result, specimen quality and clinician assessment are absent. FX-112 | Flint-65 | Explicit denial and later uncertainty\nRecord. Adult, 36. The intake explicitly records no chills. The follow-up contains no entry for chills. The\nentry “not reassessed” applies to the follow-up only. Evidence statement. Flint-65 records no chills at intake and no reassessment of chills at follow-up. Record limitation. Do not carry the intake denial forward as a new observation.",
+        "text": "DOCMATE AI / SYNTHETIC TEST DATA 05\nSYNTHETIC RECORDS / FX-110 TO FX-112\nInfection concern and uncertainty\nSeparate an observation, a suspected source and a confirmed finding. FX-110 | Ember-38 | Infection concern with mental status change\nRecord. Adult, 70. A caregiver described new confusion at 16:20 after a reported infection. The triage\nnote records an urgent clinician-review flag as a fictional workflow event. Evidence statement. Ember-38 records caregiver-reported new confusion at 16:20. Record limitation. Baseline mental status, examination and measurement context are unavailable. FX-111 | Cinder-22 | Urine test status and attribution\nRecord. Adult, 58. On the first day a urine specimen was requested. The second-day note says the\nspecimen was received. There is no result, organism or diagnosis in this fixture. Evidence statement. Cinder-22 says the specimen was received and the urine result remains pending. Record limitation. Result, specimen quality and clinician assessment are absent. FX-112 | Flint-65 | Explicit denial and later uncertainty\nRecord. Adult, 36. The intake explicitly records no chills. The follow-up contains no entry for chills. The\nentry “not reassessed” applies to the follow-up only. Evidence statement. Flint-65 records no chills at intake and no reassessment of chills at follow-up. Record limitation. Do not carry the intake denial forward as a new observation.",
+        "quote": "DOCMATE AI / SYNTHETIC TEST DATA 05\nSYNTHETIC RECORDS / FX-110 TO FX-112\nInfection concern and uncertainty\nSeparate an observation, a suspected source and a confirmed finding. FX-110 | Ember-38 | Infection concern with mental status change\nRecord. Adult, 70. A caregiver described new confusion at 16:20 after a reported infection. The triage\nnote records an urgent clinician-review flag as a fictional workflow event. Evidence statement. Ember-38 records caregiver-reported new confusion at 16:20. Record limitation. Baseline mental status, examination and measurement context are unavailable. FX-111 | Cinder-22 | Urine test status and attribution\nRecord. Adult, 58. On the first day a urine specimen was requested. The second-day note says the\nspecimen was received. There is no result, organism or diagnosis in this fixture. Evidence statement. Cinder-22 says the specimen was received and the urine result remains pending. Record limitation. Result, specimen quality and clinician assessment are absent. FX-112 | Flint-65 | Explicit denial and later uncertainty\nRecord. Adult, 36. The intake explicitly records no chills. The follow-up contains no entry for chills. The\nentry “not reassessed” applies to the follow-up only. Evidence statement. Flint-65 records no chills at intake and no reassessment of chills at follow-up. Record limitation. Do not carry the intake denial forward as a new observation.",
+        "chunk_id": "7e3f47ef-15f3-4486-97fc-09f0fe5d5d97",
+        "source_title": "DocMate Demo Resource Library",
+        "source_year": 2026,
+        "page": 5,
+        "verified": true,
+        "verification_status": "verified"
+      }
+    ],
+    "sourceFound": true
+  }
+}

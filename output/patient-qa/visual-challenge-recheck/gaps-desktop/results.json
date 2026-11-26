@@ -1,0 +1,235 @@
+{
+  "bn": {
+    "preview_kinds": [
+      "diagnosis",
+      "allergy",
+      "medication",
+      "lab",
+      "measurement",
+      "measurement",
+      "measurement",
+      "measurement",
+      "open_item"
+    ],
+    "repeat_submission": {
+      "status": 200,
+      "same_visit": true,
+      "created": false,
+      "follow_up_rows": 1
+    },
+    "treatment_before_reconcile": {
+      "status": 409,
+      "code": "reconciliation_required"
+    },
+    "reconciled": {
+      "current_medicines": [
+        "Metformin 1000 mg twice daily"
+      ],
+      "allergies": [
+        "Sulfonamide rash"
+      ],
+      "vitals": {
+        "blood_pressure_systolic": 138,
+        "blood_pressure_diastolic": 86
+      },
+      "lab_values": [],
+      "historical": [
+        {
+          "label": "HbA1c",
+          "value": "7.9 %",
+          "case_id": "6f8e6788-4d7a-4a49-8681-dbd80cfa16da",
+          "visit_date": "2026-10-25T12:30:08.371Z"
+        },
+        {
+          "label": "Blood pressure (systolic)",
+          "value": "150 mmHg",
+          "case_id": "6f8e6788-4d7a-4a49-8681-dbd80cfa16da",
+          "visit_date": "2026-10-25T12:30:08.371Z"
+        },
+        {
+          "label": "Blood pressure (diastolic)",
+          "value": "95 mmHg",
+          "case_id": "6f8e6788-4d7a-4a49-8681-dbd80cfa16da",
+          "visit_date": "2026-10-25T12:30:08.371Z"
+        },
+        {
+          "label": "Heart rate",
+          "value": "82 bpm",
+          "case_id": "6f8e6788-4d7a-4a49-8681-dbd80cfa16da",
+          "visit_date": "2026-10-25T12:30:08.371Z"
+        },
+        {
+          "label": "Weight",
+          "value": "74 kg",
+          "case_id": "6f8e6788-4d7a-4a49-8681-dbd80cfa16da",
+          "visit_date": "2026-10-25T12:30:08.371Z"
+        }
+      ],
+      "diagnosis": "Type 2 diabetes mellitus"
+    },
+    "history_used": [
+      "allergy_check: Sulfonamide rash · নিশ্চিত · অ্যালার্জি পরীক্ষায় ব্যবহার",
+      "interaction_check: Metformin 1000 mg twice daily · বদলানো হয়েছে · ওষুধের মিথস্ক্রিয়া (interaction) পরীক্ষায় ব্যবহার",
+      "working_diagnosis: Type 2 diabetes mellitus · আজকের জন্য নিশ্চিত · আজকের রোগনির্ণয় হিসেবে ব্যবহার",
+      "historical_context: শুধু ইতিহাস (আজকের মান নয়): HbA1c 7.9 % · রক্তচাপ সিস্টোলিক (BP) 150 mmHg · রক্তচাপ ডায়াস্টোলিক (BP) 95 mmHg · হৃদস্পন্দন (Heart rate) 82 bpm · ওজন 74 kg"
+    ],
+    "approve_without_review": {
+      "status": 422,
+      "code": "guideline_conflict"
+    },
+    "audit": [
+      {
+        "event": "FOLLOW_UP_STARTED",
+        "decision": null,
+        "sides": null
+      },
+      {
+        "event": "FOLLOW_UP_RECONCILED",
+        "decision": null,
+        "sides": null
+      },
+      {
+        "event": "TREATMENT_APPROVAL_BLOCKED",
+        "decision": null,
+        "sides": null
+      },
+      {
+        "event": "TREATMENT_CONFLICT_REVIEWED",
+        "decision": "request_information",
+        "sides": 2
+      },
+      {
+        "event": "TREATMENT_CONFLICT_REVIEWED",
+        "decision": "use_recommendation",
+        "sides": 2
+      }
+    ],
+    "visit1_unchanged": true
+  },
+  "en": {
+    "preview_kinds": [
+      "diagnosis",
+      "allergy",
+      "medication",
+      "lab",
+      "measurement",
+      "measurement",
+      "measurement",
+      "measurement",
+      "open_item"
+    ],
+    "repeat_submission": {
+      "status": 200,
+      "same_visit": true,
+      "created": false,
+      "follow_up_rows": 1
+    },
+    "treatment_before_reconcile": {
+      "status": 409,
+      "code": "reconciliation_required"
+    },
+    "reconciled": {
+      "current_medicines": [
+        "Metformin 1000 mg twice daily"
+      ],
+      "allergies": [
+        "Sulfonamide rash"
+      ],
+      "vitals": {
+        "blood_pressure_systolic": 138,
+        "blood_pressure_diastolic": 86
+      },
+      "lab_values": [],
+      "historical": [
+        {
+          "label": "HbA1c",
+          "value": "7.9 %",
+          "case_id": "8e5170eb-44f5-4b46-bf25-9c67f31d7fa3",
+          "visit_date": "2026-10-25T12:30:15.278Z"
+        },
+        {
+          "label": "Blood pressure (systolic)",
+          "value": "150 mmHg",
+          "case_id": "8e5170eb-44f5-4b46-bf25-9c67f31d7fa3",
+          "visit_date": "2026-10-25T12:30:15.278Z"
+        },
+        {
+          "label": "Blood pressure (diastolic)",
+          "value": "95 mmHg",
+          "case_id": "8e5170eb-44f5-4b46-bf25-9c67f31d7fa3",
+          "visit_date": "2026-10-25T12:30:15.278Z"
+        },
+        {
+          "label": "Heart rate",
+          "value": "82 bpm",
+          "case_id": "8e5170eb-44f5-4b46-bf25-9c67f31d7fa3",
+          "visit_date": "2026-10-25T12:30:15.278Z"
+        },
+        {
+          "label": "Weight",
+          "value": "74 kg",
+          "case_id": "8e5170eb-44f5-4b46-bf25-9c67f31d7fa3",
+          "visit_date": "2026-10-25T12:30:15.278Z"
+        }
+      ],
+      "diagnosis": "Type 2 diabetes mellitus"
+    },
+    "history_used": [
+      "allergy_check: Sulfonamide rash · Confirmed · used in the allergy check",
+      "interaction_check: Metformin 1000 mg twice daily · Changed · used in the interaction check",
+      "working_diagnosis: Type 2 diabetes mellitus · Confirmed for today · used as today's working diagnosis",
+      "historical_context: History only (not today's values): HbA1c 7.9 % · BP systolic 150 mmHg · BP diastolic 95 mmHg · Heart rate 82 bpm · Weight 74 kg"
+    ],
+    "approve_without_review": {
+      "status": 422,
+      "code": "guideline_conflict"
+    },
+    "audit": [
+      {
+        "event": "FOLLOW_UP_STARTED",
+        "decision": null,
+        "sides": null
+      },
+      {
+        "event": "FOLLOW_UP_RECONCILED",
+        "decision": null,
+        "sides": null
+      },
+      {
+        "event": "TREATMENT_APPROVAL_BLOCKED",
+        "decision": null,
+        "sides": null
+      },
+      {
+        "event": "TREATMENT_CONFLICT_REVIEWED",
+        "decision": "request_information",
+        "sides": 2
+      },
+      {
+        "event": "TREATMENT_CONFLICT_REVIEWED",
+        "decision": "use_recommendation",
+        "sides": 2
+      }
+    ],
+    "visit1_unchanged": true,
+    "controls": {
+      "different_population": {
+        "kind": "different_context",
+        "blocking": false,
+        "applicable": "recommends",
+        "option_disputed": false
+      },
+      "single_source": {
+        "conflicts": 0,
+        "option_disputed": false
+      },
+      "altered_quote": {
+        "new_key": true,
+        "earlier_review_applies": false,
+        "approve_status": 422,
+        "approve_code": "guideline_conflict"
+      },
+      "restored_quote_review_current": true
+    }
+  }
+}

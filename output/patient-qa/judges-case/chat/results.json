@@ -1,0 +1,174 @@
+{
+  "caseSetup": {
+    "status": "created",
+    "code": "P-901"
+  },
+  "chatWorkspace": {
+    "heading": "P-901",
+    "screen": "Case Conversation"
+  },
+  "01-symptoms-only": {
+    "http": 200,
+    "status": "answered",
+    "mode": "llm",
+    "model": "gpt-4o-mini",
+    "reply": "এই রোগীর উপসর্গগুলি, যেমন **বাড়তি তৃষ্ণা (Increased thirst)**, **বারবার মূত্রত্যাগ (Frequent urination)** এবং **অবসাদ (Fatigue)**, ডায়াবেটিসের সাথে সম্পর্কিত হতে পারে [1]। তবে, ডায়াবেটিস নিশ্চিত করার জন্য ল্যাবরেটরি পরীক্ষার ফলাফল প্রয়োজন [1]।\n\n- **ডায়াবেটিস নিশ্চিত করার জন্য দ্বিতীয় পরীক্ষার ফলাফল প্রয়োজন** [1]।\n\n_লাইব্রেরিতে নেই: HbA1c result; Fasting plasma glucose result._",
+    "claims": [
+      {
+        "ref": 1,
+        "page": 1,
+        "text": "Frequent urination (polyuria), increased thirst (polydipsia), and fatigue can occur with diabetes.",
+        "quote": "Frequent urination (polyuria), increased thirst (polydipsia), and fatigue can occur with diabetes.",
+        "section": "DocMate Judges - Diabetes Diagnostic Reference",
+        "chunk_id": "5fa65e03-07b4-4a3a-8589-feea9b12bb5e",
+        "verified": true,
+        "claim_text": "Frequent urination (polyuria), increased thirst (polydipsia), and fatigue can occur with diabetes.",
+        "source_year": 2026,
+        "source_title": "DocMate Judges - Diabetes Diagnostic Reference",
+        "verification_status": "verified"
+      }
+    ],
+    "followUps": [],
+    "missing": [
+      "HbA1c result",
+      "Fasting plasma glucose result"
+    ],
+    "dropped": 1,
+    "trace": [
+      {
+        "type": "trace",
+        "step": "understand",
+        "status": "running"
+      },
+      {
+        "type": "trace",
+        "step": "understand",
+        "status": "done"
+      },
+      {
+        "type": "trace",
+        "step": "retrieve",
+        "status": "running"
+      },
+      {
+        "type": "trace",
+        "step": "retrieve",
+        "status": "done",
+        "count": 6
+      },
+      {
+        "type": "trace",
+        "step": "generate",
+        "status": "running"
+      },
+      {
+        "type": "trace",
+        "step": "generate",
+        "status": "done"
+      },
+      {
+        "type": "trace",
+        "step": "verify",
+        "status": "running"
+      },
+      {
+        "type": "trace",
+        "step": "verify",
+        "status": "done",
+        "count": 1
+      }
+    ],
+    "eventTypes": [
+      "doctor_turn",
+      "trace",
+      "trace",
+      "trace",
+      "trace",
+      "trace",
+      "trace",
+      "trace",
+      "trace",
+      "final"
+    ]
+  },
+  "02-labs-in-conversation": {
+    "http": 200,
+    "status": "insufficient_evidence",
+    "mode": "llm",
+    "model": "gpt-4o-mini",
+    "reply": "লাইব্রেরিতে এর উত্তর পাইনি, তাই অনুমান করছি না। এখানে আপনার ক্লিনিকাল বিবেচনাই মূল।",
+    "claims": [],
+    "followUps": [
+      {
+        "id": "exam-general-followup",
+        "text": "শারীরিক পরীক্ষায় (Physical Examination) চিকিৎসক কী পর্যবেক্ষণ নথিভুক্ত করেছেন?",
+        "type": "question",
+        "why_it_helps": "পরীক্ষার ফলাফল সম্ভাব্য রোগ সংকুচিত করে",
+        "quick_answers": [
+          "কোনো উল্লেখযোগ্য ফাইন্ডিং নেই",
+          "পেটে ব্যথা (Abdominal tenderness)",
+          "পানিশূন্যতা (Dehydration)"
+        ],
+        "which_diagnoses_it_separates": []
+      }
+    ],
+    "missing": [],
+    "dropped": 2,
+    "trace": [
+      {
+        "type": "trace",
+        "step": "understand",
+        "status": "running"
+      },
+      {
+        "type": "trace",
+        "step": "understand",
+        "status": "done"
+      },
+      {
+        "type": "trace",
+        "step": "retrieve",
+        "status": "running"
+      },
+      {
+        "type": "trace",
+        "step": "retrieve",
+        "status": "done",
+        "count": 5
+      },
+      {
+        "type": "trace",
+        "step": "generate",
+        "status": "running"
+      },
+      {
+        "type": "trace",
+        "step": "generate",
+        "status": "done"
+      },
+      {
+        "type": "trace",
+        "step": "verify",
+        "status": "running"
+      },
+      {
+        "type": "trace",
+        "step": "verify",
+        "status": "done",
+        "count": 0
+      }
+    ],
+    "eventTypes": [
+      "doctor_turn",
+      "trace",
+      "trace",
+      "trace",
+      "trace",
+      "trace",
+      "trace",
+      "trace",
+      "trace",
+      "final"
+    ]
+  }
+}

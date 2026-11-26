@@ -1,0 +1,11 @@
+[
+  {
+    "fixture": "F6 manual prescription issuance paths",
+    "expected": "create-as-finalized refused (422); allergy draft blocked (422); stale review refused (409); clean draft stops at release gate (423); nothing stored as finalized; editor shows the server status.",
+    "observed": "direct finalized=422; allergy check=blocked, finalize=422; stale=409; clean check=clear, finalize=423; stored=draft,draft; editor=blocked server=blocked",
+    "safety_enforced": true,
+    "issuance_blocked": true,
+    "ui_matches_server": true,
+    "match": true
+  }
+]

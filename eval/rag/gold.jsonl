@@ -1,0 +1,45 @@
+{"id": "d1", "lang": "en", "question": "What are the three clinical phases of dengue?", "source": "Dengue", "section": 1, "facts": [["febrile"], ["critical"], ["recovery"]]}
+{"id": "d2", "lang": "en", "question": "When does the critical phase of dengue usually occur?", "source": "Dengue", "section": 1, "facts": [["3"], ["7"]]}
+{"id": "d3", "lang": "en", "question": "What lab findings often come before the platelet drop in dengue?", "source": "Dengue", "section": 1, "facts": [["tourniquet"], ["leukopenia", "4000"]]}
+{"id": "d4", "lang": "en", "question": "What are the warning signs of severe dengue?", "source": "Dengue", "section": 2, "facts": [["abdominal pain"], ["vomiting"], ["bleeding"]]}
+{"id": "d5", "lang": "en", "question": "What should I do if a dengue patient develops a warning sign?", "source": "Dengue", "section": 2, "facts": [["hospital", "admi"], ["intravenous", "IV"]]}
+{"id": "d6", "lang": "en", "question": "Can I give ibuprofen for fever in suspected dengue?", "source": "Dengue", "section": 3, "facts": [["paracetamol", "acetaminophen"], ["contraindicated", "avoid", "not"]]}
+{"id": "d7", "lang": "en", "question": "What is the maximum daily paracetamol dose in dengue?", "source": "Dengue", "section": 3, "facts": [["3000", "3 g"]]}
+{"id": "d8", "lang": "en", "question": "Are intramuscular injections safe in dengue?", "source": "Dengue", "section": 3, "facts": [["intramuscular", "IM"], ["hematoma", "never"]]}
+{"id": "d9", "lang": "en", "question": "How much oral fluid should an adult dengue outpatient take per day?", "source": "Dengue", "section": 4, "facts": [["2.5"], ["ORS", "oral rehydration"]]}
+{"id": "d10", "lang": "en", "question": "What IV fluid rate is recommended for dengue with warning signs but no shock?", "source": "Dengue", "section": 4, "facts": [["5 to 7", "5-7"], ["crystalloid", "saline", "Ringer"]]}
+{"id": "d11", "lang": "bn", "question": "ডেঙ্গু জ্বরের সতর্কতা চিহ্নগুলো (warning signs) কী কী?", "source": "Dengue", "section": 2, "facts": [["পেট", "abdominal"], ["বমি", "vomiting"]]}
+{"id": "d12", "lang": "bn", "question": "ডেঙ্গুতে জ্বরের জন্য কোন ওষুধ দেওয়া নিরাপদ?", "source": "Dengue", "section": 3, "facts": [["প্যারাসিটামল", "paracetamol"]]}
+{"id": "d13", "lang": "banglish", "question": "dengue rogike ki ibuprofen deya jabe?", "source": "Dengue", "section": 3, "facts": [["প্যারাসিটামল", "paracetamol", "NSAID", "আইবুপ্রোফেন", "ibuprofen"]]}
+{"id": "p1", "lang": "en", "question": "What are the classic symptoms of community-acquired pneumonia?", "source": "Respiratory", "section": 1, "facts": [["cough"], ["fever"], ["sputum", "dyspnea"]]}
+{"id": "p2", "lang": "en", "question": "What examination findings suggest pneumonia?", "source": "Respiratory", "section": 1, "facts": [["crackles"], ["tachypnea", "bronchial", "dullness"]]}
+{"id": "p3", "lang": "en", "question": "How do elderly patients with pneumonia present atypically?", "source": "Respiratory", "section": 1, "facts": [["confusion"], ["functional decline", "without high fever"]]}
+{"id": "p4", "lang": "en", "question": "What is the CRB-65 score made of?", "source": "Respiratory", "section": 2, "facts": [["confusion"], ["respiratory rate", "30"], ["65"]]}
+{"id": "p5", "lang": "en", "question": "What does a CRB-65 score of 3 mean?", "source": "Respiratory", "section": 2, "facts": [["severe"], ["admission", "hospital", "intensive"]]}
+{"id": "p6", "lang": "en", "question": "What is the first-line antibiotic for mild community-acquired pneumonia in a healthy adult?", "source": "Respiratory", "section": 3, "facts": [["amoxicillin"]]}
+{"id": "p7", "lang": "en", "question": "When should azithromycin be used for pneumonia?", "source": "Respiratory", "section": 3, "facts": [["atypical", "legionella", "mycoplasma"]]}
+{"id": "p8", "lang": "en", "question": "What can I give for pneumonia if the patient has a mild penicillin allergy?", "source": "Respiratory", "section": 4, "facts": [["cefuroxime", "cefpodoxime"]]}
+{"id": "p9", "lang": "en", "question": "Which antibiotic for pneumonia with penicillin anaphylaxis?", "source": "Respiratory", "section": 4, "facts": [["doxycycline", "levofloxacin", "moxifloxacin"]]}
+{"id": "p10", "lang": "en", "question": "What should I do if pneumonia does not improve after 72 hours of antibiotics?", "source": "Respiratory", "section": 5, "facts": [["chest radiograph", "x-ray", "radiography"], ["effusion", "empyema", "blood count"]]}
+{"id": "p11", "lang": "bn", "question": "নিউমোনিয়ার রোগী কখন জরুরি চিকিৎসা নেবেন?", "source": "Respiratory", "section": 5, "facts": [["শ্বাস", "dyspnea", "92", "অক্সিজেন", "oxygen"]]}
+{"id": "p12", "lang": "banglish", "question": "pneumonia rogir severity kivabe bujhbo?", "source": "Respiratory", "section": 2, "facts": [["CRB-65", "CRB"]]}
+{"id": "c1", "lang": "en", "question": "Which chest pain features should trigger a red-flag alert?", "source": "Cardiology Consensus", "section": 1, "facts": [["crushing", "pressure", "squeezing"], ["left arm", "jaw", "radiat"]]}
+{"id": "c2", "lang": "en", "question": "How quickly should an ECG be done for acute chest pain?", "source": "Cardiology Consensus", "section": 1, "facts": [["10 minutes", "10"]]}
+{"id": "c3", "lang": "en", "question": "How is STEMI diagnosed on ECG?", "source": "Cardiology Consensus", "section": 2, "facts": [["ST"], ["contiguous"]]}
+{"id": "c4", "lang": "en", "question": "What is the reperfusion time target for STEMI?", "source": "Cardiology Consensus", "section": 2, "facts": [["90"], ["120"]]}
+{"id": "c5", "lang": "en", "question": "How is NSTEMI defined?", "source": "Cardiology Consensus", "section": 2, "facts": [["troponin", "ST depression", "T-wave"]]}
+{"id": "c6", "lang": "en", "question": "What aspirin dose is given in suspected acute coronary syndrome?", "source": "Cardiology Consensus", "section": 3, "facts": [["300"]]}
+{"id": "c7", "lang": "en", "question": "When are nitrates contraindicated in chest pain?", "source": "Cardiology Consensus", "section": 3, "facts": [["PDE-5", "sildenafil", "tadalafil"], ["right ventricular"]]}
+{"id": "c8", "lang": "en", "question": "How do I tell pericarditis from other chest pain?", "source": "Cardiology Consensus", "section": 4, "facts": [["leaning forward"], ["friction rub", "PR"]]}
+{"id": "c9", "lang": "en", "question": "What features suggest costochondritis?", "source": "Cardiology Consensus", "section": 4, "facts": [["tender", "palpation"]]}
+{"id": "c10", "lang": "bn", "question": "বুকে ব্যথার রোগীর ইসিজি (ECG) কত দ্রুত করা উচিত?", "source": "Cardiology Consensus", "section": 1, "facts": [["১০", "10"]]}
+{"id": "c11", "lang": "banglish", "question": "STEMI hole ki korbo?", "source": "Cardiology Consensus", "section": 2, "facts": [["PCI", "reperfusion", "রিপারফিউশন", "thrombolysis"]]}
+{"id": "h1", "lang": "en", "question": "How is hypertension defined in adults?", "source": "Hypertension", "section": 1, "facts": [["140"], ["90"]]}
+{"id": "h2", "lang": "en", "question": "What is the difference between hypertensive urgency and emergency?", "source": "Hypertension", "section": 1, "facts": [["180"], ["end-organ"]]}
+{"id": "h3", "lang": "en", "question": "What are the first-line drug classes for hypertension?", "source": "Hypertension", "section": 2, "facts": [["ACE"], ["ARB", "angiotensin receptor"], ["calcium"], ["thiazide"]]}
+{"id": "h4", "lang": "en", "question": "When is combination therapy recommended at the start for hypertension?", "source": "Hypertension", "section": 2, "facts": [["20/10", "20"]]}
+{"id": "h5", "lang": "en", "question": "Can ACE inhibitors be used in pregnancy?", "source": "Hypertension", "section": 3, "facts": [["contraindicated", "not", "avoid"]]}
+{"id": "h6", "lang": "en", "question": "Which beta-blocker is dangerous in asthma?", "source": "Hypertension", "section": 3, "facts": [["propranolol", "non-selective"]]}
+{"id": "h7", "lang": "en", "question": "What is the risk of spironolactone in CKD?", "source": "Hypertension", "section": 3, "facts": [["hyperkalemia", "potassium"]]}
+{"id": "h8", "lang": "bn", "question": "উচ্চ রক্তচাপের (Hypertension) সংজ্ঞা কী?", "source": "Hypertension", "section": 1, "facts": [["১৪০", "140"], ["৯০", "90"]]}
+{"id": "h9", "lang": "banglish", "question": "pregnant rogir BP te ki ACE inhibitor deya jabe?", "source": "Hypertension", "section": 3, "facts": [["contraindicated", "নিষিদ্ধ", "না", "নয়", "avoid", "not"]]}

@@ -1,0 +1,15 @@
+{
+  "caseSetup": {
+    "status": "created",
+    "code": "P-901"
+  },
+  "chatWorkspace": {
+    "error": "page.goto: Timeout 75000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3120/en/cases/280cdbf4-f994-42e8-9864-97fe2b6a1388?tab=conversation\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  "03-structural-analysis": {
+    "error": "apiRequestContext.post: Timeout 55000ms exceeded.\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3120/api/cases/5cce7cb7-4d03-453a-bc78-8e0a3edeb0c0/analyze\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/159.0.8154.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m"
+  },
+  "04-library-ask": {
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3120/en/ask\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3120/en/ask\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  }
+}

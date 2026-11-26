@@ -1,0 +1,83 @@
+{
+  "bn": {
+    "model": "gpt-4o-mini",
+    "mode": "live",
+    "symptoms_only": {
+      "status": "insufficient_evidence",
+      "asks_for_hba1c_and_fpg": true,
+      "says_not_in_library_for_patient_data": false,
+      "text": "এখনও রোগনির্ণয় নিশ্চিত করা যায় না। লাইব্রেরিতে ল্যাবের মানদণ্ড আছে, কিন্তু এই রোগীর ল্যাব ফল এখনও রেকর্ড হয়নি।\n- HbA1c: লাইব্রেরির মানদণ্ড ≥ 6.5% [1]।\n- ফাস্টিং প্লাজমা গ্লুকোজ (Fasting plasma glucose): লাইব্রেরির মানদণ্ড ≥ 126 mg/dL [2]।\n\n_এই রোগীর জন্য এখনও দরকার: HbA1c, ফাস্টিং প্লাজমা গ্লুকোজ (Fasting plasma glucose)।_\n\n_চূড়ান্ত সিদ্ধান্ত চিকিৎসকের।_"
+    },
+    "complete_case": {
+      "status": "answered",
+      "assessment": {
+        "status": "supported",
+        "condition": "diabetes mellitus"
+      },
+      "rejections": [
+        {
+          "detail": "attempt 1: criterion 1 (hba1c): Quote is not verbatim in E1.",
+          "reason": "altered_quote"
+        }
+      ],
+      "shows_values": true,
+      "names_condition": true,
+      "names_subtype": false,
+      "cites_reference_pdf": true,
+      "text": "রেকর্ড করা ফলাফল লাইব্রেরির মানদণ্ড অনুযায়ী **diabetes mellitus** সমর্থন করে [1]।\n- HbA1c (Day 1): **7.4%** (আপনার বার্তা) — ≥ 6.5% মানদণ্ড পূরণ করে [2]।\n- ফাস্টিং প্লাজমা গ্লুকোজ (Fasting plasma glucose): **154 mg/dL** (আপনার বার্তা) — ≥ 126 mg/dL মানদণ্ড পূরণ করে [3]।\n- ফাস্টিং প্লাজমা গ্লুকোজ (Fasting plasma glucose) (repeat): **151 mg/dL** (আপনার বার্তা) — ≥ 126 mg/dL মানদণ্ড পূরণ করে [3]।\n- নিশ্চিতকরণ: Confirm with a second result [4]\n\nধরন (subtype) নির্ধারিত হয়নি: Keep the diagnosis and its subtype separate [5]\n\n_চূড়ান্ত সিদ্ধান্ত চিকিৎসকের।_"
+    },
+    "structured_analyze": {
+      "http": 200,
+      "status": "ok",
+      "differentials": [
+        "diabetes mellitus"
+      ],
+      "shows_values": true,
+      "names_subtype": false,
+      "assessment": {
+        "model": "gpt-4o-mini",
+        "mode": "live",
+        "rejections": [],
+        "synthetic_only": true
+      }
+    }
+  },
+  "en": {
+    "model": "gpt-4o-mini",
+    "mode": "live",
+    "symptoms_only": {
+      "status": "insufficient_evidence",
+      "asks_for_hba1c_and_fpg": true,
+      "says_not_in_library_for_patient_data": false,
+      "text": "A diagnosis cannot be confirmed yet. The library states laboratory criteria, but this patient’s lab results are not recorded.\n- HbA1c: library criterion ≥ 6.5% [1].\n- Fasting plasma glucose: library criterion ≥ 126 mg/dL [2].\n\n_Still needed for this patient: HbA1c, Fasting plasma glucose._\n\n_The doctor makes the final decision._"
+    },
+    "complete_case": {
+      "status": "answered",
+      "assessment": {
+        "status": "supported",
+        "condition": "diabetes mellitus"
+      },
+      "rejections": [],
+      "shows_values": true,
+      "names_condition": true,
+      "names_subtype": false,
+      "cites_reference_pdf": true,
+      "text": "The recorded results meet the library criteria for **diabetes mellitus** [1].\n- HbA1c (Day 1): **7.4%** (your message) meets ≥ 6.5% [2].\n- Fasting plasma glucose (Day 1): **154 mg/dL** (your message) meets ≥ 126 mg/dL [3].\n- Fasting plasma glucose (repeat): **151 mg/dL** (your message) meets ≥ 126 mg/dL [3].\n- Confirmation: A second test is generally used to confirm diabetes. [4]\n\nSubtype not determined: Classifying the subtype requires additional clinical assessment. [5]\n\n_The doctor makes the final decision._"
+    },
+    "structured_analyze": {
+      "http": 200,
+      "status": "ok",
+      "differentials": [
+        "diabetes mellitus"
+      ],
+      "shows_values": true,
+      "names_subtype": false,
+      "assessment": {
+        "model": "gpt-4o-mini",
+        "mode": "live",
+        "rejections": [],
+        "synthetic_only": true
+      }
+    }
+  }
+}

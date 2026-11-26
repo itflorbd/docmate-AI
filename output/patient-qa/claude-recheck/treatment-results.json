@@ -1,0 +1,40 @@
+[
+  {
+    "fixture": "F1 eligible pneumonia, no known allergies",
+    "expected": "Draft proposes amoxicillin with a verified guideline quote, safety clear, approval saved, report is a draft, official issuance blocked (423).",
+    "observed": "draft=proposed; options=Amoxicillin, Azithromycin; ui safety=clear,clear; server safety=clear,clear; finalize=423",
+    "plan": true,
+    "citations_guideline_only": true,
+    "ui_matches_server": true,
+    "issuance_blocked": true,
+    "match": true
+  },
+  {
+    "fixture": "F2 incomplete: allergy and pregnancy status not recorded",
+    "expected": "insufficient_evidence with questions about allergies and pregnancy; no approvable option.",
+    "observed": "draft=insufficient_evidence; missing=allergy_status,pregnancy_status",
+    "abstained": true,
+    "match": true
+  },
+  {
+    "fixture": "F3 urgent chest pain (mirrors P-102)",
+    "expected": "Both analyses: insufficient_evidence + urgency urgent + red flag listed; case stays red_flag after diagnosis; draft refused; resolution audited with doctor, basis and rationale; urgency cleared afterwards.",
+    "observed": "round1=insufficient_evidence/urgent/1 flags; round2=insufficient_evidence/urgent; status after dx=red_flag; draft=urgent_review_required; audit rows=1; after resolution=none/insufficient_evidence",
+    "red_flag_preserved": true,
+    "match": true
+  },
+  {
+    "fixture": "F4 pneumonia with penicillin anaphylaxis",
+    "expected": "Amoxicillin shown as a safety stop and refused by the server (422); non-beta-lactam options offered.",
+    "observed": "options=Azithromycin:clear, Doxycycline:clear, Levofloxacin:clear, Amoxicillin:blocked, Cefuroxime:blocked; approve amoxicillin=422",
+    "safety_enforced": true,
+    "match": true
+  },
+  {
+    "fixture": "F5 diagnosis with no guideline in the library (migraine)",
+    "expected": "insufficient_evidence with a question; zero options; no demo-record citation.",
+    "observed": "draft=insufficient_evidence; options=0; demo-library chunks naming a medicine=0",
+    "abstained": true,
+    "match": true
+  }
+]

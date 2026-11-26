@@ -1,0 +1,10 @@
+{
+  "http": 200,
+  "mode": "live",
+  "model": "gpt-4o-mini",
+  "status": "ok",
+  "conditions": [
+    "diabetes mellitus"
+  ],
+  "summary": "The recorded results meet the library criteria for diabetes mellitus [1].\n- HbA1c (Day 1): 7.4% (case record) meets ≥ 6.5% [2].\n- Fasting plasma glucose (Day 1): 154 mg/dL (case record) meets ≥ 126 mg/dL [3].\n- Fasting plasma glucose (Repeat): 151 mg/dL (case record) meets ≥ 126 mg/dL [3].\n- Confirmation: A second test is generally used to confirm diabetes. [4]\n\nSubtype not determined: Classifying the subtype requires additional clinical assessment. [5]\n\nThe doctor makes the final decision."
+}
