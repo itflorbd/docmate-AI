@@ -1,126 +1,308 @@
-# DocMate AI (ডকমেট এআই)
-### Clinical Decision Support Assistant with Verbatim Citation Verification & Deterministic Drug Safety
+<div align="center">
 
-> **Important Clinical Disclaimer**:
-> **Clinical decision support only. Not a substitute for professional judgement.**
-> *(শুধুমাত্র ক্লিনিকাল সিদ্ধান্ত সহায়তা। পেশাদার মূল্যায়নের বিকল্প নয়।)*
+# 🩺 DocMate AI (ডকমেট এআই)
+
+**Bilingual Clinical Decision Support Assistant with Verbatim Citation Verification & Deterministic Drug Safety**
+
+[![Next.js](https://img.shields.io/badge/Next.js-16.4-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.3-149ECA?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16_+_pgvector-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-Base_UI-18181B?style=for-the-badge)](https://ui.shadcn.com/)
+[![Playwright](https://img.shields.io/badge/Playwright-E2E-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev/)
+[![Vitest](https://img.shields.io/badge/Vitest-Unit_Tests-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)](https://vitest.dev/)
+
+[Live Demo (Render)](https://docmate-ai-powered-doctor-assistant-6lld.onrender.com) · [Features](#-core-capabilities) · [Screenshots](#-screenshots) · [Demo Accounts](#-demo-accounts) · [Architecture](#-system-architecture) · [Project Structure](#-project-structure) · [Quickstart](#-local-quickstart)
+
+</div>
 
 ---
 
-## 1. Demo scope
+> [!IMPORTANT]
+> **Clinical Decision Support Only. Not a substitute for professional judgement.**
+> *(শুধুমাত্র ক্লিনিকাল সিদ্ধান্ত সহায়তা। পেশাদার মূল্যায়নের বিকল্প নয়।)*
+>
+> **Demo Scope & Safety Gates:** DocMate AI is a **synthetic-data demonstration**. Clinical assessment abstains (`insufficient_evidence`) and surfaces follow-up questions when vitals or clinical data are missing. Automated treatment, prescription finalization (`HTTP 409` safety stop), and official prescription printing remain **disabled** pending clinical trial validation. See [QA_REPORT.md](QA_REPORT.md) and [Patient_Workflow_Readiness.md](output/patient-qa/Patient_Workflow_Readiness.md).
 
-DocMate AI is a synthetic-data demonstration. The clinical assessment endpoint currently abstains and exposes follow-up questions for physician review. Ask searches indexed text and shows exact source excerpts. Automated treatment, prescription finalization and prescription printing are disabled pending verification of the clinical evidence and authorization workflow. See [QA_REPORT.md](QA_REPORT.md) for the release assessment.
+---
 
-## 2. Quickstart
+## 🌐 Project Demo Links
 
-Use Node.js 20.19 or newer in the 20.x series, pnpm 9 or newer, and PostgreSQL with pgvector. Docker Compose can provide the documented local database.
+| Environment | URL | Notes |
+| :--- | :--- | :--- |
+| **Live Hosted Demo (Render)** | https://docmate-ai-powered-doctor-assistant-6lld.onrender.com | Default locale redirects to `/bn` |
+| **English Portal (Render)** | https://docmate-ai-powered-doctor-assistant-6lld.onrender.com/en/login | Quick demo login buttons available |
+| **Bangla Portal (Render)** | https://docmate-ai-powered-doctor-assistant-6lld.onrender.com/bn/login | Full Bangla UI & clinical terminology |
+| **Local Development** | `http://localhost:3000` | Runs with `pnpm run dev` or `pnpm start` |
+
+### Key Application Routes
+
+| Role / Workspace | Route (`en` / `bn`) | Purpose |
+| :--- | :--- | :--- |
+| **Landing Page** | `/en` · `/bn` | Overview, safety pillars, and role entry |
+| **Unified Login** | `/en/login` · `/bn/login` | Staff email login & Patient Mobile OTP login |
+| **Doctor Dashboard** | `/en/dashboard` | Quick actions, KPIs, active/completed cases, blinking top-bar danger alerts |
+| **Patient Cases** | `/en/cases` | Fixed-viewport, searchable, filterable case table |
+| **Case Workspace** | `/en/cases/[id]` | Conversational assistant, differentials, missing info, safety checks, draft report |
+| **New Patient Intake** | `/en/patients/new` | Phone lookup, family profiles, unpreset vitals, affirmative consent |
+| **Ask Medical Library** | `/en/ask` | Closed-library Q&A with clickable verbatim `EvidenceSheet` proofs |
+| **Medical Library** | `/en/library` | Browse approved guidelines & inspect indexed chunks |
+| **Patient Portal** | `/en/portal` | Family profiles, daily meds tracker, prescriptions, report upload, consent & audit logs |
+| **Student Workspace** | `/en/study` | Practice clinical vignettes, quizzes, and study notes |
+| **Research Suite** | `/en/research` | Cross-evidence search, collections, and citation exports |
+| **Medicine Controller** | `/en/controller` | DGDA formulary management, pricing, and safety notices |
+| **Admin Control Plane** | `/en/admin` | Users, verifications, access matrix, library ingestion queue, voice/AI settings, audit log |
+
+---
+
+## 🔑 Demo Accounts
+
+All demo accounts are pre-seeded via `pnpm run seed` and available as one-click shortcuts on `/en/login` and `/bn/login`.
+
+### Staff & Clinical Roles (Email + Password)
+
+| Role | Email | Password | Default Workspace | Key Capabilities |
+| :--- | :--- | :--- | :--- | :--- |
+| **Doctor (Clinical Lead)** | `doctor@docmate.ai` | `demo123` | `/en/dashboard` | Patient lookup & intake, case workspace, follow-up turns, draft safety review |
+| **Student (Medical Trainee)** | `student@docmate.ai` | `demo123` | `/en/study` | Virtual clinical cases, quizzes, study notes, cited library Q&A |
+| **Researcher** | `researcher@docmate.ai` | `demo123` | `/en/research` | Guideline search, research collections, structured exports |
+| **Medicine Controller (DGDA)** | `controller@docmate.ai` | `demo123` | `/en/controller` | Formulary review, brand pricing, interaction rules, safety recall notices |
+| **Super Admin (Security)** | `admin@docmate.ai` | `demo123` | `/en/admin` | Role access matrix, user verification, library ingestion pipeline, audit ledger |
+
+### Patient Portal Accounts (Mobile Phone + Demo OTP)
+
+| Account | Mobile Number | Demo OTP | Profiles Included |
+| :--- | :--- | :--- | :--- |
+| **Kamal Hossain** | `01700000001` | `123456` | Self profile, medication tracker, reports & consent logs |
+| **Rafiqul & Family** | `01700000002` | `123456` | Multi-profile family account switcher |
+| **Fatema Begum** | `01700000003` | `123456` | Self profile, prescriptions & access grants |
+
+### Seeded Synthetic Patient Fixtures
+- `P-101` — Fever and cough
+- `P-102` — Chest pain
+- `P-103` — Vague malaise without recorded vitals (triggers `insufficient_evidence` + follow-up questions)
+
+---
+
+## 📸 Screenshots
+
+### Doctor & Clinical Workspaces
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <strong>Doctor Portal Dashboard (Desktop)</strong><br/><br/>
+      <img src="output/ux-rbac/doctor-dashboard-en-1280.png" alt="Doctor Dashboard" width="100%"/>
+    </td>
+    <td width="50%" align="center">
+      <strong>Patient Intake — Unpreset Vitals Review</strong><br/><br/>
+      <img src="output/patient-qa/evidence/01_doctor_intake_review_missing_vitals.png" alt="Intake Review Missing Vitals" width="100%"/>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>Case Workspace — Missing Info State</strong><br/><br/>
+      <img src="output/patient-qa/evidence/02_doctor_case_missing_info.png" alt="Case Missing Info" width="100%"/>
+    </td>
+    <td width="50%" align="center">
+      <strong>Admin Control Plane (Desktop)</strong><br/><br/>
+      <img src="output/ux-rbac/admin-admin-en-1280.png" alt="Admin Dashboard" width="100%"/>
+    </td>
+  </tr>
+</table>
+
+### Patient Portal & Mobile Responsiveness
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <strong>Patient Portal — Today's Medications</strong><br/><br/>
+      <img src="output/patient-qa/evidence/04_patient_portal_today_tab.png" alt="Patient Portal Today Tab" width="100%"/>
+    </td>
+    <td width="50%" align="center">
+      <strong>Patient Portal — Secure Report Upload</strong><br/><br/>
+      <img src="output/patient-qa/evidence/05_patient_reports_uploaded.png" alt="Patient Report Upload" width="100%"/>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>Student Workspace (Desktop)</strong><br/><br/>
+      <img src="output/ux-rbac/student-study-en-1280.png" alt="Student Workspace" width="100%"/>
+    </td>
+    <td width="50%" align="center">
+      <strong>Bangla Patient Portal (390px Mobile)</strong><br/><br/>
+      <img src="output/patient-qa/evidence/viewport_mobile_390px_portal_tabs_bn.png" alt="Mobile Patient Portal Bangla" width="55%"/>
+    </td>
+  </tr>
+</table>
+
+---
+
+## ✨ Core Capabilities
+
+- **Closed-Library RAG with Verbatim Verification**: Every clinical claim cites a specific `chunk_id` and exact verbatim quote. Backend verification normalizes whitespace and drops any unverified claim before rendering.
+- **Abstention by Design**: Missing vitals or low retrieval confidence return `insufficient_evidence` with actionable `missing_information` questions—never guessed values or fallback measurements.
+- **Top-Bar Blinking Danger Alerts**: Doctors see a pulsing header alert indicator for critical drug recalls, red-flag cases, and incomplete cases, opening a modal where each alert navigates directly to the affected case or notice.
+- **Deterministic Drug Safety Engine**: Doses, frequencies, allergies, contraindications, and drug-drug interactions are evaluated by pure TypeScript rules against structured database tables—never free-form LLM text.
+- **Patient-Controlled Privacy & Atomic Revocation**: Patients can upload private lab/imaging reports (stored privately on disk with MIME/size validation), toggle sharing per report, view audit logs, and atomically revoke doctor access in a single database transaction.
+- **Full Bilingual Support (`bn` Default & `en`)**: Complete UI and clinical terminology parity across Bangla and English (`tests/i18n-parity.test.ts`), including Banglish phonetic canonicalization and optional local/cloud voice synthesis.
+- **Document Ingestion Pipeline**: Supports PDF (with Tesseract OCR fallback), DOCX, HTML, Markdown, TXT, JSON, and ZIP archives with SHA-256 deduplication, SimHash-64 fingerprinting, prompt-injection scanning, and budget governance.
+
+---
+
+## 🏗 System Architecture
+
+```mermaid
+flowchart LR
+    UI["Next.js 16 App Router UI<br/>(Doctor · Patient · Student · Researcher · Controller · Admin)"]
+    Auth["Auth & RBAC Middleware<br/>(Signed Session Cookie · Role Matrix · Rate Limit)"]
+    API["REST API Routes (/api/*)"]
+    RAG["Closed-Library Engine<br/>(Hybrid TSV + pgvector · Verbatim Quote Verifier)"]
+    Safety["Deterministic Safety Engine<br/>(Allergies · DDI · Dose Bounds · 409 Finalize Gate)"]
+    Ingest["Ingestion Worker & Pipeline<br/>(PDF/DOCX/OCR · Chunker · Safety Scanner)"]
+    DB[("PostgreSQL 16 + pgvector<br/>(Drizzle ORM · AES PII Encryption)")]
+    Storage[("Private File Storage<br/>(data/storage/patient-reports & sources)")]
+
+    UI --> Auth --> API
+    API --> RAG --> DB
+    API --> Safety --> DB
+    API --> Ingest --> DB
+    Ingest --> Storage
+    API --> Storage
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+docmate-AI/
+├── messages/                       # Bilingual i18n dictionaries (bn.json, en.json)
+├── migrations/                     # Sequential PostgreSQL SQL migrations (0000..0014)
+├── public/                         # Static assets & voice sample clips
+├── scripts/                        # DB migrate, seed, ingestion CLI, eval & Playwright verification
+├── tests/                          # Vitest unit, security, privacy, and i18n parity suites
+├── e2e/                            # Playwright end-to-end specs
+├── docs/                           # Architecture, RBAC, and deployment guides
+├── output/                         # QA reports, benchmarks, and Playwright screenshot evidence
+├── src/
+│   ├── app/
+│   │   ├── [locale]/               # Localized App Router pages (en / bn)
+│   │   │   ├── admin/              # Admin control plane (users, library, access, ai, voice, audit)
+│   │   │   ├── ask/                # Closed-library Q&A interface
+│   │   │   ├── cases/              # Cases table & [id] clinical workspace
+│   │   │   ├── controller/         # DGDA medicine controller portal
+│   │   │   ├── dashboard/          # Doctor dashboard
+│   │   │   ├── library/            # Browseable medical library
+│   │   │   ├── login/              # Unified staff & patient OTP login
+│   │   │   ├── patients/           # Patient directory, profile & intake wizard
+│   │   │   ├── portal/             # Patient personal & family portal
+│   │   │   ├── prescriptions/      # Draft prescriptions & safety checks
+│   │   │   ├── research/           # Research suite & collections
+│   │   │   ├── settings/           # User, AI credential, voice & language settings
+│   │   │   ├── study/              # Student practice workspace
+│   │   │   └── verify/rx/          # Prescription QR verification view
+│   │   └── api/                    # Backend Route Handlers (auth, cases, patient, library, admin, voice)
+│   ├── components/
+│   │   ├── admin/                  # Admin tour & controls
+│   │   ├── case-chat/              # Clinical chat, composer, follow-up cards & safety alerts
+│   │   ├── settings/               # AI credentials & assistant config cards
+│   │   ├── shared/                 # AppShell, DoctorDangerAlerts, EvidenceSheet, ConsentSheet, etc.
+│   │   ├── ui/                     # shadcn/ui + Base UI primitives (Sheet, Dialog, AlertDialog, Drawer...)
+│   │   └── voice/                  # DocMateAvatar, VoicePanel & VoiceFloatingButton
+│   ├── context/                    # VoiceContext & client state providers
+│   ├── db/                         # Drizzle schema & pooled PostgreSQL connection
+│   ├── i18n/                       # next-intl routing & request config
+│   ├── lib/
+│   │   ├── assistant/              # Closed-library prompt, engine & quote verification
+│   │   ├── clinical/               # Deterministic drug safety, red flags & extractor
+│   │   ├── ingestion/              # Extractors (PDF/DOCX/HTML/JSON/TXT), OCR, chunker, dedup
+│   │   ├── language/               # Bangla/English/Banglish normalization
+│   │   ├── persona/                # Clinical communication style & phrasebank
+│   │   ├── queue/                  # PostgreSQL-backed ingestion job queue
+│   │   ├── storage/                # Local private storage driver
+│   │   └── voice/                  # Edge TTS, local Maya 2 bridge & dose speech formatting
+│   ├── workers/                    # Background ingestion worker
+│   └── proxy.ts                    # Next.js 16 locale & RBAC session proxy
+├── Dockerfile                      # Production multi-stage Docker image
+├── docker-compose.yml              # Local PostgreSQL + pgvector service
+├── render.yaml                     # 1-click Render Blueprint
+└── package.json                    # Scripts & dependencies
+```
+
+---
+
+## 🚀 Local Quickstart
+
+### Prerequisites
+- **Node.js** `>= 20.18.0` (20.x series recommended)
+- **pnpm** `>= 9.0.0` (or `npm`)
+- **PostgreSQL 16** with `pgvector` (Docker Compose included)
+
+### 1. Environment & Database Setup
 
 ```bash
 cp .env.example .env
+# Generate a 32-byte hex secret and set AUTH_SECRET in .env
 openssl rand -hex 32
+
+# Start PostgreSQL with pgvector
 docker compose up -d postgres
+
+# Install dependencies
 pnpm install --frozen-lockfile
 ```
 
-Set `AUTH_SECRET` in `.env` to the generated value. The example enables demo logins for this local synthetic environment. Keep the embedding API key empty for offline ingestion. Copy the database URL from your local configuration if it differs from the Docker Compose default.
+### 2. Migrate, Ingest & Seed
 
 ```bash
 export DATABASE_URL='postgresql://docmate:docmate_dev_password@localhost:5432/docmate'
 psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -c 'CREATE EXTENSION IF NOT EXISTS vector'
-pnpm exec drizzle-kit push
+
+pnpm run migrate
 pnpm run ingest
 pnpm run seed
+```
+
+### 3. Run the Application
+
+```bash
+# Development (with hot reload)
+pnpm run dev
+
+# Or Production Build & Start
 pnpm run build
 pnpm start -p 3000
 ```
 
-Open `http://localhost:3000`. In a fresh session the default locale is Bangla. For hot reload, run `pnpm run dev --webpack` in place of the production build and start commands.
+Open **`http://localhost:3000`** (defaults to `/bn`; switch to `/en` anytime via the header language toggle).
 
-> **Cloud & Production Deployment**:
-> - **Render & Vercel Guide**: Step-by-step instructions with 1-click Blueprint and screenshots in **[docs/RENDER_AND_VERCEL_DEPLOYMENT.md](docs/RENDER_AND_VERCEL_DEPLOYMENT.md)**.
-> - **General Production Guide**: Bare-metal VPS (Nginx + PM2), Docker Compose, and operations in **[DEPLOYMENT.md](DEPLOYMENT.md)**.
-
-## 3. Seeded Demo Accounts
-
-You can sign in with any of the pre-seeded clinical personas:
-
-| Role | Email | Password | Permissions |
-| :--- | :--- | :--- | :--- |
-| **Doctor (Physician)** | `doctor@docmate.ai` | `demo123` | Patient intake, clinical history, case workspace, prescribing |
-| **Student** | `student@docmate.ai` | `demo123` | Study practice, virtual patient cases, cited library Q&A |
-| **Researcher** | `researcher@docmate.ai` | `demo123` | Guideline search, cross-evidence comparison, citation exports |
-| **Medicine Controller** | `controller@docmate.ai`| `demo123` | DGDA medicine formulary, brand pricing, interaction checks |
-| **Admin** | `admin@docmate.ai` | `demo123` | Access matrix, patient governance, duplicate merges, audit ledger |
-| **Patient (Phone + OTP)**| Phone: `01700000001` | OTP: `123456` | Multi-profile portal, daily medicine routine, access control |
-
-For detailed workflow documentation:
-- **[Patient-Centred Architecture & Workflows (PATIENT_FLOW.md)](docs/PATIENT_FLOW.md)**
-- **[Access Control & Dynamic Feature Matrix (ACCESS.md)](docs/ACCESS.md)**
-- **[Upgrade Analysis & Data Migration (ANALYSIS_PATIENT_UPGRADE.md)](ANALYSIS_PATIENT_UPGRADE.md)**
+### Cloud Deployment
+- **Render Blueprint**: 1-click setup via `render.yaml` — see [docs/RENDER_AND_VERCEL_DEPLOYMENT.md](docs/RENDER_AND_VERCEL_DEPLOYMENT.md).
+- **Docker / VPS**: Full production operations guide in [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ---
 
-## 4. Seeded synthetic patient cases
+## 🧪 Testing & Quality Checks
 
-The demo physician owns three fixtures: `P-101` (fever and cough), `P-102` (chest pain), and `P-103` (vague malaise without recorded vitals). Use them only to exercise the application. Automated clinical assessment currently returns `insufficient_evidence`.
-
-### Voice assistant demo
-
-Open the voice panel and choose **Auto**, **বাংলা**, or **English** under **Conversation language**. Auto follows each typed or transcribed turn, including common Banglish phrases. Its microphone starts in the page language and follows the most recent reply language. For spoken input, select Bangla or English before recording if you want to switch. The page language stays as selected in the app. Library excerpts retain the source wording and language.
-
-In Settings, use **Sample Voice** to compare the Friendly and Reserved presets and adjust the speaking rate. The default engine uses installed Bangla and English device voices. Super admins can select **Expressive cloud voice for assistant messages** under **Engine & Routing** on `/en/admin/voice` (or `/bn/admin/voice`) when an OpenAI key is configured. It applies to scripted assistant messages and previews. Case and medication read-aloud use device voices. If cloud playback fails, DocMate tries the installed voice for the spoken language and displays a translated message if that voice is unavailable.
-
-The Maya option includes short, pre-rendered Bangla and English greetings with the Friendly female voice. Select **Maya neural voice (local)** in **Engine & Routing** to hear them. Settings previews use clips generated from DocMate’s public greeting text using Maya’s Jahnavi preset. They play without downloading a model. To synthesize the other replies and voice presets locally, use [Maya 2 Native](https://huggingface.co/maya-research/maya2-native). On Apple Silicon install the [MLX port](https://github.com/AkashKhamkar/maya2-mlx) in a separate Python environment. The first startup downloads about 5 GB of model weights plus the codec. No API key is required.
-
-```sh
-python3.12 -m venv .maya-local/venv
-.maya-local/venv/bin/pip install 'maya2-mlx @ git+https://github.com/AkashKhamkar/maya2-mlx.git@b722de398cec5c51e78190017971d18fa0c90726'
-HF_HOME="$PWD/.maya-local/hf" .maya-local/venv/bin/maya2 --quantize 4 serve --host 127.0.0.1 --port 8319
-```
-
-Set `DOCMATE_MAYA_PORT=8319` in `.env.local` and restart DocMate. In **Engine & Routing** on `/en/admin/voice`, select **Maya neural voice (local)**, click **Test Audio** to check live synthesis, then save. The personal **Sample Voice** preview can play from the bundled clips. DocMate sends scripted assistant speech to the loopback engine. The live greeting and replies use the same Maya speaker. If Maya is unavailable before a message starts playing, DocMate uses the installed voice for each language for the rest of the conversation. Reload the page to let Maya try again. The reply stays visible if playback is unavailable. Speech is labelled AI-generated.
-
-
-## 5. System architecture
-
-The Next.js workspace stores cases, physician follow-up turns and audit events in PostgreSQL. Case API reads and writes are scoped to the authenticated physician. Library ingestion stores source metadata, chunks and full-text vectors. The active Ask route searches text and displays verbatim, verified source excerpts. Optional pgvector embeddings are available to the offline evaluation harness when provider access is configured.
-
-## 6. How to Add New Medical Guidelines to the Library
-
-To expand the internal knowledge base with real clinical textbooks or national protocols:
-
-1. Place your guideline Markdown files (`.md`) or text files into `data/library/`.
-2. Format headings using standard Markdown (`# Title`, `## Section 1: ...`).
-3. Run the ingestion script:
-   ```bash
-   pnpm run ingest
-   ```
-   The script splits files by section into chunks of up to 500 whitespace-separated words with 10% overlap and populates the PostgreSQL full-text index. Unchanged chunks are reused by SHA-256 hash. A configured embedding key sends library text to the provider during ingestion.
+| Check | Command | Coverage |
+| :--- | :--- | :--- |
+| **Unit & Security Suite** | `pnpm test` | Citation verification, vitals fallback regression, report authorization, atomic consent revocation, login security, i18n key parity |
+| **TypeScript Check** | `pnpm run typecheck` | Full strict TypeScript check (`tsc --noEmit`) |
+| **ESLint** | `pnpm run lint` | Next.js + TypeScript lint rules |
+| **Playwright E2E** | `pnpm run test:e2e` | End-to-end synthetic doctor, patient, library, and responsive viewport tests |
+| **Workflow Profiler** | `node --env-file-if-exists=.env --import tsx scripts/profile-workflow.ts` | Production endpoint latency benchmarks |
 
 ---
 
-## 7. Testing & Verification
+## 📚 Additional Documentation
 
-### Running Vitest Unit Tests
-Tests citation whitespace normalization, verbatim matching, dropping unverified claims, drug safety engine rules (allergies, interactions, pregnancy, eGFR, age), and 100% i18n key parity:
-```bash
-pnpm test
-```
-
-### Running Playwright Smoke E2E Tests
-Tests demo login, case workspace rendering, and bilingual disclaimer persistence:
-```bash
-pnpm run test:e2e
-```
-
-### Code Quality & Compilation
-```bash
-pnpm run lint
-pnpm run typecheck
-pnpm run build
-```
+- [Patient-Centred Architecture & Workflows](docs/PATIENT_FLOW.md)
+- [Access Control & Dynamic Feature Matrix](docs/ACCESS.md)
+- [Patient Workflow Readiness & E2E Evidence](output/patient-qa/Patient_Workflow_Readiness.md)
+- [QA Release Assessment](QA_REPORT.md)
+- [Render & Vercel Deployment Guide](docs/RENDER_AND_VERCEL_DEPLOYMENT.md)
 
 ---
 
-## 8. License & Standards
-Built for hackathon demonstration purposes. Use only synthetic patient data. Clinical and business deployment remain out of scope.
+## 📄 License & Standards
+Built for hackathon demonstration using **synthetic patient data only** (`P-101`, `P-102`, `P-103`). Real clinical and commercial deployment remain out of scope pending prospective clinical validation.
